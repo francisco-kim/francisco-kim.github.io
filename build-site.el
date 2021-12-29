@@ -13,6 +13,9 @@
 ;; Install dependencies
 (package-install 'htmlize)
 
+;; Get the colors you currently have active in Emacs
+(setq org-html-htmlize-output-type 'css)
+
 ;; Load the publishing system
 (require 'ox-publish)
 
