@@ -12,18 +12,8 @@
 #+ATTR_HTML: :align right
 *Francisco Kim*
    
-# \\ 
-# * Table of Contents--chapters
-#   :PROPERTIES:  
-#   :UNNUMBERED: t
-#   :END:  
-
-# :PROPERTIES:
-# :CUSTOM_ID: musicology
-# :END:
-
 * Introduction
-This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2021).
+This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).
 @@latex: \thispagestyle{empty}@@
 
 In the composition of this fugue in D minor, the main idea was to use the *B-A-C-H motif* within the strict counterpoint rules of the Baroque period, in particular in Bach's period. This means:
