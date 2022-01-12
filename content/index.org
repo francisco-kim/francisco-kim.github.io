@@ -5,13 +5,15 @@
 
 #+TITLE: Compositional ideas behind Fuga I
 #+AUTHOR: Francisco Kim
+#+EMAIL: francisco.hk.kim@gmail.com
 #+DESCRIPTION: Musical analysis of the Fuga I.
 #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
 #+startup: shrink
 #+ATTR_HTML: :align right
 *Francisco Kim*
-   
+francisco.hk.kim@gmail.com
+
 * Introduction
 This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).
 @@latex: \thispagestyle{empty}@@
@@ -83,7 +85,7 @@ The B-A-C-H motif is a chromatically difficult melodic/harmonic line to handle. 
 
 This motif sounds mysterious and very eerie when the third voice hasn't entered yet, as the harmonic suggestion is not yet clear without the third voice and the chromatic voices are very dissonant. However, the entry of the third voice suggests a very interesting harmonic progression, with the middle voice (the secound countersubject) having a delayed resolution after the B-A-C-H motif (the augmented interval within the middle voice should be followed by a contrary motion first).
 
-The *D$\sharp$* (*Des*) suggests the *VII* degree of *E*, and one way of understanding this functionally is to think of it as the German sixth--with the fifth omitted--in the tonality of *E*, i.e., a chord with $\sharp\text{IV}-\flat\text{VI}-\text{I (omitted)}-\text{III}$. It is then resolved in one of the traditional ways in the tonality of *A*.
+The *D$\sharp$* (*Dis*) suggests the *VII* degree of *E*, and one way of understanding this functionally is to think of it as the German sixth--with the fifth omitted--in the tonality of *E*, i.e., a chord with $\sharp\text{IV}-\flat\text{VI}-\text{I (omitted)}-\text{III}$. It is then resolved in one of the traditional ways in the tonality of *A*.
 
 ** Double sequence
 #+CAPTION: (Suggested) German sixth chord without the fifth.
