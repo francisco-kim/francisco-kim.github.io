@@ -18,7 +18,7 @@ francisco.hk.kim@gmail.com
 This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).
 @@latex: \thispagestyle{empty}@@
 
-In the composition of this fugue in D minor, the main idea was to use the *B-A-C-H motif* within the strict counterpoint rules of the Baroque period, in particular in Bach's period. This means:
+In the composition of this fugue in D minor, the main idea was to use the *B-A-C-H motif* within the counterpoint rules of the Baroque period---in particular in Bach's time. This means:
 - avoid any parallel fifths/octaves and avoid direct fifths/octaves,
 - avoid dissonances on strong/accented beats unless it is an essential dissonance
 - resolve the melodies correctly (vertically and horizontally), e.g. the $^{6}_{4}$ chords (2nd inversion triads) and the $^{2}$ chords (3rd inversion seventh chords),
