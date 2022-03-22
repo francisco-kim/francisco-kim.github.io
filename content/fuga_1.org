@@ -72,7 +72,7 @@ This motif sounds mysterious and very eerie when the third voice hasn't entered 
 The *D$\sharp$* (*Dis*) suggests the *VII* degree of *E*, and one way of understanding this functionally is to think of it as the German sixth--with the fifth omitted--in the tonality of *E*, i.e., a chord with $\sharp\text{IV}-\flat\text{VI}-\text{I (omitted)}-\text{III}$. It is then resolved in one of the traditional ways in the tonality of *A*.
 
 ** Double sequence
-#+CAPTION: (Suggested) German sixth chord without the fifth.
+#+CAPTION: The double sequence with the pattern and imitative sequence used in all the voices.
 #+NAME:   fig:double_sequence
 #+ATTR_LATEX: :width 14cm
 [[./docs/assets/images/double_sequence.png]]

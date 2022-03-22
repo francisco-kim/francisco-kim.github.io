@@ -4,14 +4,14 @@
 # End:
 
 #+TITLE: Francisco's musical notebook
-#+AUTHOR: Francisco Kim
+#+AUTHOR: Dr. Francisco Kim
 #+EMAIL: francisco.hk.kim@gmail.com
 #+DESCRIPTION: Musical analysis of the Fuga I.
 #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
 #+startup: shrink
 #+ATTR_HTML: :align right
-*Dr. Francisco Kim*
+*Francisco Kim*
 francisco.hk.kim@gmail.com
 
 * Preface / Table of Contents
