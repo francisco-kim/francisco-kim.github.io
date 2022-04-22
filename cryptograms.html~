@@ -162,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -195,7 +208,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -244,13 +257,13 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5fae495">Sitemap</a>
+<li><a href="#orgc7ec25d">Sitemap</a>
 <ul>
-<li><a href="#orgc6ddecf">♪&nbsp; Compositional ideas behind my Fuga I</a></li>
-<li><a href="#org321f772">♪&nbsp; Some of my cryptograms to solve!</a></li>
+<li><a href="#orgf20e5b6">♪&nbsp; Compositional ideas behind my Fuga I</a></li>
+<li><a href="#org8bd568d">♪&nbsp; Some of my cryptograms to solve!</a></li>
 </ul>
 </li>
-<li><a href="#orgee5c49b">Musical cryptograms</a></li>
+<li><a href="#org478c8d6">Musical cryptograms</a></li>
 </ul>
 </div>
 </div>
@@ -262,19 +275,19 @@ for the JavaScript code in this tag.
 Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains notes, scribbles and doodles for my personal use, but you are very welcome to have a look at them!<br />
 </p>
 
-<div id="outline-container-org5fae495" class="outline-2">
-<h2 id="org5fae495">Sitemap</h2>
-<div class="outline-text-2" id="text-org5fae495">
+<div id="outline-container-orgc7ec25d" class="outline-2">
+<h2 id="orgc7ec25d">Sitemap</h2>
+<div class="outline-text-2" id="text-orgc7ec25d">
 </div>
 
-<div id="outline-container-orgc6ddecf" class="outline-3">
-<h3 id="orgc6ddecf">♪&nbsp; <a href="../index.html#orgbeecd72">Compositional ideas behind my Fuga I</a></h3>
-<div class="outline-text-3" id="text-orgc6ddecf">
+<div id="outline-container-orgf20e5b6" class="outline-3">
+<h3 id="orgf20e5b6">♪&nbsp; <a href="index.html">Compositional ideas behind my Fuga I</a></h3>
+<div class="outline-text-3" id="text-orgf20e5b6">
 </div>
 </div>
-<div id="outline-container-org321f772" class="outline-3">
-<h3 id="org321f772">♪&nbsp; <a href="cryptograms.html">Some of my cryptograms to solve!</a></h3>
-<div class="outline-text-3" id="text-org321f772">
+<div id="outline-container-org8bd568d" class="outline-3">
+<h3 id="org8bd568d">♪&nbsp; <a href="cryptograms.html">Some of my cryptograms to solve!</a></h3>
+<div class="outline-text-3" id="text-org8bd568d">
 <p>
 <br />
 <br />
@@ -283,9 +296,9 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 </div>
 </div>
 
-<div id="outline-container-orgee5c49b" class="outline-2">
-<h2 id="orgee5c49b">Musical cryptograms</h2>
-<div class="outline-text-2" id="text-orgee5c49b">
+<div id="outline-container-org478c8d6" class="outline-2">
+<h2 id="org478c8d6">Musical cryptograms</h2>
+<div class="outline-text-2" id="text-org478c8d6">
 <p>
 A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded <a href="docs/assets/images/miscellaneous/cryptogrammes.pdf">here</a>!<br />
 </p>
@@ -296,7 +309,7 @@ A musical cryptogram has been used by Westerns composers to transcribe a text in
 </p>
 
 <p align="right">
-<a href="#org5fae495" align="right">Back to the sitemap</a><br />
+<a href="#orgc7ec25d" align="right">Back to the sitemap</a><br />
 </p>
 
 <p>
