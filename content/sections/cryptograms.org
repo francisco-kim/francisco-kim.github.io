@@ -24,13 +24,28 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 :UNNUMBERED: t  
 :END:  
 
-#+INCLUDE: ToC.org
+#+INCLUDE: ToC.suborg
 
 \\
 \\
 
 * Musical cryptograms
+:PROPERTIES:  
+:UNNUMBERED: t  
+:END:  
+
 A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded [[file:docs/assets/images/miscellaneous/cryptogrammes.pdf][here]]!
 
+\\
+\\
+
 #+ATTR_HTML: :align right
-[[file:~/Dropbox/musique/musescore/composition/fuga_1/fuga-I-webpage/content/index.org::*Sitemap][Back to the sitemap]]
+[[*Sitemap][Back to the sitemap]]
+
+\\
+\\
+\\
+\\
+\\
+
+This webpage was built with Org mode, using https://github.com/fniessen/org-html-themes and https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/ for publishing it.
