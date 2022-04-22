@@ -27,21 +27,39 @@
 
 ;; Define the publishing project
 (setq org-publish-project-alist
-      (list
-       (list "org-site:main"
-             :recursive t
-             :base-directory "./content"
-             :publishing-function 'org-html-publish-to-html
-             :publishing-directory "./public"
-             ;; :with-author nil           ;; Don't include author name
-             ;; :with-creator t            ;; Include Emacs and Org versions in footer
-             ;; :with-toc t                ;; Include a table of contents
-             ;; :section-numbers nil       ;; Don't include section numbers
-             ;; :time-stamp-file nil
-             )))    ;; Don't include time stamp in file
-
+      '(
+        ("org-source"
+         :base-directory "./content"
+         :base-extension "org"
+         :publishing-directory "./public"
+         :publishing-function org-html-publish-to-html
+         :recursive t
+         :time-stamp-file nil       ;; Don't include time stamp in file
+         :with-email t
+         :with-statistics-cookies t
+         ;; :auto-sitemap t            ;; Generate sitemap.org automagically
+         ;; :sitemap-filename "sitemap.org"  ;; Call it sitemap.org (it's the default)
+         ;; :sitemap-title "Sitemap"      ;; With title 'Sitemap'
+         ;; :with-author nil           ;; Don't include author name
+         ;; :with-creator t            ;; Include Emacs and Org versions in footer
+         ;; :with-toc t                ;; Include a table of contents
+         ;; :section-numbers nil       ;; Don't include section numbers
+         )
+        ("org-static"
+         :base-directory "./content"
+         :base-extension "png\\|pdf\\|mp3"
+         :publishing-directory "./public"
+         :publishing-function org-publish-attachment
+         :recursive t
+         )
+        ("org-site:main"
+         :components ("org-source" "org-static")
+         )
+        )
+       )
+      
 ;; Generate the site output
 (org-publish-all t)
 
-(message "Build completed.")
+(message "HTML build completed.")
 

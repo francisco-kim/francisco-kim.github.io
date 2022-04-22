@@ -1,3 +1,4 @@
+# Fuga 1 -*- mode: org -*-
 * Introduction
 This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).
 @@latex: \thispagestyle{empty}@@
@@ -17,15 +18,15 @@ The ideas that were used as guiding principles this fugue were as follows:
 The score can be found below, and the fugue can be played here:
 #+BEGIN_EXPORT html
  <audio controls autoplay>
-  <source src="./docs/assets/images/Fuga_I.mp3" type="audio/mpeg">
+  <source src="./docs/assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> 
 #+END_EXPORT
 
 #+CAPTION: Fuga I
 #+ATTR_HTML: :alt Fuga I image :title Fuga I :align center
-[[./docs/assets/images/scores/Fuga_I-1.png]]
-[[./docs/assets/images/scores/Fuga_I-2.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-1.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-2.png]]
 
 * Structural analysis
 The structure diagram is shown in Figure [[fig:structure_diagram]]. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection [[Score analysis]]. The structure of the fugue with entries and episodes are shown on the [[Entries/episodes][first score]]. The highlighted subject,
@@ -35,7 +36,7 @@ countersubjects and the inverted counterpoint are detailed on the [[Subjects/cou
 #+CAPTION: Structure diagram
 #+NAME: fig:structure_diagram
 #+ATTR_HTML: :alt Fuga I image :title Fuga I :align center
-[[./docs/assets/images/structure_table/fuga_1-analysis.png]]
+[[./docs/assets/images/fuga_1/structure_table/fuga_1-analysis.png]]
    
 This fugue can be divided in three parts: measures 1-12 (in which all the voices enter successively, i.e., it is an exposition), measures 13-14 and measures 27-37. The final part of the fugue contains a stretto with an augmentation (in the upper voice) and a coda with a short (and repeated) episode that precedes it and that serves as a two-voice cadence. There is only one perfect authentic cadence in this piece with all the three voices, and it occurs at the end of the fugue. The voices collapse to just one voice at the very beginning of the coda, before opening up again with the successive entries of the subject in each voice.
 @@latex:\bigskip@@
@@ -44,13 +45,13 @@ There is a notable deceptive cadence in measure 5 (V \rightarrow VI [I]) and a q
 ** Score analysis
 *** Entries/episodes
 #+ATTR_HTML: :alt Entries/episodes analysis image :title Entries/episodes analysis :align center
-[[./docs/assets/images/scores/Fuga_I-analyse-structure-1.png]]
-[[./docs/assets/images/scores/Fuga_I-analyse-structure-2.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-analyse-structure-1.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-analyse-structure-2.png]]
 
 *** Subjects/countersujects and invertible counterpoint
 #+ATTR_HTML: :alt Subjects/countersujects and invertible counterpoint image :title Subjects/countersujects and invertible counterpoint :align center
-[[./docs/assets/images/scores/Fuga_I-analyse-sujets+counterpoint-1.png]]
-[[./docs/assets/images/scores/Fuga_I-analyse-sujets+counterpoint-2.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-1.png]]
+[[./docs/assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-2.png]]
 
 * Specific details
 ** Zenith/nadir of the piece
@@ -63,7 +64,7 @@ In measure 9 (episode 2-1), the two lower voices form a tritone on the very firs
 #+CAPTION: (Suggested) German sixth chord without the fifth.
 #+NAME:   fig:german_sixth
 #+ATTR_LATEX: :width 14cm
-[[./docs/assets/images/german_sixth.png]]
+[[./docs/assets/images/fuga_1/german_sixth.png]]
 
 The B-A-C-H motif is a chromatically difficult melodic/harmonic line to handle. This can give rise to many exciting melodic and harmonic possibilities in a freer setting of course, but it can be a difficult task within the rules of strict counterpoint.
 
@@ -75,7 +76,7 @@ The *D$\sharp$* (*Dis*) suggests the *VII* degree of *E*, and one way of underst
 #+CAPTION: The double sequence with the pattern and imitative sequence used in all the voices.
 #+NAME:   fig:double_sequence
 #+ATTR_LATEX: :width 14cm
-[[./docs/assets/images/double_sequence.png]]
+[[./docs/assets/images/fuga_1/double_sequence.png]]
 
 This passage is a double sequence, where a pattern and an imitative sequence--a sequence in which voices imitate other voices--is again used as an (inclusive) sequence. The imitative sequence is built such that the alto/tenor voice in the middle has a dactyl against an anapaest successively: making a nod to the second half of the subject.
 
@@ -84,7 +85,7 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 #+CAPTION: Measure wrapping up the double sequence which is again an imitative sequence.
 #+NAME:   fig:double_sequence
 #+ATTR_LATEX: :width 12cm
-[[./docs/assets/images/double_sequence-end.png]]
+[[./docs/assets/images/fuga_1/double_sequence-end.png]]
 
 Following the idea of /pattern \rightarrow sequence \rightarrow contrast/ (or /idea - \rightarrow repetition \rightarrow contrast/altered repetition)/, the next measure pursues a different melodic motifs. However, one of them is a recall of one of the motifs from the double sequence which allows a certain continuity with the double sequence. This passage is also an imitative sequence with a series of imperfect consonances (thirds and sixths), making these three measures complex yet beautiful with a lot of structure and symmetry. They come back once more later in the fugue as a triple counterpoint.
 
@@ -103,7 +104,7 @@ fugue = converter.parse(path)
 #+END_SRC
 
 We can then plot the piano roll:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/pianoRoll.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/pianoRoll.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 # fugue.plot('pianoroll')
@@ -117,11 +118,11 @@ roll.run()
 #+RESULTS:
 :results:
 # Out[58]:
-[[file:./docs/assets/images/pianoRoll.png]]
+[[file:./docs/assets/images/fuga_1/pianoRoll.png]]
 :end:
 
 And plot it with pitch classes this time:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/pianoRoll.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/pianoRoll.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 # fugue.plot('pianoroll')
@@ -135,11 +136,11 @@ roll.run()
 #+RESULTS:
 :results:
 # Out[59]:
-[[file:./docs/assets/images/pianoRoll.png]]
+[[file:./docs/assets/images/fuga_1/pianoRoll.png]]
 :end:
 
 By using the spline interpolation, we can plot the notes as smoothed-out curves:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/Pitch-interpolation.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/Pitch-interpolation.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 import numpy as np
@@ -170,7 +171,7 @@ plt.show()
 #+RESULTS:
 :results:
 # Out[60]:
-[[file:./docs/assets/images/Pitch-interpolation.png]]
+[[file:./docs/assets/images/fuga_1/Pitch-interpolation.png]]
 :end:
 
 ** Key center
@@ -202,7 +203,7 @@ tonality.correlationCoefficient
 : : 0.9486855347153584
 
 The correlation coefficient of other candidate keys:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/tonal_probability.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/tonal_probability.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 import matplotlib.pyplot as plt
@@ -230,11 +231,11 @@ plt.show()
 #+RESULTS:
 :results:
 # Out[63]:
-[[file:docs/assets/images/tonal_probability.png]]
+[[file:docs/assets/images/fuga_1/tonal_probability.png]]
 :end:
 
 The histogram of the pitch classes:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/histogram-pitchClass.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/histogram-pitchClass.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 fugue.plot('histogram', 'pitchClass')
@@ -243,11 +244,11 @@ fugue.plot('histogram', 'pitchClass')
 #+RESULTS:
 :results:
 # Out[64]:
-[[file:./docs/assets/images/histogram-pitchClass.png]]
+[[file:./docs/assets/images/fuga_1/histogram-pitchClass.png]]
 :end:
 
 The histogram of all the pitches:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/histogram-pitch.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/histogram-pitch.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 fugue.plot('histogram', 'pitch')
@@ -256,11 +257,11 @@ fugue.plot('histogram', 'pitch')
 #+RESULTS:
 :results:
 # Out[65]:
-[[file:./docs/assets/images/histogram-pitch.png]]
+[[file:./docs/assets/images/fuga_1/histogram-pitch.png]]
 :end:
 
 The scatter plot with measures and pitch classes:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/Scatter-pitchClass.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/Scatter-pitchClass.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 scatter = graph.plot.ScatterPitchClassOffset(fugue)
@@ -272,11 +273,11 @@ scatter.run()
 #+RESULTS:
 :results:
 # Out[66]:
-[[file:./docs/assets/images/Scatter-pitchClass.png]]
+[[file:./docs/assets/images/fuga_1/Scatter-pitchClass.png]]
 :end:
 
 The scatter plot with the pitch class by quarter length:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/scatter-pitchClass-quarterLength.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 fugue.plot('scatter', 'pitchClass', 'quarterLength')
@@ -285,11 +286,11 @@ fugue.plot('scatter', 'pitchClass', 'quarterLength')
 #+RESULTS:
 :results:
 # Out[67]:
-[[file:./docs/assets/images/scatter-pitchClass-quarterLength.png]]
+[[file:./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength.png]]
 :end:
 
 And in 3D:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/scatter-pitchClass-quarterLength-3D.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 fugue.plot('3dbars')
@@ -298,12 +299,12 @@ fugue.plot('3dbars')
 #+RESULTS:
 :results:
 # Out[243]:
-[[file:./docs/assets/images/scatter-pitchClass-quarterLength-3D.png]]
+[[file:./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png]]
 :end:
 
 ** Chords
    We now combine the three voices into =Chord= objects:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/romanAnalysis.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/romanAnalysis.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 # Chordify fugue
@@ -328,7 +329,7 @@ fugue.measures(0,12).show()
 #+RESULTS:
 :results:
 # Out[68]:
-[[file:./docs/assets/images/romanAnalysis.png]]
+[[file:./docs/assets/images/fuga_1/romanAnalysis.png]]
 :end:
 
 One possibility would be as follows:
@@ -362,7 +363,7 @@ displayPart.show()
 #+RESULTS:
 
 But we will do something simpler and better adapted to our case:
-# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/romanAnalysis-onlyChords.png
+# #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/romanAnalysis-onlyChords.png
 #+ATTR_LATEX: :options frame=single
 #+BEGIN_SRC python :exports both :results raw drawer :eval never-export
 chordsFlat = chords.flat
@@ -374,7 +375,7 @@ onlyChords.measures(0,37).show()
 #+RESULTS:
 :results:
 # Out[69]:
-[[file:./docs/assets/images/romanAnalysis-onlyChords.png]]
+[[file:./docs/assets/images/fuga_1/romanAnalysis-onlyChords.png]]
 :end:
 
 With the chords, it is possible to analyse the key of each measures:

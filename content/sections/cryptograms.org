@@ -7,7 +7,7 @@
 #+AUTHOR: Dr. Francisco Kim
 #+EMAIL: francisco.kim@alumni.ethz.ch
 #+DESCRIPTION: Musical analysis of the Fuga I.
-#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
+#+SETUPFILE: ../../org-html-themes/org/theme-readtheorg.setup
 #+HTML_HEAD: <style> #content{max-width:920px;}</style>
 #+HTML_HEAD: <style> p{max-width:870px;}</style>
 #+HTML_HEAD: <style> li{max-width:870px;}</style>
@@ -24,25 +24,13 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 :UNNUMBERED: t  
 :END:  
 
-#+INCLUDE: ./sections/ToC.org
-# #+INCLUDE: ./sitemap.org
+#+INCLUDE: ToC.org
 
 \\
 \\
 
-* Compositional ideas behind Fuga I
-#+INCLUDE: fuga_1.suborg
-
-\\
-\\
+* Musical cryptograms
+A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded [[file:docs/assets/images/miscellaneous/cryptogrammes.pdf][here]]!
 
 #+ATTR_HTML: :align right
-[[*Sitemap][Back to the sitemap]]
-
-\\
-\\
-\\
-\\
-\\
-
-This webpage was built with Org mode, using https://github.com/fniessen/org-html-themes and https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/ for publishing it.
+[[file:~/Dropbox/musique/musescore/composition/fuga_1/fuga-I-webpage/content/index.org::*Sitemap][Back to the sitemap]]
