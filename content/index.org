@@ -24,7 +24,7 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 :UNNUMBERED: t  
 :END:  
 
-#+INCLUDE: ./sections/ToC.suborg
+#+INCLUDE: ToC.suborg
 # #+INCLUDE: ./sitemap.org
 
 \\
