@@ -34,7 +34,7 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 :UNNUMBERED: t  
 :END:  
 
-A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded [[file:docs/assets/images/miscellaneous/cryptogrammes.pdf][here]]!
+A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded [[file:docs/assets/images/cryptograms/cryptogrammes.pdf][here]]!
 
 \\
 \\
