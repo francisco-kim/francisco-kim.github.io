@@ -14,10 +14,15 @@
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
 #+startup: shrink
 
-#+ATTR_HTML: :align right
-*Francisco Kim*
+# #+ATTR_HTML: :align right
+# *Francisco Kim*
+#+BEGIN_EXPORT html
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ffrancisco-kim.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=applemusic.svg&icon_color=%23E7E7E7&title=+Music+lovers+count+++++&edge_flat=false" align="right"/></a>
+#+END_EXPORT
+\\
 
 Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains notes, scribbles and doodles for my personal use, but you are very welcome to have a look at them!
+\\
 
 * Sitemap
 :PROPERTIES:  
@@ -48,4 +53,4 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 \\
 \\
 
-This webpage was built with Org mode, using https://github.com/fniessen/org-html-themes and https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/ for publishing it.
+This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]], along with [[https://github.com/gjbae1212/hit-counter][gjbae1212's hit counter]].
