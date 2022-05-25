@@ -1,4 +1,6 @@
 * My personal webpage
-Webpage showing compositional ideas behind my Fuga I.
+Webpage showing the compositional ideas behind my Fuga I & and other music-related personal notes.
+
+This repository is published to [[https://francisco-kim.github.io ]](GitHub Pages).
 
 All rights reserved on the Fuga I.
