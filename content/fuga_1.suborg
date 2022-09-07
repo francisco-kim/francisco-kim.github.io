@@ -90,9 +90,10 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 
 Following the idea of /pattern \rightarrow sequence \rightarrow contrast/ (or /idea - \rightarrow repetition \rightarrow contrast/altered repetition)/, the next measure pursues a different melodic motifs. However, one of them is a recall of one of the motifs from the double sequence which allows a certain continuity with the double sequence. This passage is also an imitative sequence with a series of imperfect consonances (thirds and sixths), making these three measures complex yet beautiful with a lot of structure and symmetry. They come back once more later in the fugue as a triple counterpoint.
 
-* Appendix: Computational Musicology
+* Appendix
+** Computational musicology
 We now analyse the fugue with [[https://web.mit.edu/music21/][=music21=]] (v6.7 in this appendix), a /python/ package developed by MIT for computer-aided musicology.
-** Piano roll and other graphics
+*** Piano roll and other graphics
 First initialise =music21=:
 # #+BEGIN_SRC ipython :session fugue :exports code :results none
 #+ATTR_LATEX: :options frame=single
@@ -175,7 +176,7 @@ plt.show()
 [[file:./docs/assets/images/fuga_1/Pitch-interpolation.png]]
 :end:
 
-** Key center
+*** Key center
 The key is found using the [[https://rnhart.net/articles/key-finding/][Krumhansl-Schmuckler key-finding algorithm]] which uses the correlation coefficient
 $$R = \frac{\sum\limits_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum\limits_{i=1}^{n}(x_i - \bar{x})^2 \sum\limits_{i=1}^{n}(y_i - \bar{y})^2}}$$
 in which one coordinate is the *profile* of each note in a major or minor key and the other coordinate is the *total duration* of each pitch class. The profiles have been empirically established values.
@@ -303,7 +304,7 @@ fugue.plot('3dbars')
 [[file:./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png]]
 :end:
 
-** Chords
+*** Chords
    We now combine the three voices into =Chord= objects:
 # #+BEGIN_SRC ipython :session fugue :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/romanAnalysis.png
 #+ATTR_LATEX: :options frame=single
@@ -406,25 +407,313 @@ for m in chords.getElementsByClass('Measure'):
 14 g minor
 15 F major
 16 d minor
-17 d minor
-18 d minor
-19 d minor
-20 d minor
-21 a minor
-22 D major
-23 C major
-24 F major
-25 d minor
-26 F major
-27 G major
-28 d minor
-29 a minor
-30 A major
-31 d minor
-32 d minor
-33 d minor
-34 d minor
-35 A major
-36 D major
-37 b minor
+...
 #+end_example
+
+** Fractal intervallic scaling in Fuga I
+There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws [fn:Brother] [fn:Hsu]. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.
+
+Here, we investigate the possibility of having an interval-related scaling law in the Fuga I. In the musical sense, the structure-related scaling might be understood easily when we think of the augmentation and the diminution of the subject, for instance. The indication that the distribution of the interval counts is fractal, however, is a bit more puzzling. This likely stems from the fact that the stepwise motion is favoured as opposed to skips and leaps.
+
+Let us first count the number of existing intervals per voice:
+# #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results raw drawer :eval never-export
+from music21 import *
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+from collections import Counter
+
+# Import Fuga I
+path = './Fuga I analysis with music21.musicxml'
+fugue = converter.parse(path)
+
+# Get notes & intervals per voice (1, 2, 3) and then merge
+# all of them (hence length = 4).
+# Voice 1: soprano (last entry) / Voice 2: tenor/alto (first entry) /
+# Voice 3: bass (second entry) / Voice 4: all
+notes = []
+for i in range(len(fugue.parts)):
+    pitchesPerVoice = fugue.parts[i].flat.notes
+    notes.append([n.pitch.ps for n in pitchesPerVoice])
+notes.append([note for voice in notes for note in voice])
+
+intervals = []
+for voiceNotes in notes:
+    intervalsPerVoice = []
+    for j in range(len(list(voiceNotes))-1):
+        intervalsPerVoice.append(abs(voiceNotes[j+1]-voiceNotes[j]))
+    intervals.append(intervalsPerVoice)
+
+# Show existing intervals in the Fuga I
+analysis.discrete.MelodicIntervalDiversity().countMelodicIntervals(fugue.parts)
+#+END_SRC
+
+#+RESULTS:
+:results:
+# Out[48]:
+#+BEGIN_EXAMPLE
+  {'P4': [<music21.interval.Interval P4>, 48],
+  'm2': [<music21.interval.Interval m2>, 190],
+  'm3': [<music21.interval.Interval m3>, 56],
+  'M2': [<music21.interval.Interval M2>, 264],
+  'd4': [<music21.interval.Interval d4>, 3],
+  'm6': [<music21.interval.Interval m6>, 11],
+  'A1': [<music21.interval.Interval A1>, 14],
+  'M6': [<music21.interval.Interval M6>, 15],
+  'M3': [<music21.interval.Interval M3>, 16],
+  'A2': [<music21.interval.Interval A2>, 3],
+  'P11': [<music21.interval.Interval P11>, 1],
+  'P5': [<music21.interval.Interval P5>, 8],
+  'm14': [<music21.interval.Interval m14>, 1],
+  'P8': [<music21.interval.Interval P8>, 5],
+  'M10': [<music21.interval.Interval M10>, 1],
+  'd5': [<music21.interval.Interval d5>, 1]}
+#+END_EXAMPLE
+:end:
+
+Now count intervals for each voice:
+# #+BEGIN_SRC ipython :session fractal :exports both :results output
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results output :eval never-export
+intervalCounts = []
+sortedIntervalCounts = []
+for i in range(len(intervals)):
+    intervalCount = Counter(intervals[i])
+    sortedIntervalCount = sorted(intervalCount.items())
+
+    intervalCounts.append(intervalCount)
+    sortedIntervalCounts.append(sortedIntervalCount)
+
+    print("Voice {}: {}".format(i+1, sortedIntervalCounts[i]))
+#+END_SRC
+
+#+RESULTS:
+: Voice 1: [(0.0, 5), (1.0, 59), (2.0, 86), (3.0, 15), (4.0, 6), (5.0, 16), (8.0, 3), (9.0, 5), (17.0, 1)]
+: Voice 2: [(0.0, 9), (1.0, 76), (2.0, 86), (3.0, 26), (4.0, 8), (5.0, 19), (7.0, 3), (8.0, 3), (9.0, 6), (12.0, 1), (22.0, 1)]
+: Voice 3: [(0.0, 4), (1.0, 69), (2.0, 92), (3.0, 18), (4.0, 5), (5.0, 13), (6.0, 1), (7.0, 5), (8.0, 5), (9.0, 4), (12.0, 4), (16.0, 1)]
+: Voice 4: [(0.0, 18), (1.0, 204), (2.0, 264), (3.0, 59), (4.0, 19), (5.0, 48), (6.0, 1), (7.0, 8), (8.0, 11), (9.0, 16), (12.0, 6), (16.0, 1), (17.0, 1), (22.0, 1)]
+
+Let us now choose the bin size (as well as how to treat the intervals) of each voice by considering the melodies. In other words, let us take into account the melodic jump between measures 26 and 28 for the analysis of the soprano voice (voice 1), i.e., we omit the intervals larger than 9 semitones. For the tenor/alto voice (voice 2), the jump in measure 25 and the octave jump in 27 will be considered. Lastly, the bass voice (voice 3) will exclude the jump between measures 12 and 13:
+# #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results raw drawer :eval never-export
+# Voice 1
+# Jump in measures 26-28
+bins1 = [0, 3, 6, 9]
+foldedIntervals1 = [i for i in intervals[0] if i <= 9]    # omitted after 9
+
+# Voice 2
+# Jump in measure 25 & octave jump in 27
+bins2 = [0, 3, 6, 9]
+foldedIntervals2 = [i for i in intervals[1] if i <= 9]    # omitted after 9
+
+# Voice 3 
+# Jump in measures 12-13
+bins3 = [0, 3, 6, 9, 12]
+foldedIntervals3 = [i for i in intervals[2] if i <= 12]    # Omitted after 12
+
+# All the voices
+bins4 = [0, 5, 10, 16]
+foldedIntervals4 = [i for i in intervals[3] if i <= 16]    # Omitted after 16
+#+END_SRC
+
+#+RESULTS:
+:results:
+# Out[122]:
+:end:
+
+As an example, when looking at all the melodies together after our choice of bin size and interval treatment, the following intervals remain:
+# #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results raw drawer :eval never-export
+bins = [bins1, bins2, bins3, bins4]
+foldedIntervals = [foldedIntervals1, foldedIntervals2, foldedIntervals3, foldedIntervals4]
+
+newIntervalCounts = [np.histogram(foldedIntervals[i], bins=bins[i])[0] for i in range(4)]
+
+newFoundIntervals = []
+for i in range(4):
+    newIntervals = []
+    for j in range(len(bins[i])-1):
+        newIntervals.append((bins[i][j] + bins[i][j+1])/2)
+    newFoundIntervals.append(newIntervals)
+
+sorted(Counter(foldedIntervals[3]).items())
+#+END_SRC
+
+#+RESULTS:
+:results:
+# Out[54]:
+#+BEGIN_EXAMPLE
+  [(0.0, 18),
+  (1.0, 204),
+  (2.0, 264),
+  (3.0, 59),
+  (4.0, 19),
+  (5.0, 48),
+  (6.0, 1),
+  (7.0, 8),
+  (8.0, 11),
+  (9.0, 16),
+  (12.0, 6),
+  (16.0, 1)]
+#+END_EXAMPLE
+:end:
+
+Finally, the final fractal dimension of the Fuga I is shown here:
+# #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/fractal_AllVoices.png
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results raw drawer :eval never-export
+figIndex = 3
+xOrig = np.array(newFoundIntervals[figIndex]).reshape((-1, 1))
+f = lambda k: 2 ** (k/12)
+x = np.log(f(xOrig))
+y = np.log(np.array(newIntervalCounts[figIndex]))
+
+linearRegression = LinearRegression()
+model = linearRegression.fit(x, y)
+y_pred = linearRegression.predict(x)
+r_sq = model.score(x, y)
+
+# Plot
+fig, (ax1) = plt.subplots(nrows=1, ncols=1, figsize = (6,4))
+
+ax1.scatter(x, y, color="black")
+ax1.plot(x, y_pred, color="blue", linewidth=3, \
+         label=r'$\log(N) = C - d_{f}\, \log(2^{i/12})$')
+
+ax1.set_xlabel(r'$\log(2^{i/12})$', fontsize=10)
+ax1.set_ylabel(r'$\log(N)$', fontsize=10)
+
+ax1.set_title('All the voices', fontsize=12)
+ax1.text(0.9, 0.6, \
+         r'$d_{f} =$' + str(round(-linearRegression.coef_[0], 3)) + '\n \n' + r'$R^{2} =$' + f'{r_sq:.3f}', \
+         horizontalalignment='center', verticalalignment='center', fontsize=10, transform=ax1.transAxes)
+ax1.text(0.03, 0.06, 'Bins: ' + f'{bins[figIndex]}', \
+         horizontalalignment='left', fontsize=6, transform=ax1.transAxes)
+ax1.legend(numpoints=1, loc=1, fontsize=7)
+
+plt.show()
+#+END_SRC
+
+#+RESULTS:
+:results:
+# Out[272]:
+[[file:./docs/assets/images/fuga_1/fractal_AllVoices.png]]
+:end:
+
+We now show the anaylsis for separate voices as well, where the most coherent bin size and the interval treatment (with respect to the music structure and the musical ideas) have been selected, as mentioned above:
+# #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer :ipyfile ./docs/assets/images/fuga_1/fractal_individualVoices.png
+#+ATTR_LATEX: :options frame=single
+#+BEGIN_SRC python :session fractal :exports both :results raw drawer :eval never-export
+f = lambda k: 2 ** (k/12)
+
+xOrig = [np.array(newFoundIntervals[i]).reshape((-1, 1)) for i in range(4)]
+x = [np.log(f(xOrig[i])) for i in range(4)]
+y = [np.log(np.array(newIntervalCounts[i])) for i in range(4)]
+
+linearRegression = [LinearRegression() for i in range(4)]
+model = [linearRegression[i].fit(x[i], y[i]) for i in range(4)]
+y_pred = [linearRegression[i].predict(x[i]) for i in range(4)]
+r_sq = [model[i].score(x[i], y[i]) for i in range(4)]
+
+# Plot
+#fig, axs = plt.subplots(nrows=2, ncols=2, figsize = (6,4), tight_layout = True)
+fig, axs = plt.subplots(nrows=2, ncols=2, figsize = (9,6))
+fig.subplots_adjust(hspace = .6, wspace=.3)
+axs = axs.ravel()
+
+titles = ['Voice 1', 'Voice 2', 'Voice 3', 'All the voices']
+
+for i in range(4):
+    axs[i].scatter(x[i], y[i], color="black")
+    axs[i].plot(x[i], y_pred[i], color="blue", linewidth=3, \
+                label=r'$\log(N) = C - d_{f}\, \log(2^{i/12})$')
+    axs[i].set_xlabel(r'$\log(2^{i/12})$', fontsize=10)
+    axs[i].set_ylabel(r'$\log(N)$', fontsize=10)
+    axs[i].set_title(f'{titles[i]}', fontsize=12)
+    axs[i].text(0.85, 0.62, \
+                r'$d_{f} =$' + str(round(-linearRegression[i].coef_[0], 3)) + '\n \n' + r'$R^{2} =$' + str(round(r_sq[i], 3)), \
+                horizontalalignment='center', verticalalignment='center', fontsize=10, transform=axs[i].transAxes)
+    axs[i].text(0.03, 0.06, 'Bins: ' + f'{bins[i]}', \
+                horizontalalignment='left', fontsize=6, transform=axs[i].transAxes)
+    axs[i].legend(numpoints=1, loc=1, fontsize=7)
+
+plt.show()
+#+END_SRC
+
+#+RESULTS:
+:results:
+# Out[280]:
+[[file:./docs/assets/images/fuga_1/fractal_individualVoices.png]]
+:end:
+
+The fit using three points only could make us doubt that the interval distribution is really fractal. But it should be reminded that such a fractal law in music should only arise after some coarse-graining at a larger scale. And since that an octave is divided in 12 semitones only and that the musically coherent intervals are quite limited, finishing with three points only at the end of the binning does not seem unreasonable. And a linear fit of three points is by no means a trivial guarantee :).
+
+It should also be noted, however, that the dimension and the $R^2$ are all quite sensitive to the bin size and the way we treat the intervals. For completeness, here are some of the results with different configurations:
+#+CAPTION: Voice 1 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 26-28.
+#+ATTR_HTML: :border 2
+| / |                     |                   |       < |       > |
+|   | Bins                | Intervals         | $d_{f}$ | $R^{2}$ |
+|---+---------------------+-------------------+---------+---------|
+|   | [0, 2, 4, 6, 9, 17] | All the intervals |   4.432 |   0.626 |
+|   | [0, 2, 4, 6, 9]     | Omitted after 9   |   6.321 |   0.800 |
+|   | [0, 3, 6, 9]        | Folded after 9    |   8.458 |   0.999 |
+|   | [[color:red][[0, 3, 6, 9]]]        | [[color:red][Omitted after 9]]   |   [[color:red][8.458]] |   [[color:red][0.999]] |
+|---+---------------------+-------------------+---------+---------|
+
+#+CAPTION: Voice 2 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measure 25 & the octave jump in 27.
+#+ATTR_HTML: :border 2
+| / |                  |                  |       < |       > |
+|   | Bins             | Intervals        | $d_{f}$ | $R^{2}$ |
+|---+------------------+------------------+---------+---------|
+|   | [0, 3, 6, 9, 12] | Omitted after 12 |   6.790 |   0.874 |
+|   | [0, 3, 6, 12]    | Folded after 16  |   5.725 |   0.994 |
+|   | [0, 3, 6, 10]    | Folded after 11  |   6.880 | 0.99996 |
+|   | [[color:red][[0, 3, 6, 9]]]     | [[color:red][Omitted after 9]]  |   [[color:red][7.666]] |   [[color:red][0.995]] |
+|---+------------------+------------------+---------+---------|
+
+#+CAPTION: Voice 3 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 12-13.
+#+ATTR_HTML: :border 2
+| / |                      |                  |       < |       > |
+|   | Bins                 | Intervals        | $d_{f}$ | $R^{2}$ |
+|---+----------------------+------------------+---------+---------|
+|   | [0, 3, 6, 9, 12, 16] | Omitted after 16 |   5.070 |   0.868 |
+|   | [0, 4, 8, 12]        | Folded after 12  |   5.723 |   0.922 |
+|   | [0, 4, 8, 12, 16]    | Folded after 16  |   5.099 |   0.927 |
+|   | [0, 3, 6, 9, 12]     | Folded after 12  |   5.940 |   0.936 |
+|   | [[color:red][[0, 3, 6, 9, 12]]]     | [[color:red][Omitted after 12]] |   [[color:red][5.924]] |   [[color:red][0.933]] |
+|---+----------------------+------------------+---------+---------|
+
+#+CAPTION: Voice 4 binned differently with different interval treatments.
+#+ATTR_HTML: :border 2 :rules all :frame border
+| / |                   |                  |       < |       > |
+|   | Bins              | Intervals        | $d_{f}$ | $R^{2}$ |
+|---+-------------------+------------------+---------+---------|
+|   | [0, 3, 6, 9, 12]  |  Folded after 12 |   6.353 |   0.876 |
+|   | [0, 4, 8, 12]     | Folded after 12  |   5.723 |   0.922 |
+|   | [0, 4, 8, 12, 16] | Folded after 16  |   6.092 |   0.983 |
+|   | [0, 5, 10, 16]    | Folded after 16  |   7.024 |   0.999 |
+|   | [[color:red][[0, 5, 10, 16]]]    | [[color:red][Omitted after 16]] |   [[color:red][7.247]] |   [[color:red][0.998]] |
+|---+-------------------+------------------+---------+---------|
+The selected version for the analysis with all the voices (red line) assumes that a jump of up to a a tenth (16 semitones) is reasonable but that jumps greater than that are to evoke a very special and out-of-the-ordinary effect.
+
+\\
+\\
+\\
+\\
+\\
+
+#+ATTR_HTML: :align right
+[[*Sitemap][Back to the sitemap]] [fn:sitemap]
+
+\\
+\\
+
+[fn:Hsu] K. Hsu and A. Hsu, Fractal geometry of music, Proc. Natl. Acad. Sci. USA, 87 (1990) 938–941.
+[fn:Brother] H. J. Brothers, Intervallic scaling in the Bach cello suites, Fractals, 4 (2009) 537–545.
+
+
+[fn:sitemap] This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]], along with [[https://github.com/gjbae1212/hit-counter][gjbae1212's hit counter]].

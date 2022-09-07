@@ -16,6 +16,23 @@
 ;; Get the colors you currently have active in Emacs
 (setq org-html-htmlize-output-type 'css)
 
+;;; org text color (e.g. This is [[color:green][green text]])
+(require 'org)
+(org-add-link-type
+ "color"
+ (lambda (path)
+   (message (concat "color "
+                    (progn (add-text-properties
+                            0 (length path)
+                            (list 'face `((t (:foreground ,path))))
+                            path) path))))
+ (lambda (path desc format)
+   (cond
+    ((eq format 'html)
+     (format "<span style=\"color:%s;\">%s</span>" path desc))
+    ((eq format 'latex)
+     (format "{\\color{%s}%s}" path desc)))))
+
 ;; Load the publishing system
 (require 'ox-publish)
 
