@@ -653,7 +653,7 @@ plt.show()
 The fit using three points only could make us doubt that the interval distribution is really fractal. But it should be reminded that such a fractal law in music should only arise after some coarse-graining at a larger scale. And since that an octave is divided in 12 semitones only and that the musically coherent intervals are quite limited, finishing with three points only at the end of the binning does not seem unreasonable. And a linear fit of three points is by no means a trivial guarantee :).
 
 It should also be noted, however, that the dimension and the $R^2$ are all quite sensitive to the bin size and the way we treat the intervals. For completeness, here are some of the results with different configurations:
-#+CAPTION: Voice 1 binned differently with different interval treatments. The selected version (last line) takes into account the jump in measures 26-28.
+#+CAPTION: Voice 1 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 26-28.
 #+ATTR_HTML: :border 2
 | / |                     |                   |       < |       > |
 |   | Bins                | Intervals         | $d_{f}$ | $R^{2}$ |
@@ -661,12 +661,10 @@ It should also be noted, however, that the dimension and the $R^2$ are all quite
 |   | [0, 2, 4, 6, 9, 17] | All the intervals |   4.432 |   0.626 |
 |   | [0, 2, 4, 6, 9]     | Omitted after 9   |   6.321 |   0.800 |
 |   | [0, 3, 6, 9]        | Folded after 9    |   8.458 |   0.999 |
-|   | [0, 3, 6, 9]        | Omitted after 9   |   8.458 |   0.999 |
+|   | [[color:red][[0, 3, 6, 9]]]        | [[color:red][Omitted after 9]]   |   [[color:red][8.458]] |   [[color:red][0.999]] |
 |---+---------------------+-------------------+---------+---------|
 
-# |   | [[color:red][[0, 3, 6, 9]]]        | [[color:red][Omitted after 9]]   |   [[color:red][8.458]] |   [[color:red][0.999]] |
-
-#+CAPTION: Voice 2 binned differently with different interval treatments. The selected version (last line) takes into account the jump in measure 25 & the octave jump in 27.
+#+CAPTION: Voice 2 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measure 25 & the octave jump in 27.
 #+ATTR_HTML: :border 2
 | / |                  |                  |       < |       > |
 |   | Bins             | Intervals        | $d_{f}$ | $R^{2}$ |
@@ -674,12 +672,10 @@ It should also be noted, however, that the dimension and the $R^2$ are all quite
 |   | [0, 3, 6, 9, 12] | Omitted after 12 |   6.790 |   0.874 |
 |   | [0, 3, 6, 12]    | Folded after 16  |   5.725 |   0.994 |
 |   | [0, 3, 6, 10]    | Folded after 11  |   6.880 | 0.99996 |
-|   | [0, 3, 6, 9]     | Omitted after 9  |   7.666 |   0.995 |
+|   | [[color:red][[0, 3, 6, 9]]]     | [[color:red][Omitted after 9]]  |   [[color:red][7.666]] |   [[color:red][0.995]] |
 |---+------------------+------------------+---------+---------|
 
-# |   | [[color:red][[0, 3, 6, 9]]]     | [[color:red][Omitted after 9]]  |   [[color:red][7.666]] |   [[color:red][0.995]] |
-
-#+CAPTION: Voice 3 binned differently with different interval treatments. The selected version (last line) takes into account the jump in measures 12-13.
+#+CAPTION: Voice 3 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 12-13.
 #+ATTR_HTML: :border 2
 | / |                      |                  |       < |       > |
 |   | Bins                 | Intervals        | $d_{f}$ | $R^{2}$ |
@@ -688,26 +684,21 @@ It should also be noted, however, that the dimension and the $R^2$ are all quite
 |   | [0, 4, 8, 12]        | Folded after 12  |   5.723 |   0.922 |
 |   | [0, 4, 8, 12, 16]    | Folded after 16  |   5.099 |   0.927 |
 |   | [0, 3, 6, 9, 12]     | Folded after 12  |   5.940 |   0.936 |
-|   | [0, 3, 6, 9, 12]     | Omitted after 12 |   5.924 |   0.933 |
+|   | [[color:red][[0, 3, 6, 9, 12]]]     | [[color:red][Omitted after 12]] |   [[color:red][5.924]] |   [[color:red][0.933]] |
 |---+----------------------+------------------+---------+---------|
-
-# |   | [[color:red][[0, 3, 6, 9, 12]]]     | [[color:red][Omitted after 12]] |   [[color:red][5.924]] |   [[color:red][0.933]] |
 
 #+CAPTION: Voice 4 binned differently with different interval treatments.
 #+ATTR_HTML: :border 2 :rules all :frame border
 | / |                   |                  |       < |       > |
 |   | Bins              | Intervals        | $d_{f}$ | $R^{2}$ |
 |---+-------------------+------------------+---------+---------|
-|   | [0, 3, 6, 9, 12]  | Folded after 12  |   6.353 |   0.876 |
+|   | [0, 3, 6, 9, 12]  |  Folded after 12 |   6.353 |   0.876 |
 |   | [0, 4, 8, 12]     | Folded after 12  |   5.723 |   0.922 |
 |   | [0, 4, 8, 12, 16] | Folded after 16  |   6.092 |   0.983 |
 |   | [0, 5, 10, 16]    | Folded after 16  |   7.024 |   0.999 |
-|   | [0, 5, 10, 16]    | Omitted after 16 |   7.247 |   0.998 |
+|   | [[color:red][[0, 5, 10, 16]]]    | [[color:red][Omitted after 16]] |   [[color:red][7.247]] |   [[color:red][0.998]] |
 |---+-------------------+------------------+---------+---------|
-
-# |   | [[color:red][[0, 5, 10, 16]]]    | [[color:red][Omitted after 16]] |   [[color:red][7.247]] |   [[color:red][0.998]] |
-
-The selected version for the analysis with all the voices (last line) assumes that a jump of up to a a tenth (16 semitones) is reasonable but that jumps greater than that are to evoke a very special and out-of-the-ordinary effect.
+The selected version for the analysis with all the voices (red line) assumes that a jump of up to a a tenth (16 semitones) is reasonable but that jumps greater than that are to evoke a very special and out-of-the-ordinary effect.
 
 \\
 \\
