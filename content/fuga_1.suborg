@@ -411,9 +411,20 @@ for m in chords.getElementsByClass('Measure'):
 #+end_example
 
 ** Fractal intervallic scaling in Fuga I
-There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws [fn:Brother] [fn:Hsu]. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.
+There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws [fn:Hsu] [fn:Brother]. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.
 
 Here, we investigate the possibility of having an interval-related scaling law in the Fuga I. In the musical sense, the structure-related scaling might be understood easily when we think of the augmentation and the diminution of the subject, for instance. The indication that the distribution of the interval counts is fractal, however, is a bit more puzzling. This likely stems from the fact that the stepwise motion is favoured as opposed to skips and leaps.
+
+Mathematically, with the interval (semitone) given by $i$ and its count given by $N$ this equates to saying that
+\begin{equation*}
+N(i) = c \, \left( 2^{i/12} \right)^{d_{f}}
+\end{equation*}
+
+\begin{equation*}
+\Longrightarrow \quad \boxed{\log(N) = C - d_{f}\, \log(2^{i/12})}.
+\end{equation*}
+
+where we consider the "size" of the interval by the function $2^{i/12}$ to account for the fact that its frequency is logarithmic. The $d_{f}$ denotes the fractal dimension. Ultimately this is related to the following statement: let $P(\varepsilon_i)$ be the probability density of elements of size $\varepsilon_i$ with $\sum\limits_{i=1}^{n} P(\varepsilon_i) = 1$ in a set of $n$ elements. If there is a power-law distribution, then there is a scaling factor $\mu = \frac{\varepsilon_i}{\varepsilon_{i+1}}$ such that $P(\varepsilon_{i+1}) = \mu^{d_{f}} P(\varepsilon_{i})$[fn:Brother].
 
 Let us first count the number of existing intervals per voice:
 # #+BEGIN_SRC ipython :session fractal :exports both :results raw drawer
