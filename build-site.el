@@ -18,7 +18,7 @@
 
 ;;; org text color (e.g. This is [[color:green][green text]])
 (require 'org)
-(org-add-link-type
+(org-link-set-parameters
  "color"
  (lambda (path)
    (message (concat "color "
