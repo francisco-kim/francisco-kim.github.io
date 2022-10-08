@@ -90,8 +90,7 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 
 Following the idea of /pattern \rightarrow sequence \rightarrow contrast/ (or /idea - \rightarrow repetition \rightarrow contrast/altered repetition)/, the next measure pursues a different melodic motifs. However, one of them is a recall of one of the motifs from the double sequence which allows a certain continuity with the double sequence. This passage is also an imitative sequence with a series of imperfect consonances (thirds and sixths), making these three measures complex yet beautiful with a lot of structure and symmetry. They come back once more later in the fugue as a triple counterpoint.
 
-* Appendix
-** Computational musicology
+* Appendix A: computational musicology
 We now analyse the fugue with [[https://web.mit.edu/music21/][=music21=]] (v6.7 in this appendix), a /python/ package developed by MIT for computer-aided musicology.
 *** Piano roll and other graphics
 First initialise =music21=:
@@ -410,7 +409,7 @@ for m in chords.getElementsByClass('Measure'):
 ...
 #+end_example
 
-** Fractal intervallic scaling in Fuga I
+* Appendix B: fractal intervallic scaling in Fuga I
 There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws [fn:Hsu] [fn:Brother]. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.
 
 Here, we investigate the possibility of having an interval-related scaling law in the Fuga I. In the musical sense, the structure-related scaling might be understood easily when we think of the augmentation and the diminution of the subject, for instance. The indication that the distribution of the interval counts is fractal, however, is a bit more puzzling. This likely stems from the fact that the stepwise motion is favoured as opposed to skips and leaps.
