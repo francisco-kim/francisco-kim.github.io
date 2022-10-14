@@ -13,6 +13,10 @@
 ;; Install dependencies
 (package-install 'htmlize)
 
+;; Set python indentation offset
+(setq python-indent-guess-indent-offset t)  
+(setq python-indent-guess-indent-offset-verbose nil)
+
 ;; Get the colors you currently have active in Emacs
 (setq org-html-htmlize-output-type 'css)
 
@@ -46,9 +50,9 @@
 (setq org-publish-project-alist
       '(
         ("org-source"
-         :base-directory "./content"
+         :base-directory "./src"
          :base-extension "org"
-         :publishing-directory "./public"
+         :publishing-directory "./docs"
          :publishing-function org-html-publish-to-html
          :recursive t
          :time-stamp-file nil       ;; Don't include time stamp in file
@@ -63,9 +67,9 @@
          ;; :section-numbers nil       ;; Don't include section numbers
          )
         ("org-static"
-         :base-directory "./content"
+         :base-directory "./src"
          :base-extension "png\\|pdf\\|mp3"
-         :publishing-directory "./public"
+         :publishing-directory "./docs"
          :publishing-function org-publish-attachment
          :recursive t
          )

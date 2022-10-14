@@ -10,190 +10,6 @@
 <meta name="author" content="Dr. Francisco Kim" />
 <meta name="description" content="Musical analysis of the Fuga I."
  />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
-</style>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -279,46 +95,46 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgea80e75">Sitemap</a>
+<li><a href="#org1a488df">Sitemap</a>
 <ul>
-<li><a href="#org960da5e">♪&nbsp; Compositional ideas behind my Fuga I</a></li>
-<li><a href="#org2a8b299">♪&nbsp; Some of my cryptograms to solve!</a></li>
+<li><a href="#org8dd2b15">♪&nbsp; Compositional ideas behind my Fuga I</a></li>
+<li><a href="#org9cf5a95">♪&nbsp; Some of my cryptograms to solve!</a></li>
 </ul>
 </li>
-<li><a href="#orgcd69163">Compositional ideas behind Fuga I</a></li>
-<li><a href="#org3279e51">1. Introduction</a></li>
-<li><a href="#orgb01f155">2. Music/Score</a></li>
-<li><a href="#org35dae4d">3. Structural analysis</a>
+<li><a href="#org09c1a3c">Compositional ideas behind Fuga I</a></li>
+<li><a href="#orgf5ec5be">1. Introduction</a></li>
+<li><a href="#org79c5aff">2. Music/Score</a></li>
+<li><a href="#org7233148">3. Structural analysis</a>
 <ul>
-<li><a href="#org22dfd64">3.1. Structure diagram</a></li>
-<li><a href="#orgeb8d7e9">3.2. Score analysis</a>
+<li><a href="#org52fd0d0">3.1. Structure diagram</a></li>
+<li><a href="#orgbcee749">3.2. Score analysis</a>
 <ul>
-<li><a href="#org5b89d7d">3.2.1. Entries/episodes</a></li>
-<li><a href="#orge6f90b4">3.2.2. Subjects/countersujects and invertible counterpoint</a></li>
+<li><a href="#org389e5f1">3.2.1. Entries/episodes</a></li>
+<li><a href="#orgf42f4e9">3.2.2. Subjects/countersujects and invertible counterpoint</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org563648f">4. Specific details</a>
+<li><a href="#orgdb7ce9c">4. Specific details</a>
 <ul>
-<li><a href="#orgb00e251">4.1. Zenith/nadir of the piece</a></li>
-<li><a href="#orgdb2d18a">4.2. The strong-beat tritone in the lower voices</a></li>
-<li><a href="#orge3ca881">4.3. German sixth (übermässiger Quintsextakkord)</a></li>
-<li><a href="#org67c7b4f">4.4. Double sequence</a></li>
+<li><a href="#orgab0e053">4.1. Zenith/nadir of the piece</a></li>
+<li><a href="#org787568a">4.2. The strong-beat tritone in the lower voices</a></li>
+<li><a href="#orge066c70">4.3. German sixth (übermässiger Quintsextakkord)</a></li>
+<li><a href="#org841180d">4.4. Double sequence</a></li>
 </ul>
 </li>
-<li><a href="#org5d52215">5. Appendix</a>
+<li><a href="#org12c905d">5. Appendix A: computational musicology</a>
 <ul>
-<li><a href="#org2c3e24f">5.1. Computational musicology</a>
+<li>
 <ul>
-<li><a href="#orge6781d4">5.1.1. Piano roll and other graphics</a></li>
-<li><a href="#org119e5c2">5.1.2. Key center</a></li>
-<li><a href="#org805be31">5.1.3. Chords</a></li>
+<li><a href="#org4f8bf34">5.0.1. Piano roll and other graphics</a></li>
+<li><a href="#orge555ec1">5.0.2. Key center</a></li>
+<li><a href="#org74264ca">5.0.3. Chords</a></li>
 </ul>
 </li>
-<li><a href="#org9b8d3ea">5.2. Fractal intervallic scaling in Fuga I</a></li>
 </ul>
 </li>
+<li><a href="#org4b0048d">6. Appendix B: fractal intervallic scaling</a></li>
 </ul>
 </div>
 </div>
@@ -332,19 +148,19 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 <br />
 </p>
 
-<div id="outline-container-orgea80e75" class="outline-2">
-<h2 id="orgea80e75">Sitemap</h2>
-<div class="outline-text-2" id="text-orgea80e75">
+<div id="outline-container-org1a488df" class="outline-2">
+<h2 id="org1a488df">Sitemap</h2>
+<div class="outline-text-2" id="text-org1a488df">
 </div>
 
-<div id="outline-container-org960da5e" class="outline-3">
-<h3 id="org960da5e">♪&nbsp; <a href="index.html">Compositional ideas behind my Fuga I</a></h3>
-<div class="outline-text-3" id="text-org960da5e">
+<div id="outline-container-org8dd2b15" class="outline-3">
+<h3 id="org8dd2b15">♪&nbsp; <a href="index.html">Compositional ideas behind my Fuga I</a></h3>
+<div class="outline-text-3" id="text-org8dd2b15">
 </div>
 </div>
-<div id="outline-container-org2a8b299" class="outline-3">
-<h3 id="org2a8b299">♪&nbsp; <a href="cryptograms.html">Some of my cryptograms to solve!</a></h3>
-<div class="outline-text-3" id="text-org2a8b299">
+<div id="outline-container-org9cf5a95" class="outline-3">
+<h3 id="org9cf5a95">♪&nbsp; <a href="cryptograms.html">Some of my cryptograms to solve!</a></h3>
+<div class="outline-text-3" id="text-org9cf5a95">
 <p>
 <br />
 <br />
@@ -353,9 +169,9 @@ Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains
 </div>
 </div>
 
-<div id="outline-container-orgcd69163" class="outline-2">
-<h2 id="orgcd69163">Compositional ideas behind Fuga I</h2>
-<div class="outline-text-2" id="text-orgcd69163">
+<div id="outline-container-org09c1a3c" class="outline-2">
+<h2 id="org09c1a3c">Compositional ideas behind Fuga I</h2>
+<div class="outline-text-2" id="text-org09c1a3c">
 <p>
 This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).<br />
 <br />
@@ -363,8 +179,8 @@ This is a personal note of the musical ideas that were used in the composition o
 </div>
 </div>
 
-<div id="outline-container-org3279e51" class="outline-2">
-<h2 id="org3279e51"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-orgf5ec5be" class="outline-2">
+<h2 id="orgf5ec5be"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In the composition of this fugue in D minor, the main idea was to use the <b>B-A-C-H motif</b> within the counterpoint rules of the Baroque period&#x2014;in particular in Bach's time. This means:<br />
@@ -389,39 +205,39 @@ The ideas that were used as guiding principles this fugue were as follows:<br />
 </div>
 </div>
 
-<div id="outline-container-orgb01f155" class="outline-2">
-<h2 id="orgb01f155"><span class="section-number-2">2</span> Music/Score</h2>
+<div id="outline-container-org79c5aff" class="outline-2">
+<h2 id="org79c5aff"><span class="section-number-2">2</span> Music/Score</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 The score can be found below, and the fugue can be played here:<br />
 </p>
  <audio controls autoplay>
-  <source src="./docs/assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
+  <source src="./assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio> 
 
 <p alt="Fuga I image" title="Fuga I" align="center">
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-1.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga_I-2.png" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-1.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga_I-2.png" /><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org35dae4d" class="outline-2">
-<h2 id="org35dae4d"><span class="section-number-2">3</span> Structural analysis</h2>
+<div id="outline-container-org7233148" class="outline-2">
+<h2 id="org7233148"><span class="section-number-2">3</span> Structural analysis</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-The structure diagram is shown in Figure <a href="#org6da242d">1</a>. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection <a href="#orgeb8d7e9">3.2</a>. The structure of the fugue with entries and episodes are shown on the <a href="#org5b89d7d">first score</a>. The highlighted subject,<br />
-countersubjects and the inverted counterpoint are detailed on the <a href="#orge6f90b4">second score</a>.<br />
+The structure diagram is shown in Figure <a href="#org913a4d3">1</a>. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection <a href="#orgbcee749">3.2</a>. The structure of the fugue with entries and episodes are shown on the <a href="#org389e5f1">first score</a>. The highlighted subject,<br />
+countersubjects and the inverted counterpoint are detailed on the <a href="#orgf42f4e9">second score</a>.<br />
 </p>
 </div>
 
-<div id="outline-container-org22dfd64" class="outline-3">
-<h3 id="org22dfd64"><span class="section-number-3">3.1</span> Structure diagram</h3>
+<div id="outline-container-org52fd0d0" class="outline-3">
+<h3 id="org52fd0d0"><span class="section-number-3">3.1</span> Structure diagram</h3>
 <div class="outline-text-3" id="text-3-1">
 
-<div id="org6da242d" class="figure">
-<p><img src="./docs/assets/images/fuga_1/structure_table/fuga_1-analysis.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
+<div id="org913a4d3" class="figure">
+<p><img src="./assets/images/fuga_1/structure_table/fuga_1-analysis.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
 </p>
 <p><span class="figure-number">Figure 1: </span>Structure diagram</p>
 </div>
@@ -434,38 +250,38 @@ There is a notable deceptive cadence in measure 5 (V &rarr; VI [I]) and a quite 
 </div>
 </div>
 
-<div id="outline-container-orgeb8d7e9" class="outline-3">
-<h3 id="orgeb8d7e9"><span class="section-number-3">3.2</span> Score analysis</h3>
+<div id="outline-container-orgbcee749" class="outline-3">
+<h3 id="orgbcee749"><span class="section-number-3">3.2</span> Score analysis</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-org5b89d7d" class="outline-4">
-<h4 id="org5b89d7d"><span class="section-number-4">3.2.1</span> Entries/episodes</h4>
+<div id="outline-container-org389e5f1" class="outline-4">
+<h4 id="org389e5f1"><span class="section-number-4">3.2.1</span> Entries/episodes</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center">
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-analyse-structure-1.png" alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center" /><br />
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-analyse-structure-2.png" alt="Fuga_I-analyse-structure-2.png" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-structure-1.png" alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-structure-2.png" alt="Fuga_I-analyse-structure-2.png" /><br />
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge6f90b4" class="outline-4">
-<h4 id="orge6f90b4"><span class="section-number-4">3.2.2</span> Subjects/countersujects and invertible counterpoint</h4>
+<div id="outline-container-orgf42f4e9" class="outline-4">
+<h4 id="orgf42f4e9"><span class="section-number-4">3.2.2</span> Subjects/countersujects and invertible counterpoint</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center">
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-1.png" alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center" /><br />
-<img src="./docs/assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-2.png" alt="Fuga_I-analyse-sujets+counterpoint-2.png" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-1.png" alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-2.png" alt="Fuga_I-analyse-sujets+counterpoint-2.png" /><br />
 </p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org563648f" class="outline-2">
-<h2 id="org563648f"><span class="section-number-2">4</span> Specific details</h2>
+<div id="outline-container-orgdb7ce9c" class="outline-2">
+<h2 id="orgdb7ce9c"><span class="section-number-2">4</span> Specific details</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgb00e251" class="outline-3">
-<h3 id="orgb00e251"><span class="section-number-3">4.1</span> Zenith/nadir of the piece</h3>
+<div id="outline-container-orgab0e053" class="outline-3">
+<h3 id="orgab0e053"><span class="section-number-3">4.1</span> Zenith/nadir of the piece</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 The piece has a brief central part in the relative major (F major). The zenith of this fugue is in this F major section, which is generally in the higher pitch registry. The D minor section, in contrast, is much more grounded in the lower pitch registry.<br />
@@ -473,8 +289,8 @@ The piece has a brief central part in the relative major (F major). The zenith o
 </div>
 </div>
 
-<div id="outline-container-orgdb2d18a" class="outline-3">
-<h3 id="orgdb2d18a"><span class="section-number-3">4.2</span> The strong-beat tritone in the lower voices</h3>
+<div id="outline-container-org787568a" class="outline-3">
+<h3 id="org787568a"><span class="section-number-3">4.2</span> The strong-beat tritone in the lower voices</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 In measure 9 (episode 2-1), the two lower voices form a tritone on the very first beat (<b>E</b> and \(\textbf{B}\flat\)) which is not allowed in principle (the fact that the dissonant interval is with the bass AND the fact that the dissonance is on the first beat). This is the only place in this fugue where such a dissonance occur, and this is to stress the B-A-C-H motif that enters with an augmentation with respect to the subject.<br />
@@ -482,12 +298,12 @@ In measure 9 (episode 2-1), the two lower voices form a tritone on the very firs
 </div>
 </div>
 
-<div id="outline-container-orge3ca881" class="outline-3">
-<h3 id="orge3ca881"><span class="section-number-3">4.3</span> German sixth (übermässiger Quintsextakkord)</h3>
+<div id="outline-container-orge066c70" class="outline-3">
+<h3 id="orge066c70"><span class="section-number-3">4.3</span> German sixth (übermässiger Quintsextakkord)</h3>
 <div class="outline-text-3" id="text-4-3">
 
-<div id="org6563675" class="figure">
-<p><img src="./docs/assets/images/fuga_1/german_sixth.png" alt="german_sixth.png" /><br />
+<div id="org916e4a8" class="figure">
+<p><img src="./assets/images/fuga_1/german_sixth.png" alt="german_sixth.png" /><br />
 </p>
 <p><span class="figure-number">Figure 2: </span>(Suggested) German sixth chord without the fifth.</p>
 </div>
@@ -506,12 +322,12 @@ The <b>D\(\sharp\)</b> (<b>Dis</b>) suggests the <b>VII</b> degree of <b>E</b>, 
 </div>
 </div>
 
-<div id="outline-container-org67c7b4f" class="outline-3">
-<h3 id="org67c7b4f"><span class="section-number-3">4.4</span> Double sequence</h3>
+<div id="outline-container-org841180d" class="outline-3">
+<h3 id="org841180d"><span class="section-number-3">4.4</span> Double sequence</h3>
 <div class="outline-text-3" id="text-4-4">
 
-<div id="org46ebb2b" class="figure">
-<p><img src="./docs/assets/images/fuga_1/double_sequence.png" alt="double_sequence.png" /><br />
+<div id="orga713465" class="figure">
+<p><img src="./assets/images/fuga_1/double_sequence.png" alt="double_sequence.png" /><br />
 </p>
 <p><span class="figure-number">Figure 3: </span>The double sequence with the pattern and imitative sequence used in all the voices.</p>
 </div>
@@ -525,8 +341,8 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 </p>
 
 
-<div id="org887c18a" class="figure">
-<p><img src="./docs/assets/images/fuga_1/double_sequence-end.png" alt="double_sequence-end.png" /><br />
+<div id="org61ccdd0" class="figure">
+<p><img src="./assets/images/fuga_1/double_sequence-end.png" alt="double_sequence-end.png" /><br />
 </p>
 <p><span class="figure-number">Figure 4: </span>Measure wrapping up the double sequence which is again an imitative sequence.</p>
 </div>
@@ -538,20 +354,16 @@ Following the idea of <i>pattern &rarr; sequence &rarr; contrast</i> (or <i>idea
 </div>
 </div>
 
-<div id="outline-container-org5d52215" class="outline-2">
-<h2 id="org5d52215"><span class="section-number-2">5</span> Appendix</h2>
+<div id="outline-container-org12c905d" class="outline-2">
+<h2 id="org12c905d"><span class="section-number-2">5</span> Appendix A: computational musicology</h2>
 <div class="outline-text-2" id="text-5">
-</div>
-<div id="outline-container-org2c3e24f" class="outline-3">
-<h3 id="org2c3e24f"><span class="section-number-3">5.1</span> Computational musicology</h3>
-<div class="outline-text-3" id="text-5-1">
 <p>
 We now analyse the fugue with <a href="https://web.mit.edu/music21/"><code>music21</code></a> (v6.7 in this appendix), a <i>python</i> package developed by MIT for computer-aided musicology.<br />
 </p>
 </div>
-<div id="outline-container-orge6781d4" class="outline-4">
-<h4 id="orge6781d4"><span class="section-number-4">5.1.1</span> Piano roll and other graphics</h4>
-<div class="outline-text-4" id="text-5-1-1">
+<div id="outline-container-org4f8bf34" class="outline-4">
+<h4 id="org4f8bf34"><span class="section-number-4">5.0.1</span> Piano roll and other graphics</h4>
+<div class="outline-text-4" id="text-5-0-1">
 <p>
 First initialise <code>music21</code>:<br />
 </p>
@@ -581,7 +393,7 @@ roll.run()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/pianoRoll.png" alt="pianoRoll.png" /><br />
+<p><img src="./assets/images/fuga_1/pianoRoll.png" alt="pianoRoll.png" /><br />
 </p>
 </div>
 
@@ -601,7 +413,7 @@ roll.run()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/pitchClass.png" alt="pitchClass.png" /><br />
+<p><img src="./assets/images/fuga_1/pitchClass.png" alt="pitchClass.png" /><br />
 </p>
 </div>
 
@@ -638,15 +450,15 @@ plt.show()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/Pitch-interpolation.png" alt="Pitch-interpolation.png" /><br />
+<p><img src="./assets/images/fuga_1/Pitch-interpolation.png" alt="Pitch-interpolation.png" /><br />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org119e5c2" class="outline-4">
-<h4 id="org119e5c2"><span class="section-number-4">5.1.2</span> Key center</h4>
-<div class="outline-text-4" id="text-5-1-2">
+<div id="outline-container-orge555ec1" class="outline-4">
+<h4 id="orge555ec1"><span class="section-number-4">5.0.2</span> Key center</h4>
+<div class="outline-text-4" id="text-5-0-2">
 <p>
 The key is found using the <a href="https://rnhart.net/articles/key-finding/">Krumhansl-Schmuckler key-finding algorithm</a> which uses the correlation coefficient<br />
 \[R = \frac{\sum\limits_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum\limits_{i=1}^{n}(x_i - \bar{x})^2 \sum\limits_{i=1}^{n}(y_i - \bar{y})^2}}\]<br />
@@ -708,7 +520,7 @@ plt.show()
 
 
 <div class="figure">
-<p><img src="docs/assets/images/fuga_1/tonal_probability.png" alt="tonal_probability.png" /><br />
+<p><img src="assets/images/fuga_1/tonal_probability.png" alt="tonal_probability.png" /><br />
 </p>
 </div>
 
@@ -723,7 +535,7 @@ The histogram of the pitch classes:<br />
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/histogram-pitchClass.png" alt="histogram-pitchClass.png" /><br />
+<p><img src="./assets/images/fuga_1/histogram-pitchClass.png" alt="histogram-pitchClass.png" /><br />
 </p>
 </div>
 
@@ -738,7 +550,7 @@ The histogram of all the pitches:<br />
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/histogram-pitch.png" alt="histogram-pitch.png" /><br />
+<p><img src="./assets/images/fuga_1/histogram-pitch.png" alt="histogram-pitch.png" /><br />
 </p>
 </div>
 
@@ -756,7 +568,7 @@ scatter.run()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/Scatter-pitchClass.png" alt="Scatter-pitchClass.png" /><br />
+<p><img src="./assets/images/fuga_1/Scatter-pitchClass.png" alt="Scatter-pitchClass.png" /><br />
 </p>
 </div>
 
@@ -771,7 +583,7 @@ The scatter plot with the pitch class by quarter length:<br />
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength.png" alt="scatter-pitchClass-quarterLength.png" /><br />
+<p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength.png" alt="scatter-pitchClass-quarterLength.png" /><br />
 </p>
 </div>
 
@@ -786,15 +598,15 @@ And in 3D:<br />
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png" alt="scatter-pitchClass-quarterLength-3D.png" /><br />
+<p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png" alt="scatter-pitchClass-quarterLength-3D.png" /><br />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org805be31" class="outline-4">
-<h4 id="org805be31"><span class="section-number-4">5.1.3</span> Chords</h4>
-<div class="outline-text-4" id="text-5-1-3">
+<div id="outline-container-org74264ca" class="outline-4">
+<h4 id="org74264ca"><span class="section-number-4">5.0.3</span> Chords</h4>
+<div class="outline-text-4" id="text-5-0-3">
 <p>
 We now combine the three voices into <code>Chord</code> objects:<br />
 </p>
@@ -822,7 +634,7 @@ fugue.measures(0,12).show()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/romanAnalysis.png" alt="romanAnalysis.png" /><br />
+<p><img src="./assets/images/fuga_1/romanAnalysis.png" alt="romanAnalysis.png" /><br />
 </p>
 </div>
 
@@ -870,7 +682,7 @@ onlyChords.measures(0,37).show()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/romanAnalysis-onlyChords.png" alt="romanAnalysis-onlyChords.png" /><br />
+<p><img src="./assets/images/fuga_1/romanAnalysis-onlyChords.png" alt="romanAnalysis-onlyChords.png" /><br />
 </p>
 </div>
 
@@ -908,9 +720,9 @@ With the chords, it is possible to analyse the key of each measures:<br />
 </div>
 </div>
 
-<div id="outline-container-org9b8d3ea" class="outline-3">
-<h3 id="org9b8d3ea"><span class="section-number-3">5.2</span> Fractal intervallic scaling in Fuga I</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-org4b0048d" class="outline-2">
+<h2 id="org4b0048d"><span class="section-number-2">6</span> Appendix B: fractal intervallic scaling</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> <sup>, </sup><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.<br />
 </p>
@@ -923,7 +735,7 @@ Here, we investigate the possibility of having an interval-related scaling law i
 Mathematically, with the interval (semitone) given by \(i\) and its count given by \(N\) this equates to saying that<br />
 </p>
 \begin{equation*}
-N(i) = c \, \left( 2^{i/12} \right)^{d_{f}}
+N(i) = c \, \left( 2^{i/12} \right)^{-d_{f}}
 \end{equation*}
 
 \begin{equation*}
@@ -931,7 +743,7 @@ N(i) = c \, \left( 2^{i/12} \right)^{d_{f}}
 \end{equation*}
 
 <p>
-where we consider the "size" of the interval by the function \(2^{i/12}\) to account for the fact that its frequency is logarithmic. The \(d_{f}\) denotes the fractal dimension. Ultimately this is related to the following statement: let \(P(\varepsilon_i)\) be the probability density of elements of size \(\varepsilon_i\) with \(\sum\limits_{i=1}^{n} P(\varepsilon_i) = 1\) in a set of \(n\) elements. If there is a power-law distribution, then there is a scaling factor \(\mu = \frac{\varepsilon_i}{\varepsilon_{i+1}}\) such that \(P(\varepsilon_{i+1}) = \mu^{d_{f}} P(\varepsilon_{i})\)<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup>.<br />
+where we consider the "size" of the interval by the function \(2^{i/12}\) to account for the fact that its frequency is logarithmic. The \(d_{f}\) denotes the fractal dimension, and the minus sign in the first equation is a matter of choice &#x2013; we consider the pitch period instead of frequency, and this only changes the sign of \(d_{f}\) that we obtain at the end. Ultimately this is related to the following statement: let \(P(\varepsilon_i)\) be the probability density of elements of size \(\varepsilon_i\) with \(\sum\limits_{i=1}^{n} P(\varepsilon_i) = 1\) in a set of \(n\) elements. If there is a power-law distribution, then there is a scaling factor \(\mu = \frac{\varepsilon_i}{\varepsilon_{i+1}}\) such that \(P(\varepsilon_{i+1}) = \mu^{d_{f}} P(\varepsilon_{i})\)<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup>.<br />
 </p>
 
 <p>
@@ -1122,7 +934,7 @@ plt.show()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/fractal_AllVoices.png" alt="fractal_AllVoices.png" /><br />
+<p><img src="./assets/images/fuga_1/fractal_AllVoices.png" alt="fractal_AllVoices.png" /><br />
 </p>
 </div>
 
@@ -1170,7 +982,7 @@ plt.show()
 
 
 <div class="figure">
-<p><img src="./docs/assets/images/fuga_1/fractal_individualVoices.png" alt="fractal_individualVoices.png" /><br />
+<p><img src="./assets/images/fuga_1/fractal_individualVoices.png" alt="fractal_individualVoices.png" /><br />
 </p>
 </div>
 
@@ -1419,14 +1231,13 @@ The selected version for the analysis with all the voices (red line) assumes tha
 </p>
 
 <p align="right">
-<a href="#orgea80e75" align="right">Back to the sitemap</a> <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup><br />
+<a href="#org1a488df" align="right">Back to the sitemap</a> <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup><br />
 </p>
 
 <p>
 <br />
 <br />
 </p>
-</div>
 </div>
 </div>
 <div id="footnotes">
