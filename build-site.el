@@ -24,13 +24,13 @@
 (require 'org)
 (org-link-set-parameters
  "color"
- (lambda (path)
+ :follow (lambda (path)
    (message (concat "color "
                     (progn (add-text-properties
                             0 (length path)
                             (list 'face `((t (:foreground ,path))))
                             path) path))))
- (lambda (path desc format)
+ :export (lambda (path desc format)
    (cond
     ((eq format 'html)
      (format "<span style=\"color:%s;\">%s</span>" path desc))
