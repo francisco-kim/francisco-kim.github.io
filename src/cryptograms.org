@@ -3,16 +3,10 @@
 # org-html-table-use-header-tags-for-first-column: t
 # End:
 
-#+TITLE: Francisco's musical notebook
-#+AUTHOR: Dr. Francisco Kim
-#+EMAIL: francisco.kim@alumni.ethz.ch
-#+DESCRIPTION: Musical analysis of the Fuga I.
+#+TITLE: Musical cryptograms
+#+DESCRIPTION: Some musical cryptograms written by Francisco Kim.
 #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
-#+HTML_HEAD: <style> #content{max-width:920px;}</style>
-#+HTML_HEAD: <style> p{max-width:870px;}</style>
-#+HTML_HEAD: <style> li{max-width:870px;}</style>
-#+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
-#+startup: shrink
+#+SETUPFILE: common.setup
 
 #+ATTR_HTML: :align right
 *Francisco Kim*

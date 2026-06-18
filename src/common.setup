@@ -1,0 +1,13 @@
+# -*- mode: org; -*-
+# Shared header for every page. Include it from a page with:
+#   #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
+#   #+SETUPFILE: common.setup
+# (a page only needs its own #+TITLE and #+DESCRIPTION on top of these.)
+
+#+AUTHOR: Dr. Francisco Kim
+#+EMAIL: francisco.kim@alumni.ethz.ch
+#+HTML_HEAD: <style> #content{max-width:920px;}</style>
+#+HTML_HEAD: <style> p{max-width:870px;}</style>
+#+HTML_HEAD: <style> li{max-width:870px;}</style>
+#+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
+#+startup: shrink

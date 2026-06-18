@@ -4,36 +4,35 @@
 # End:
 
 #+TITLE: Francisco's musical notebook
-#+AUTHOR: Dr. Francisco Kim
-#+EMAIL: francisco.kim@alumni.ethz.ch
-#+DESCRIPTION: Musical analysis of the Fuga I.
+#+DESCRIPTION: Francisco Kim's musical notebook: compositions and music-related notes.
 #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
-#+HTML_HEAD: <style> #content{max-width:920px;}</style>
-#+HTML_HEAD: <style> p{max-width:870px;}</style>
-#+HTML_HEAD: <style> li{max-width:870px;}</style>
-#+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil
-#+startup: shrink
-
-# #+ATTR_HTML: :align right
-# *Francisco Kim*
+#+SETUPFILE: common.setup
 
 Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains notes, scribbles and doodles for my personal use, but you are very welcome to have a look at them!
 \\
 
+* Featured: Fuga I
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+A three-voice fugue in D minor built on the *B-A-C-H motif* within the counterpoint rules of the Baroque period. Listen below, then read the full write-up, which includes a musicological, computational and mathematical analysis of the piece.
+
+#+BEGIN_EXPORT html
+<audio controls>
+  <source src="./assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+#+END_EXPORT
+
+[[file:fuga_1.org][Read the full analysis of Fuga I →]]
+
+\\
+\\
+
 * Sitemap
-:PROPERTIES:  
-:UNNUMBERED: t  
-:END:  
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 
 #+INCLUDE: ToC.suborg
-
-\\
-\\
-
-* Compositional ideas behind Fuga I
-:PROPERTIES:  
-:UNNUMBERED: t  
-:END:  
-
-#+INCLUDE: fuga_1.suborg :minlevel 1
-

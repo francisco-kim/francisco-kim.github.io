@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Compositional ideas behind Fuga I</title>
+<meta name="author" content="Dr. Francisco Kim" />
+<meta name="description" content="Musicological, computational and mathematical analysis of the Fuga I." />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<style> #content{max-width:920px;}</style>
+<style> p{max-width:870px;}</style>
+<style> li{max-width:870px;}</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Compositional ideas behind Fuga I</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0836edc">Sitemap</a>
+<ul>
+<li><a href="#orgf1b63cc">♪&nbsp; Compositional ideas behind my Fuga I</a></li>
+<li><a href="#org468d8e2">♪&nbsp; Some of my cryptograms to solve!</a></li>
+</ul>
+</li>
+<li><a href="#org92cecae">Compositional ideas behind Fuga I</a></li>
+<li><a href="#org30a875d">1. Introduction</a></li>
+<li><a href="#orgdf67e4a">2. Music/Score</a></li>
+<li><a href="#org2f38600">3. Structural analysis</a>
+<ul>
+<li><a href="#org6f45130">3.1. Structure diagram</a></li>
+<li><a href="#org66837e0">3.2. Score analysis</a>
+<ul>
+<li><a href="#orgc62c0af">3.2.1. Entries/episodes</a></li>
+<li><a href="#org64dd598">3.2.2. Subjects/countersujects and invertible counterpoint</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1afd6c1">4. Specific details</a>
+<ul>
+<li><a href="#org8e08871">4.1. Zenith/nadir of the piece</a></li>
+<li><a href="#orgf6dbdda">4.2. The strong-beat tritone in the lower voices</a></li>
+<li><a href="#org555593d">4.3. German sixth (übermässiger Quintsextakkord)</a></li>
+<li><a href="#org1e0bd45">4.4. Double sequence</a></li>
+</ul>
+</li>
+<li><a href="#orga7ebb64">5. Appendix A: computational musicology</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orgc8591ab">5.0.1. Piano roll and other graphics</a></li>
+<li><a href="#org651fcf2">5.0.2. Key center</a></li>
+<li><a href="#org5582bf3">5.0.3. Chords</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org330cc13">6. Appendix B: fractal intervallic scaling</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0836edc" class="outline-2">
+<h2 id="org0836edc">Sitemap</h2>
+<div class="outline-text-2" id="text-org0836edc">
+</div>
+<div id="outline-container-orgf1b63cc" class="outline-3">
+<h3 id="orgf1b63cc">♪&nbsp; <a href="fuga_1.html">Compositional ideas behind my Fuga I</a></h3>
+<div class="outline-text-3" id="text-orgf1b63cc">
+</div>
+</div>
+<div id="outline-container-org468d8e2" class="outline-3">
+<h3 id="org468d8e2">♪&nbsp; <a href="cryptograms.html">Some of my cryptograms to solve!</a></h3>
+<div class="outline-text-3" id="text-org468d8e2">
+<p>
+<br />
+<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org92cecae" class="outline-2">
+<h2 id="org92cecae">Compositional ideas behind Fuga I</h2>
+<div class="outline-text-2" id="text-org92cecae">
+<p>
+This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).<br />
+<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org30a875d" class="outline-2">
+<h2 id="org30a875d"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+In the composition of this fugue in D minor, the main idea was to use the <b>B-A-C-H motif</b> within the counterpoint rules of the Baroque period&#x2014;in particular in Bach's time. This means:<br />
+</p>
+<ul class="org-ul">
+<li>avoid any parallel fifths/octaves and avoid direct fifths/octaves,<br /></li>
+<li>avoid dissonances on strong/accented beats unless it is an essential dissonance<br /></li>
+<li>resolve the melodies correctly (vertically and horizontally), e.g. the \(^{6}_{4}\) chords (2nd inversion triads) and the \(^{2}\) chords (3rd inversion seventh chords),<br /></li>
+</ul>
+<p>
+among other general rules.<br />
+</p>
+
+<p>
+The ideas that were used as guiding principles this fugue were as follows:<br />
+</p>
+<ul class="org-ul">
+<li>Use and explore extensively the B-A-C-H motif and try to render this motif as melodious as possible<br /></li>
+<li>Have a well-thought and well-built structure<br /></li>
+<li>Employ the double/triple (invertible) counterpoint as much as possible.<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf67e4a" class="outline-2">
+<h2 id="orgdf67e4a"><span class="section-number-2">2.</span> Music/Score</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The score can be found below, and the fugue can be played here:<br />
+</p>
+ <audio controls autoplay>
+  <source src="./assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+
+<p alt="Fuga I image" title="Fuga I" align="center">
+<img src="./assets/images/fuga_1/scores/Fuga_I-1.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga_I-2.png" /><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org2f38600" class="outline-2">
+<h2 id="org2f38600"><span class="section-number-2">3.</span> Structural analysis</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+The structure diagram is shown in Figure <a href="#orgdc69c9c">1</a>. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection <a href="#org66837e0">3.2</a>. The structure of the fugue with entries and episodes are shown on the <a href="#orgc62c0af">first score</a>. The highlighted subject,<br />
+countersubjects and the inverted counterpoint are detailed on the <a href="#org64dd598">second score</a>.<br />
+</p>
+</div>
+<div id="outline-container-org6f45130" class="outline-3">
+<h3 id="org6f45130"><span class="section-number-3">3.1.</span> Structure diagram</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div id="orgdc69c9c" class="figure">
+<p><img src="./assets/images/fuga_1/structure_table/fuga_1-analysis.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
+</p>
+<p><span class="figure-number">Figure 1: </span>Structure diagram</p>
+</div>
+
+<p>
+This fugue can be divided in three parts: measures 1-12 (in which all the voices enter successively, i.e., it is an exposition), measures 13-14 and measures 27-37. The final part of the fugue contains a stretto with an augmentation (in the upper voice) and a coda with a short (and repeated) episode that precedes it and that serves as a two-voice cadence. There is only one perfect authentic cadence in this piece with all the three voices, and it occurs at the end of the fugue. The voices collapse to just one voice at the very beginning of the coda, before opening up again with the successive entries of the subject in each voice.<br />
+<br />
+There is a notable deceptive cadence in measure 5 (V &rarr; VI [I]) and a quite brutal and sudden transition from F major to D minor in measure 24, whereas there is (only) one perfect authentic cadence in this piece with all the three voices&#x2013;it occurs at the end of the fugue which finishes with an Picardy third. The inverted counterpoint at the octave is profusely used in this fugue, and a voice is dropped from time to time at certain places in order to alleviate the texture of the fugue.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org66837e0" class="outline-3">
+<h3 id="org66837e0"><span class="section-number-3">3.2.</span> Score analysis</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgc62c0af" class="outline-4">
+<h4 id="orgc62c0af"><span class="section-number-4">3.2.1.</span> Entries/episodes</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center">
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-structure-1.png" alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-structure-2.png" alt="Fuga_I-analyse-structure-2.png" /><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org64dd598" class="outline-4">
+<h4 id="org64dd598"><span class="section-number-4">3.2.2.</span> Subjects/countersujects and invertible counterpoint</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center">
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-1.png" alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center" /><br />
+<img src="./assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-2.png" alt="Fuga_I-analyse-sujets+counterpoint-2.png" /><br />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1afd6c1" class="outline-2">
+<h2 id="org1afd6c1"><span class="section-number-2">4.</span> Specific details</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org8e08871" class="outline-3">
+<h3 id="org8e08871"><span class="section-number-3">4.1.</span> Zenith/nadir of the piece</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+The piece has a brief central part in the relative major (F major). The zenith of this fugue is in this F major section, which is generally in the higher pitch registry. The D minor section, in contrast, is much more grounded in the lower pitch registry.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6dbdda" class="outline-3">
+<h3 id="orgf6dbdda"><span class="section-number-3">4.2.</span> The strong-beat tritone in the lower voices</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+In measure 9 (episode 2-1), the two lower voices form a tritone on the very first beat (<b>E</b> and \(\textbf{B}\flat\)) which is not allowed in principle (the fact that the dissonant interval is with the bass AND the fact that the dissonance is on the first beat). This is the only place in this fugue where such a dissonance occur, and this is to stress the B-A-C-H motif that enters with an augmentation with respect to the subject.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org555593d" class="outline-3">
+<h3 id="org555593d"><span class="section-number-3">4.3.</span> German sixth (übermässiger Quintsextakkord)</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div id="org88921e8" class="figure">
+<p><img src="./assets/images/fuga_1/german_sixth.png" alt="german_sixth.png" /><br />
+</p>
+<p><span class="figure-number">Figure 2: </span>(Suggested) German sixth chord without the fifth.</p>
+</div>
+
+<p>
+The B-A-C-H motif is a chromatically difficult melodic/harmonic line to handle. This can give rise to many exciting melodic and harmonic possibilities in a freer setting of course, but it can be a difficult task within the rules of strict counterpoint.<br />
+</p>
+
+<p>
+This motif sounds mysterious and very eerie when the third voice hasn't entered yet, as the harmonic suggestion is not yet clear without the third voice and the chromatic voices are very dissonant. However, the entry of the third voice suggests a very interesting harmonic progression, with the middle voice (the secound countersubject) having a delayed resolution after the B-A-C-H motif (the augmented interval within the middle voice should be followed by a contrary motion first).<br />
+</p>
+
+<p>
+The <b>D\(\sharp\)</b> (<b>Dis</b>) suggests the <b>VII</b> degree of <b>E</b>, and one way of understanding this functionally is to think of it as the German sixth&#x2013;with the fifth omitted&#x2013;in the tonality of <b>E</b>, i.e., a chord with \(\sharp\text{IV}-\flat\text{VI}-\text{I (omitted)}-\text{III}\). It is then resolved in one of the traditional ways in the tonality of <b>A</b>.<br />
+</p>
+</div>
+</div>
+<div id="outline-container-org1e0bd45" class="outline-3">
+<h3 id="org1e0bd45"><span class="section-number-3">4.4.</span> Double sequence</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<div id="org0ed4561" class="figure">
+<p><img src="./assets/images/fuga_1/double_sequence.png" alt="double_sequence.png" /><br />
+</p>
+<p><span class="figure-number">Figure 3: </span>The double sequence with the pattern and imitative sequence used in all the voices.</p>
+</div>
+
+<p>
+This passage is a double sequence, where a pattern and an imitative sequence&#x2013;a sequence in which voices imitate other voices&#x2013;is again used as an (inclusive) sequence. The imitative sequence is built such that the alto/tenor voice in the middle has a dactyl against an anapaest successively: making a nod to the second half of the subject.<br />
+</p>
+
+<p>
+Harmonically, the passage goes through the cycle of fifths "downwards". At the end of each measure, the last note of the middle voice is the seventh of the chords which should be resolved downwards by a half step (scale degree <b>IV</b> should, in principle, resolve down to <b>III</b>). However, as another voice (soprano) takes over the seventh of the chord and then resolves down correctly, the middle voice can go up a step to avoid a parallel octave. In this case, this also ensures that we have an inclusive sequence (i.e., in all the voices) by a step.<br />
+</p>
+
+
+<div id="orgda6a2b9" class="figure">
+<p><img src="./assets/images/fuga_1/double_sequence-end.png" alt="double_sequence-end.png" /><br />
+</p>
+<p><span class="figure-number">Figure 4: </span>Measure wrapping up the double sequence which is again an imitative sequence.</p>
+</div>
+
+<p>
+Following the idea of <i>pattern &rarr; sequence &rarr; contrast</i> (or <i>idea - &rarr; repetition &rarr; contrast/altered repetition)</i>, the next measure pursues a different melodic motifs. However, one of them is a recall of one of the motifs from the double sequence which allows a certain continuity with the double sequence. This passage is also an imitative sequence with a series of imperfect consonances (thirds and sixths), making these three measures complex yet beautiful with a lot of structure and symmetry. They come back once more later in the fugue as a triple counterpoint.<br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga7ebb64" class="outline-2">
+<h2 id="orga7ebb64"><span class="section-number-2">5.</span> Appendix A: computational musicology</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+We now analyse the fugue with <a href="https://web.mit.edu/music21/"><code>music21</code></a> (v6.7 in this appendix), a <i>python</i> package developed by MIT for computer-aided musicology.<br />
+</p>
+</div>
+<div id="outline-container-orgc8591ab" class="outline-4">
+<h4 id="orgc8591ab"><span class="section-number-4">5.0.1.</span> Piano roll and other graphics</h4>
+<div class="outline-text-4" id="text-5-0-1">
+<p>
+First initialise <code>music21</code>:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">from</span> music21 <span class="org-keyword">import</span> <span class="org-operator">*</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">environment.set('musescoreDirectPNGPath', '~/.myscript/MuseScore-3.6.2-x86_64.AppImage')</span>
+
+<span class="org-variable-name">path</span> <span class="org-operator">=</span> <span class="org-string">'../music21/Fuga I analysis with music21.musicxml'</span>
+<span class="org-variable-name">fugue</span> <span class="org-operator">=</span> converter.parse(path)
+</pre>
+</div>
+
+<p>
+We can then plot the piano roll:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-comment-delimiter"># </span><span class="org-comment">fugue.plot('pianoroll')</span>
+
+<span class="org-variable-name">roll</span> <span class="org-operator">=</span> graph.plot.HorizontalBarPitchSpaceOffset(fugue)
+roll.<span class="org-variable-name">title</span> <span class="org-operator">=</span> <span class="org-string">'Piano roll of Fuga I'</span>
+roll.<span class="org-variable-name">figureSize</span> <span class="org-operator">=</span> (12, 6)
+roll.run()
+</pre>
+</div>
+
+
+<div id="orgab4a867" class="figure">
+<p><img src="./assets/images/fuga_1/pianoRoll.png" alt="pianoRoll.png" /><br />
+</p>
+</div>
+
+<p>
+And plot it with pitch classes this time:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-comment-delimiter"># </span><span class="org-comment">fugue.plot('pianoroll')</span>
+
+<span class="org-variable-name">roll</span> <span class="org-operator">=</span> graph.plot.HorizontalBarPitchClassOffset(fugue)
+roll.<span class="org-variable-name">title</span> <span class="org-operator">=</span> <span class="org-string">'Piano roll of Fuga I'</span>
+roll.<span class="org-variable-name">figureSize</span> <span class="org-operator">=</span> (12, 6)
+roll.run()
+</pre>
+</div>
+
+
+<div id="org14b4dcb" class="figure">
+<p><img src="./assets/images/fuga_1/pitchClass.png" alt="pitchClass.png" /><br />
+</p>
+</div>
+
+<p>
+By using the spline interpolation, we can plot the notes as smoothed-out curves:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">from</span> scipy <span class="org-keyword">import</span> interpolate
+
+<span class="org-variable-name">fig</span> <span class="org-operator">=</span> plt.figure()
+<span class="org-variable-name">subplot</span> <span class="org-operator">=</span> fig.add_subplot(1, 1, 1)
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(fugue.parts)):
+    <span class="org-variable-name">top</span> <span class="org-operator">=</span> fugue.parts[i].flat.notes
+    <span class="org-variable-name">y</span> <span class="org-operator">=</span> [n.pitch.ps <span class="org-keyword">for</span> n <span class="org-keyword">in</span> top]
+    <span class="org-variable-name">x</span> <span class="org-operator">=</span> [n.offset <span class="org-operator">+</span> n.quarterLength<span class="org-operator">/</span>2.0 <span class="org-keyword">for</span> n <span class="org-keyword">in</span> top]
+
+    <span class="org-variable-name">tick</span> <span class="org-operator">=</span> interpolate.splrep(x, y, s<span class="org-operator">=</span>0)
+    <span class="org-variable-name">xnew</span> <span class="org-operator">=</span> np.arange(x[0], <span class="org-builtin">max</span>(x), 0.01)
+    <span class="org-variable-name">ynew</span> <span class="org-operator">=</span> interpolate.splev(xnew, tick, der<span class="org-operator">=</span>0)
+
+    subplot.plot(xnew, ynew)
+    subplot.spines[<span class="org-string">'top'</span>].set_color(<span class="org-string">'none'</span>)
+    subplot.spines[<span class="org-string">'right'</span>].set_color(<span class="org-string">'none'</span>)
+
+plt.title(<span class="org-string">'Fuga I motion'</span>)
+
+plt.show()
+</pre>
+</div>
+
+
+<div id="org2f669ff" class="figure">
+<p><img src="./assets/images/fuga_1/Pitch-interpolation.png" alt="Pitch-interpolation.png" /><br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org651fcf2" class="outline-4">
+<h4 id="org651fcf2"><span class="section-number-4">5.0.2.</span> Key center</h4>
+<div class="outline-text-4" id="text-5-0-2">
+<p>
+The key is found using the <a href="https://rnhart.net/articles/key-finding/">Krumhansl-Schmuckler key-finding algorithm</a> which uses the correlation coefficient<br />
+\[R = \frac{\sum\limits_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum\limits_{i=1}^{n}(x_i - \bar{x})^2 \sum\limits_{i=1}^{n}(y_i - \bar{y})^2}}\]<br />
+in which one coordinate is the <b>profile</b> of each note in a major or minor key and the other coordinate is the <b>total duration</b> of each pitch class. The profiles have been empirically established values.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">tonality</span> <span class="org-operator">=</span> fugue.analyze(<span class="org-string">'key'</span>)
+tonality
+</pre>
+</div>
+
+<pre class="example">
+&lt;music21.key.Key of d minor&gt;
+</pre>
+
+<p>
+The correlation coefficient is then given by<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">tonality.correlationCoefficient
+</pre>
+</div>
+
+<pre class="example">
+# Out[213]:
+: 0.9486855347153584
+</pre>
+
+
+<p>
+The correlation coefficient of other candidate keys:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+plt.figure(figsize<span class="org-operator">=</span>(12, 6))
+
+<span class="org-variable-name">alternateKeys</span> <span class="org-operator">=</span> [tonality] <span class="org-operator">+</span> tonality.alternateInterpretations
+
+<span class="org-variable-name">keys</span> <span class="org-operator">=</span> [<span class="org-builtin">str</span>(alternateKeys[i]).split()[0] <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(alternateKeys))]
+<span class="org-variable-name">corrCoeffs</span> <span class="org-operator">=</span> [alternateKeys[i].correlationCoefficient <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(alternateKeys))]
+
+<span class="org-variable-name">xPos</span> <span class="org-operator">=</span> np.arange(<span class="org-builtin">len</span>(keys))
+plt.xticks(xPos, keys)
+
+plt.xlabel(<span class="org-string">'Key'</span>)
+plt.ylabel(<span class="org-string">'Correlation coefficient'</span>)
+plt.title(<span class="org-string">'Correlation coefficients of the candidate keys'</span>)
+plt.tick_params(axis <span class="org-operator">=</span> <span class="org-string">"x"</span>, bottom <span class="org-operator">=</span> <span class="org-constant">False</span>)
+
+plt.bar(xPos, corrCoeffs, align<span class="org-operator">=</span><span class="org-string">'center'</span>, width<span class="org-operator">=</span>0.8)
+
+plt.show()
+</pre>
+</div>
+
+
+<div id="org5d9fe91" class="figure">
+<p><img src="assets/images/fuga_1/tonal_probability.png" alt="tonal_probability.png" /><br />
+</p>
+</div>
+
+<p>
+The histogram of the pitch classes:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">fugue.plot(<span class="org-string">'histogram'</span>, <span class="org-string">'pitchClass'</span>)
+</pre>
+</div>
+
+
+<div id="org814caaf" class="figure">
+<p><img src="./assets/images/fuga_1/histogram-pitchClass.png" alt="histogram-pitchClass.png" /><br />
+</p>
+</div>
+
+<p>
+The histogram of all the pitches:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">fugue.plot(<span class="org-string">'histogram'</span>, <span class="org-string">'pitch'</span>)
+</pre>
+</div>
+
+
+<div id="org04c0758" class="figure">
+<p><img src="./assets/images/fuga_1/histogram-pitch.png" alt="histogram-pitch.png" /><br />
+</p>
+</div>
+
+<p>
+The scatter plot with measures and pitch classes:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">scatter</span> <span class="org-operator">=</span> graph.plot.ScatterPitchClassOffset(fugue)
+scatter.<span class="org-variable-name">title</span> <span class="org-operator">=</span> <span class="org-string">'Fuga I and its notes'</span>
+scatter.<span class="org-variable-name">figureSize</span> <span class="org-operator">=</span> (12, 6)
+scatter.run()
+</pre>
+</div>
+
+
+<div id="org34c76e4" class="figure">
+<p><img src="./assets/images/fuga_1/Scatter-pitchClass.png" alt="Scatter-pitchClass.png" /><br />
+</p>
+</div>
+
+<p>
+The scatter plot with the pitch class by quarter length:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">fugue.plot(<span class="org-string">'scatter'</span>, <span class="org-string">'pitchClass'</span>, <span class="org-string">'quarterLength'</span>)
+</pre>
+</div>
+
+
+<div id="org66fda51" class="figure">
+<p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength.png" alt="scatter-pitchClass-quarterLength.png" /><br />
+</p>
+</div>
+
+<p>
+And in 3D:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">fugue.plot(<span class="org-string">'3dbars'</span>)
+</pre>
+</div>
+
+
+<div id="org46d618b" class="figure">
+<p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png" alt="scatter-pitchClass-quarterLength-3D.png" /><br />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5582bf3" class="outline-4">
+<h4 id="org5582bf3"><span class="section-number-4">5.0.3.</span> Chords</h4>
+<div class="outline-text-4" id="text-5-0-3">
+<p>
+We now combine the three voices into <code>Chord</code> objects:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-comment-delimiter"># </span><span class="org-comment">Chordify fugue</span>
+<span class="org-variable-name">chords</span> <span class="org-operator">=</span> fugue.chordify()
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Insert chords in fugue</span>
+fugue.insert(0, chords)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Chords closed position</span>
+<span class="org-keyword">for</span> c <span class="org-keyword">in</span> chords.recurse().getElementsByClass(<span class="org-string">'Chord'</span>):
+    c.closedPosition(forceOctave<span class="org-operator">=</span>4, inPlace<span class="org-operator">=</span><span class="org-constant">True</span>)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Add Roman numeral analysis</span>
+<span class="org-keyword">for</span> c <span class="org-keyword">in</span> chords.recurse().getElementsByClass(<span class="org-string">'Chord'</span>):
+    <span class="org-variable-name">rn</span> <span class="org-operator">=</span> roman.romanNumeralFromChord(c, key.Key(<span class="org-string">'d'</span>))
+    c.addLyric(<span class="org-builtin">str</span>(rn.figure))
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Show</span>
+fugue.measures(0,12).show()
+</pre>
+</div>
+
+
+<div id="org7bcd07c" class="figure">
+<p><img src="./assets/images/fuga_1/romanAnalysis.png" alt="romanAnalysis.png" /><br />
+</p>
+</div>
+
+<p>
+One possibility would be as follows:<br />
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">chordsFlat</span> <span class="org-operator">=</span> chords.flat
+<span class="org-variable-name">onlyChords</span> <span class="org-operator">=</span> chordsFlat.getElementsByClass(<span class="org-string">'Chord'</span>)
+
+<span class="org-variable-name">displayPart</span> <span class="org-operator">=</span> stream.Part(<span class="org-builtin">id</span><span class="org-operator">=</span><span class="org-string">'displayPart'</span>)
+
+<span class="org-keyword">def</span> <span class="org-function-name">appendChordPairs</span>(thisChord, nextChord):
+<span class="org-comment-delimiter">#    </span><span class="org-comment">if ((thisChord.isTriad() is True or</span>
+<span class="org-comment-delimiter">#            </span><span class="org-comment">thisChord.isSeventh() is True) and</span>
+<span class="org-comment-delimiter">#                </span><span class="org-comment">thisChord.root().name == 'D'):</span>
+    <span class="org-variable-name">closePositionThisChord</span> <span class="org-operator">=</span> thisChord.closedPosition(forceOctave<span class="org-operator">=</span>4)
+    <span class="org-variable-name">closePositionNextChord</span> <span class="org-operator">=</span> nextChord.closedPosition(forceOctave<span class="org-operator">=</span>4)
+
+    <span class="org-variable-name">m</span> <span class="org-operator">=</span> stream.Measure()
+    m.append(closePositionThisChord)
+    m.append(closePositionNextChord)
+    displayPart.append(m)
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(onlyChords) <span class="org-operator">-</span> 1):
+    <span class="org-variable-name">thisChord</span> <span class="org-operator">=</span> onlyChords[i]
+    <span class="org-variable-name">nextChord</span> <span class="org-operator">=</span> onlyChords[i <span class="org-operator">+</span> 1]
+    appendChordPairs(thisChord, nextChord)
+
+displayPart.show()
+</pre>
+</div>
+
+<p>
+But we will do something simpler and better adapted to our case:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">chordsFlat</span> <span class="org-operator">=</span> chords.flat
+<span class="org-variable-name">onlyChords</span> <span class="org-operator">=</span> chordsFlat.getElementsByClass(<span class="org-string">'Chord'</span>)
+
+onlyChords.measures(0,37).show()
+</pre>
+</div>
+
+
+<div id="org7440bf2" class="figure">
+<p><img src="./assets/images/fuga_1/romanAnalysis-onlyChords.png" alt="romanAnalysis-onlyChords.png" /><br />
+</p>
+</div>
+
+<p>
+With the chords, it is possible to analyse the key of each measures:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">for</span> m <span class="org-keyword">in</span> chords.getElementsByClass(<span class="org-string">'Measure'</span>):
+    <span class="org-variable-name">k</span> <span class="org-operator">=</span> m.analyze(<span class="org-string">'key'</span>)
+    <span class="org-builtin">print</span>(m.number, k)
+</pre>
+</div>
+
+<pre class="example" id="orgde50cfa">
+1 a minor
+2 b- minor
+3 d minor
+4 a minor
+5 d minor
+6 g minor
+7 d minor
+8 d minor
+9 a minor
+10 D major
+11 C major
+12 F major
+13 F major
+14 g minor
+15 F major
+16 d minor
+...
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org330cc13" class="outline-2">
+<h2 id="org330cc13"><span class="section-number-2">6.</span> Appendix B: fractal intervallic scaling</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws<sup><a id="fnr.-1-Hsu" class="footref" href="#fn.-1-Hsu" role="doc-backlink">1</a></sup><sup>, </sup><sup><a id="fnr.-1-Brother" class="footref" href="#fn.-1-Brother" role="doc-backlink">2</a></sup>. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.<br />
+</p>
+
+<p>
+Here, we investigate the possibility of having an interval-related scaling law in the Fuga I. In the musical sense, the structure-related scaling might be understood easily when we think of the augmentation and the diminution of the subject, for instance. The indication that the distribution of the interval counts is fractal, however, is a bit more puzzling. This likely stems from the fact that the stepwise motion is favoured as opposed to skips and leaps.<br />
+</p>
+
+<p>
+Mathematically, with the interval (semitone) given by \(i\) and its count given by \(N\) this equates to saying that<br />
+</p>
+\begin{equation*}
+N(i) = c \, \left( 2^{i/12} \right)^{-d_{f}}
+\end{equation*}
+
+\begin{equation*}
+\Longrightarrow \quad \boxed{\log(N) = C - d_{f}\, \log(2^{i/12})}.
+\end{equation*}
+
+<p>
+where we consider the "size" of the interval by the function \(2^{i/12}\) to account for the fact that its frequency is logarithmic. The \(d_{f}\) denotes the fractal dimension, and the minus sign in the first equation is a matter of choice &#x2013; we consider the pitch period instead of frequency, and this only changes the sign of \(d_{f}\) that we obtain at the end. Ultimately this is related to the following statement: let \(P(\varepsilon_i)\) be the probability density of elements of size \(\varepsilon_i\) with \(\sum\limits_{i=1}^{n} P(\varepsilon_i) = 1\) in a set of \(n\) elements. If there is a power-law distribution, then there is a scaling factor \(\mu = \frac{\varepsilon_i}{\varepsilon_{i+1}}\) such that \(P(\varepsilon_{i+1}) = \mu^{d_{f}} P(\varepsilon_{i})\)<sup><a id="fnr.-1-Brother.2" class="footref" href="#fn.-1-Brother" role="doc-backlink">2</a></sup>.<br />
+</p>
+
+<p>
+Let us first count the number of existing intervals per voice:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">from</span> music21 <span class="org-keyword">import</span> <span class="org-operator">*</span>
+<span class="org-keyword">import</span> numpy <span class="org-keyword">as</span> np
+<span class="org-keyword">from</span> sklearn.linear_model <span class="org-keyword">import</span> LinearRegression
+<span class="org-keyword">import</span> matplotlib.pyplot <span class="org-keyword">as</span> plt
+<span class="org-keyword">from</span> collections <span class="org-keyword">import</span> Counter
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Import Fuga I</span>
+<span class="org-variable-name">path</span> <span class="org-operator">=</span> <span class="org-string">'./Fuga I analysis with music21.musicxml'</span>
+<span class="org-variable-name">fugue</span> <span class="org-operator">=</span> converter.parse(path)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Get notes &amp; intervals per voice (1, 2, 3) and then merge</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">all of them (hence length = 4).</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Voice 1: soprano (last entry) / Voice 2: tenor/alto (first entry) /</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Voice 3: bass (second entry) / Voice 4: all</span>
+<span class="org-variable-name">notes</span> <span class="org-operator">=</span> []
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(fugue.parts)):
+    <span class="org-variable-name">pitchesPerVoice</span> <span class="org-operator">=</span> fugue.parts[i].flat.notes
+    notes.append([n.pitch.ps <span class="org-keyword">for</span> n <span class="org-keyword">in</span> pitchesPerVoice])
+notes.append([note <span class="org-keyword">for</span> voice <span class="org-keyword">in</span> notes <span class="org-keyword">for</span> note <span class="org-keyword">in</span> voice])
+
+<span class="org-variable-name">intervals</span> <span class="org-operator">=</span> []
+<span class="org-keyword">for</span> voiceNotes <span class="org-keyword">in</span> notes:
+    <span class="org-variable-name">intervalsPerVoice</span> <span class="org-operator">=</span> []
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(<span class="org-builtin">list</span>(voiceNotes))<span class="org-operator">-</span>1):
+        intervalsPerVoice.append(<span class="org-builtin">abs</span>(voiceNotes[j<span class="org-operator">+</span>1]<span class="org-operator">-</span>voiceNotes[j]))
+    intervals.append(intervalsPerVoice)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Show existing intervals in the Fuga I</span>
+analysis.discrete.MelodicIntervalDiversity().countMelodicIntervals(fugue.parts)
+</pre>
+</div>
+
+<pre class="example" id="orgb8be60e">
+{'P4': [&lt;music21.interval.Interval P4&gt;, 48],
+'m2': [&lt;music21.interval.Interval m2&gt;, 190],
+'m3': [&lt;music21.interval.Interval m3&gt;, 56],
+'M2': [&lt;music21.interval.Interval M2&gt;, 264],
+'d4': [&lt;music21.interval.Interval d4&gt;, 3],
+'m6': [&lt;music21.interval.Interval m6&gt;, 11],
+'A1': [&lt;music21.interval.Interval A1&gt;, 14],
+'M6': [&lt;music21.interval.Interval M6&gt;, 15],
+'M3': [&lt;music21.interval.Interval M3&gt;, 16],
+'A2': [&lt;music21.interval.Interval A2&gt;, 3],
+'P11': [&lt;music21.interval.Interval P11&gt;, 1],
+'P5': [&lt;music21.interval.Interval P5&gt;, 8],
+'m14': [&lt;music21.interval.Interval m14&gt;, 1],
+'P8': [&lt;music21.interval.Interval P8&gt;, 5],
+'M10': [&lt;music21.interval.Interval M10&gt;, 1],
+'d5': [&lt;music21.interval.Interval d5&gt;, 1]}
+</pre>
+
+<p>
+Now count intervals for each voice:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">intervalCounts</span> <span class="org-operator">=</span> []
+<span class="org-variable-name">sortedIntervalCounts</span> <span class="org-operator">=</span> []
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(intervals)):
+    <span class="org-variable-name">intervalCount</span> <span class="org-operator">=</span> Counter(intervals[i])
+    <span class="org-variable-name">sortedIntervalCount</span> <span class="org-operator">=</span> <span class="org-builtin">sorted</span>(intervalCount.items())
+
+    intervalCounts.append(intervalCount)
+    sortedIntervalCounts.append(sortedIntervalCount)
+
+    <span class="org-builtin">print</span>(<span class="org-string">"Voice {}: {}"</span>.<span class="org-builtin">format</span>(i<span class="org-operator">+</span>1, sortedIntervalCounts[i]))
+</pre>
+</div>
+
+<pre class="example">
+Voice 1: [(0.0, 5), (1.0, 59), (2.0, 86), (3.0, 15), (4.0, 6), (5.0, 16), (8.0, 3), (9.0, 5), (17.0, 1)]
+Voice 2: [(0.0, 9), (1.0, 76), (2.0, 86), (3.0, 26), (4.0, 8), (5.0, 19), (7.0, 3), (8.0, 3), (9.0, 6), (12.0, 1), (22.0, 1)]
+Voice 3: [(0.0, 4), (1.0, 69), (2.0, 92), (3.0, 18), (4.0, 5), (5.0, 13), (6.0, 1), (7.0, 5), (8.0, 5), (9.0, 4), (12.0, 4), (16.0, 1)]
+Voice 4: [(0.0, 18), (1.0, 204), (2.0, 264), (3.0, 59), (4.0, 19), (5.0, 48), (6.0, 1), (7.0, 8), (8.0, 11), (9.0, 16), (12.0, 6), (16.0, 1), (17.0, 1), (22.0, 1)]
+</pre>
+
+
+<p>
+Let us now choose the bin size (as well as how to treat the intervals) of each voice by considering the melodies. In other words, let us take into account the melodic jump between measures 26 and 28 for the analysis of the soprano voice (voice 1), i.e., we omit the intervals larger than 9 semitones. For the tenor/alto voice (voice 2), the jump in measure 25 and the octave jump in 27 will be considered. Lastly, the bass voice (voice 3) will exclude the jump between measures 12 and 13:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-comment-delimiter"># </span><span class="org-comment">Voice 1</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Jump in measures 26-28</span>
+<span class="org-variable-name">bins1</span> <span class="org-operator">=</span> [0, 3, 6, 9]
+<span class="org-variable-name">foldedIntervals1</span> <span class="org-operator">=</span> [i <span class="org-keyword">for</span> i <span class="org-keyword">in</span> intervals[0] <span class="org-keyword">if</span> i <span class="org-operator">&lt;=</span> 9]    <span class="org-comment-delimiter"># </span><span class="org-comment">omitted after 9</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Voice 2</span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Jump in measure 25 &amp; octave jump in 27</span>
+<span class="org-variable-name">bins2</span> <span class="org-operator">=</span> [0, 3, 6, 9]
+<span class="org-variable-name">foldedIntervals2</span> <span class="org-operator">=</span> [i <span class="org-keyword">for</span> i <span class="org-keyword">in</span> intervals[1] <span class="org-keyword">if</span> i <span class="org-operator">&lt;=</span> 9]    <span class="org-comment-delimiter"># </span><span class="org-comment">omitted after 9</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Voice 3 </span>
+<span class="org-comment-delimiter"># </span><span class="org-comment">Jump in measures 12-13</span>
+<span class="org-variable-name">bins3</span> <span class="org-operator">=</span> [0, 3, 6, 9, 12]
+<span class="org-variable-name">foldedIntervals3</span> <span class="org-operator">=</span> [i <span class="org-keyword">for</span> i <span class="org-keyword">in</span> intervals[2] <span class="org-keyword">if</span> i <span class="org-operator">&lt;=</span> 12]    <span class="org-comment-delimiter"># </span><span class="org-comment">Omitted after 12</span>
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">All the voices</span>
+<span class="org-variable-name">bins4</span> <span class="org-operator">=</span> [0, 5, 10, 16]
+<span class="org-variable-name">foldedIntervals4</span> <span class="org-operator">=</span> [i <span class="org-keyword">for</span> i <span class="org-keyword">in</span> intervals[3] <span class="org-keyword">if</span> i <span class="org-operator">&lt;=</span> 16]    <span class="org-comment-delimiter"># </span><span class="org-comment">Omitted after 16</span>
+</pre>
+</div>
+
+<p>
+The bin \(0-3\), for instance, includes the interval 0 but not the interval 3. This is true for all bins except for the last bins that include the supremum. The last bins can also be stretched to accommodate the extremal intervals that are used sparingly in music.<br />
+</p>
+
+<p>
+As an example, when looking at all the melodies together after our choice of bin size and interval treatment, the following intervals remain:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">bins</span> <span class="org-operator">=</span> [bins1, bins2, bins3, bins4]
+<span class="org-variable-name">foldedIntervals</span> <span class="org-operator">=</span> [foldedIntervals1, foldedIntervals2, foldedIntervals3, foldedIntervals4]
+
+<span class="org-variable-name">newIntervalCounts</span> <span class="org-operator">=</span> [np.histogram(foldedIntervals[i], bins<span class="org-operator">=</span>bins[i])[0] <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+
+<span class="org-variable-name">newFoundIntervals</span> <span class="org-operator">=</span> []
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4):
+    <span class="org-variable-name">newIntervals</span> <span class="org-operator">=</span> []
+    <span class="org-keyword">for</span> j <span class="org-keyword">in</span> <span class="org-builtin">range</span>(<span class="org-builtin">len</span>(bins[i])<span class="org-operator">-</span>1):
+        newIntervals.append((bins[i][j] <span class="org-operator">+</span> bins[i][j<span class="org-operator">+</span>1])<span class="org-operator">/</span>2)
+    newFoundIntervals.append(newIntervals)
+
+<span class="org-builtin">sorted</span>(Counter(foldedIntervals[3]).items())
+</pre>
+</div>
+
+<pre class="example" id="org3d19eb0">
+[(0.0, 18),
+(1.0, 204),
+(2.0, 264),
+(3.0, 59),
+(4.0, 19),
+(5.0, 48),
+(6.0, 1),
+(7.0, 8),
+(8.0, 11),
+(9.0, 16),
+(12.0, 6),
+(16.0, 1)]
+</pre>
+
+<p>
+Finally, the final fractal dimension of the Fuga I is shown here:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">figIndex</span> <span class="org-operator">=</span> 3
+<span class="org-variable-name">xOrig</span> <span class="org-operator">=</span> np.array(newFoundIntervals[figIndex]).reshape((<span class="org-operator">-</span>1, 1))
+<span class="org-variable-name">f</span> <span class="org-operator">=</span> <span class="org-keyword">lambda</span> k: 2 <span class="org-operator">**</span> (k<span class="org-operator">/</span>12)
+<span class="org-variable-name">x</span> <span class="org-operator">=</span> np.log(f(xOrig))
+<span class="org-variable-name">y</span> <span class="org-operator">=</span> np.log(np.array(newIntervalCounts[figIndex]))
+
+<span class="org-variable-name">linearRegression</span> <span class="org-operator">=</span> LinearRegression()
+<span class="org-variable-name">model</span> <span class="org-operator">=</span> linearRegression.fit(x, y)
+<span class="org-variable-name">y_pred</span> <span class="org-operator">=</span> linearRegression.predict(x)
+<span class="org-variable-name">r_sq</span> <span class="org-operator">=</span> model.score(x, y)
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot</span>
+fig, (ax1) <span class="org-operator">=</span> plt.subplots(nrows<span class="org-operator">=</span>1, ncols<span class="org-operator">=</span>1, figsize <span class="org-operator">=</span> (6,4))
+
+ax1.scatter(x, y, color<span class="org-operator">=</span><span class="org-string">"black"</span>)
+ax1.plot(x, y_pred, color<span class="org-operator">=</span><span class="org-string">"blue"</span>, linewidth<span class="org-operator">=</span>3, \
+         label<span class="org-operator">=</span>r<span class="org-string">'$\log(N) = C - d_{f}\, \log(2^{i/12})$'</span>)
+
+ax1.set_xlabel(r<span class="org-string">'$\log(2^{i/12})$'</span>, fontsize<span class="org-operator">=</span>10)
+ax1.set_ylabel(r<span class="org-string">'$\log(N)$'</span>, fontsize<span class="org-operator">=</span>10)
+
+ax1.set_title(<span class="org-string">'All the voices'</span>, fontsize<span class="org-operator">=</span>12)
+ax1.text(0.9, 0.6, \
+         r<span class="org-string">'$d_{f} =$'</span> <span class="org-operator">+</span> <span class="org-builtin">str</span>(<span class="org-builtin">round</span>(<span class="org-operator">-</span>linearRegression.coef_[0], 3)) <span class="org-operator">+</span> <span class="org-string">'</span><span class="org-constant">\n</span><span class="org-string"> </span><span class="org-constant">\n</span><span class="org-string">'</span> <span class="org-operator">+</span> r<span class="org-string">'$R^{2} =$'</span> <span class="org-operator">+</span> f<span class="org-string">'</span>{r_sq:.3f}<span class="org-string">'</span>, \
+         horizontalalignment<span class="org-operator">=</span><span class="org-string">'center'</span>, verticalalignment<span class="org-operator">=</span><span class="org-string">'center'</span>, fontsize<span class="org-operator">=</span>10, transform<span class="org-operator">=</span>ax1.transAxes)
+ax1.text(0.03, 0.06, <span class="org-string">'Bins: '</span> <span class="org-operator">+</span> f<span class="org-string">'</span>{bins[figIndex]}<span class="org-string">'</span>, \
+         horizontalalignment<span class="org-operator">=</span><span class="org-string">'left'</span>, fontsize<span class="org-operator">=</span>6, transform<span class="org-operator">=</span>ax1.transAxes)
+ax1.legend(numpoints<span class="org-operator">=</span>1, loc<span class="org-operator">=</span>1, fontsize<span class="org-operator">=</span>7)
+
+plt.show()
+</pre>
+</div>
+
+
+<div id="org5568bcf" class="figure">
+<p><img src="./assets/images/fuga_1/fractal_AllVoices.png" alt="fractal_AllVoices.png" /><br />
+</p>
+</div>
+
+<p>
+We now show the anaylsis for separate voices as well, where the most coherent bin size and the interval treatment (with respect to the music structure and the musical ideas) have been selected, as mentioned above:<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">f</span> <span class="org-operator">=</span> <span class="org-keyword">lambda</span> k: 2 <span class="org-operator">**</span> (k<span class="org-operator">/</span>12)
+
+<span class="org-variable-name">xOrig</span> <span class="org-operator">=</span> [np.array(newFoundIntervals[i]).reshape((<span class="org-operator">-</span>1, 1)) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+<span class="org-variable-name">x</span> <span class="org-operator">=</span> [np.log(f(xOrig[i])) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+<span class="org-variable-name">y</span> <span class="org-operator">=</span> [np.log(np.array(newIntervalCounts[i])) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+
+<span class="org-variable-name">linearRegression</span> <span class="org-operator">=</span> [LinearRegression() <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+<span class="org-variable-name">model</span> <span class="org-operator">=</span> [linearRegression[i].fit(x[i], y[i]) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+<span class="org-variable-name">y_pred</span> <span class="org-operator">=</span> [linearRegression[i].predict(x[i]) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+<span class="org-variable-name">r_sq</span> <span class="org-operator">=</span> [model[i].score(x[i], y[i]) <span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4)]
+
+<span class="org-comment-delimiter"># </span><span class="org-comment">Plot</span>
+<span class="org-comment-delimiter">#</span><span class="org-comment">fig, axs = plt.subplots(nrows=2, ncols=2, figsize = (6,4), tight_layout = True)</span>
+<span class="org-variable-name">fig</span>, <span class="org-variable-name">axs</span> <span class="org-operator">=</span> plt.subplots(nrows<span class="org-operator">=</span>2, ncols<span class="org-operator">=</span>2, figsize <span class="org-operator">=</span> (9,6))
+fig.subplots_adjust(hspace <span class="org-operator">=</span> .6, wspace<span class="org-operator">=</span>.3)
+<span class="org-variable-name">axs</span> <span class="org-operator">=</span> axs.ravel()
+
+<span class="org-variable-name">titles</span> <span class="org-operator">=</span> [<span class="org-string">'Voice 1'</span>, <span class="org-string">'Voice 2'</span>, <span class="org-string">'Voice 3'</span>, <span class="org-string">'All the voices'</span>]
+
+<span class="org-keyword">for</span> i <span class="org-keyword">in</span> <span class="org-builtin">range</span>(4):
+    axs[i].scatter(x[i], y[i], color<span class="org-operator">=</span><span class="org-string">"black"</span>)
+    axs[i].plot(x[i], y_pred[i], color<span class="org-operator">=</span><span class="org-string">"blue"</span>, linewidth<span class="org-operator">=</span>3, \
+                label<span class="org-operator">=</span>r<span class="org-string">'$\log(N) = C - d_{f}\, \log(2^{i/12})$'</span>)
+    axs[i].set_xlabel(r<span class="org-string">'$\log(2^{i/12})$'</span>, fontsize<span class="org-operator">=</span>10)
+    axs[i].set_ylabel(r<span class="org-string">'$\log(N)$'</span>, fontsize<span class="org-operator">=</span>10)
+    axs[i].set_title(f<span class="org-string">'</span>{titles[i]}<span class="org-string">'</span>, fontsize<span class="org-operator">=</span>12)
+    axs[i].text(0.85, 0.62, \
+                r<span class="org-string">'$d_{f} =$'</span> <span class="org-operator">+</span> <span class="org-builtin">str</span>(<span class="org-builtin">round</span>(<span class="org-operator">-</span>linearRegression[i].coef_[0], 3)) <span class="org-operator">+</span> <span class="org-string">'</span><span class="org-constant">\n</span><span class="org-string"> </span><span class="org-constant">\n</span><span class="org-string">'</span> <span class="org-operator">+</span> r<span class="org-string">'$R^{2} =$'</span> <span class="org-operator">+</span> <span class="org-builtin">str</span>(<span class="org-builtin">round</span>(r_sq[i], 3)), \
+                horizontalalignment<span class="org-operator">=</span><span class="org-string">'center'</span>, verticalalignment<span class="org-operator">=</span><span class="org-string">'center'</span>, fontsize<span class="org-operator">=</span>10, transform<span class="org-operator">=</span>axs[i].transAxes)
+    axs[i].text(0.03, 0.06, <span class="org-string">'Bins: '</span> <span class="org-operator">+</span> f<span class="org-string">'</span>{bins[i]}<span class="org-string">'</span>, \
+                horizontalalignment<span class="org-operator">=</span><span class="org-string">'left'</span>, fontsize<span class="org-operator">=</span>6, transform<span class="org-operator">=</span>axs[i].transAxes)
+    axs[i].legend(numpoints<span class="org-operator">=</span>1, loc<span class="org-operator">=</span>1, fontsize<span class="org-operator">=</span>7)
+
+plt.show()
+</pre>
+</div>
+
+
+<div id="org03da55d" class="figure">
+<p><img src="./assets/images/fuga_1/fractal_individualVoices.png" alt="fractal_individualVoices.png" /><br />
+</p>
+</div>
+
+<p>
+The fit using three points only could make us doubt that the interval distribution is really fractal. But it should be reminded that such a fractal law in music should only arise after some coarse-graining at a larger scale. And since that an octave is divided in 12 semitones only and that the musically coherent intervals are quite limited, finishing with three points only at the end of the binning does not seem unreasonable. And a linear fit of three points is by no means a trivial guarantee :).<br />
+</p>
+
+<p>
+It should also be noted, however, that the dimension and the \(R^2\) are all quite sensitive to the bin size and the way we treat the intervals. For completeness, here are some of the results with different configurations:<br />
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Voice 1 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 26-28.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Bins</th>
+<th scope="col" class="org-left">Intervals</th>
+<th scope="col" class="org-right">\(d_{f}\)</th>
+<th scope="col" class="org-right">\(R^{2}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">0-2, 2-4, 4-6, 6-9, 9-17</td>
+<td class="org-left">All the intervals</td>
+<td class="org-right">4.432</td>
+<td class="org-right">0.626</td>
+</tr>
+
+<tr>
+<td class="org-left">0-2, 2-4, 4-6, 6-9</td>
+<td class="org-left">Omitted after 9</td>
+<td class="org-right">6.321</td>
+<td class="org-right">0.800</td>
+</tr>
+
+<tr>
+<td class="org-left">0-3, 3-6, 6-9</td>
+<td class="org-left">Folded after 9</td>
+<td class="org-right">8.458</td>
+<td class="org-right">0.999</td>
+</tr>
+
+<tr>
+<td class="org-left"><span style="color:red;">0-3, 3-6, 6-9</span></td>
+<td class="org-left"><span style="color:red;">Omitted after 9</span></td>
+<td class="org-right"><span style="color:red;">8.458</span></td>
+<td class="org-right"><span style="color:red;">0.999</span></td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> Voice 2 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measure 25 &amp; the octave jump in 27.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Bins</th>
+<th scope="col" class="org-left">Intervals</th>
+<th scope="col" class="org-right">\(d_{f}\)</th>
+<th scope="col" class="org-right">\(R^{2}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">0-3, 3-6, 6-9, 9-12</td>
+<td class="org-left">Omitted after 12</td>
+<td class="org-right">6.790</td>
+<td class="org-right">0.874</td>
+</tr>
+
+<tr>
+<td class="org-left">0-3, 3-6, 6-12</td>
+<td class="org-left">Folded after 16</td>
+<td class="org-right">5.725</td>
+<td class="org-right">0.994</td>
+</tr>
+
+<tr>
+<td class="org-left">0-3, 3-6, 6-10</td>
+<td class="org-left">Folded after 11</td>
+<td class="org-right">6.880</td>
+<td class="org-right">0.99996</td>
+</tr>
+
+<tr>
+<td class="org-left"><span style="color:red;">0-3, 3-6, 6-9</span></td>
+<td class="org-left"><span style="color:red;">Omitted after 9</span></td>
+<td class="org-right"><span style="color:red;">7.666</span></td>
+<td class="org-right"><span style="color:red;">0.995</span></td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> Voice 3 binned differently with different interval treatments. The selected version (red line) takes into account the jump in measures 12-13.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Bins</th>
+<th scope="col" class="org-left">Intervals</th>
+<th scope="col" class="org-right">\(d_{f}\)</th>
+<th scope="col" class="org-right">\(R^{2}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">0-3, 3-6, 6-9, 9-12, 12-16</td>
+<td class="org-left">Omitted after 16</td>
+<td class="org-right">5.070</td>
+<td class="org-right">0.868</td>
+</tr>
+
+<tr>
+<td class="org-left">0-4, 4-8, 8-12</td>
+<td class="org-left">Folded after 12</td>
+<td class="org-right">5.723</td>
+<td class="org-right">0.922</td>
+</tr>
+
+<tr>
+<td class="org-left">0-4, 4-8, 8-12, 12-16</td>
+<td class="org-left">Folded after 16</td>
+<td class="org-right">5.099</td>
+<td class="org-right">0.927</td>
+</tr>
+
+<tr>
+<td class="org-left">0-3, 3-6, 6-9, 9-12</td>
+<td class="org-left">Folded after 12</td>
+<td class="org-right">5.940</td>
+<td class="org-right">0.936</td>
+</tr>
+
+<tr>
+<td class="org-left"><span style="color:red;">0-3, 3-6, 6-9, 9-12</span></td>
+<td class="org-left"><span style="color:red;">Omitted after 12</span></td>
+<td class="org-right"><span style="color:red;">5.924</span></td>
+<td class="org-right"><span style="color:red;">0.933</span></td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
+<caption class="t-above"><span class="table-number">Table 4:</span> Voice 4 binned differently with different interval treatments.</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Bins</th>
+<th scope="col" class="org-left">Intervals</th>
+<th scope="col" class="org-right">\(d_{f}\)</th>
+<th scope="col" class="org-right">\(R^{2}\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">0-3, 3-6, 6-9, 9-12</td>
+<td class="org-left">Folded after 12</td>
+<td class="org-right">6.353</td>
+<td class="org-right">0.876</td>
+</tr>
+
+<tr>
+<td class="org-left">0-4, 4-8, 8-12</td>
+<td class="org-left">Folded after 12</td>
+<td class="org-right">5.723</td>
+<td class="org-right">0.922</td>
+</tr>
+
+<tr>
+<td class="org-left">0-4, 4-8, 8-12, 12-16</td>
+<td class="org-left">Folded after 16</td>
+<td class="org-right">6.092</td>
+<td class="org-right">0.983</td>
+</tr>
+
+<tr>
+<td class="org-left">0-5, 5-10, 10-16</td>
+<td class="org-left">Folded after 16</td>
+<td class="org-right">7.024</td>
+<td class="org-right">0.999</td>
+</tr>
+
+<tr>
+<td class="org-left"><span style="color:red;">0-5, 5-10, 10-16</span></td>
+<td class="org-left"><span style="color:red;">Omitted after 16</span></td>
+<td class="org-right"><span style="color:red;">7.247</span></td>
+<td class="org-right"><span style="color:red;">0.998</span></td>
+</tr>
+</tbody>
+</table>
+<p>
+The selected version for the analysis with all the voices (red line) assumes that a jump of up to a a tenth (16 semitones) is reasonable but that jumps greater than that are to evoke a very special and out-of-the-ordinary effect.<br />
+</p>
+
+<p>
+<br />
+<br />
+<br />
+<br />
+<br />
+</p>
+
+<p align="right">
+<a href="#org0836edc" align="right">Back to the sitemap</a><sup><a id="fnr.-1-sitemap" class="footref" href="#fn.-1-sitemap" role="doc-backlink">3</a></sup><br />
+</p>
+
+<p>
+<br />
+<br />
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.-1-Hsu" class="footnum" href="#fnr.-1-Hsu" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+K. Hsu and A. Hsu, Fractal geometry of music, Proc. Natl. Acad. Sci. USA, 87 (1990) 938–941.<br />
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-Brother" class="footnum" href="#fnr.-1-Brother" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+H. J. Brothers, Intervallic scaling in the Bach cello suites, Fractals, 4 (2009) 537–545.<br />
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.-1-sitemap" class="footnum" href="#fnr.-1-sitemap" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+This webpage was built with Org mode, using <a href="https://github.com/fniessen/org-html-themes">fniessen's org-html-themes</a> and <a href="https://github.com/SystemCrafters/org-website-example">System Crafters's Org website publishing example</a>.<br />
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: Dr. Francisco Kim</p>
+<p class="email">Email: <a href="mailto:francisco.kim@alumni.ethz.ch">francisco.kim@alumni.ethz.ch</a></p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

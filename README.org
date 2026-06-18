@@ -13,9 +13,12 @@ written permission.
 * How it works
 The site is written in [[https://orgmode.org][Emacs Org-mode]] and exported to static HTML.
 
-- =src/= holds the source: =index.org= and =cryptograms.org= are the pages; =*.suborg=
-  files (e.g. =fuga_1.suborg=, =ToC.suborg=) are fragments pulled in with =#+INCLUDE=;
-  =src/assets/= holds the images, audio, and PDFs.
+- =src/= holds the source. =index.org= is the home page (a welcome, a featured piece, and
+  the sitemap); each composition gets its own page (e.g. =fuga_1.org=), plus there is
+  =cryptograms.org=. The actual prose/analysis lives in =*.suborg= fragments (e.g.
+  =fuga_1.suborg=) pulled in with =#+INCLUDE=, and =ToC.suborg= is the shared sitemap.
+  =common.setup= is the shared page header (author, styles, options) so pages don't repeat
+  it. =src/assets/= holds the images, audio, and PDFs.
 - =build.sh= empties =docs/= and runs =emacs -Q --script build-site.el=.
 - =build-site.el= installs its only dependency, =htmlize= (kept under =.packages/=), and
   exports everything in =src/= into =docs/=.
@@ -25,6 +28,31 @@ Important: the HTML export uses *only Emacs* — it does not run any Python. The
 Python/=music21= analyses are pre-computed and their results (figures, tables) are committed,
 so the site can always be rebuilt from any machine that has Emacs. See
 [[Regenerating the analyses]] for when Python is actually needed.
+
+* Adding a new composition
+Each composition is one page. To add one (say =prelude=):
+
+1. Write the prose/analysis in =src/prelude.suborg= (a fragment, no header needed). Put any
+   images/audio under =src/assets/=.
+2. Create the page =src/prelude.org= by copying =fuga_1.org=. The minimal header is just:
+   #+BEGIN_SRC org
+   ,#+TITLE: My Prelude
+   ,#+DESCRIPTION: A short description.
+   ,#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
+   ,#+SETUPFILE: common.setup
+   #+END_SRC
+   followed by a =* Sitemap= section that does =#+INCLUDE: ToC.suborg=, then a content
+   section that does =#+INCLUDE: prelude.suborg :minlevel 1=.
+3. Add one entry to the sitemap in =src/ToC.suborg= (this menu shows on every page):
+   #+BEGIN_SRC org
+   ,* ♪\nbsp{} [[file:prelude.org][My Prelude]]
+   ,:PROPERTIES:
+   ,:UNNUMBERED: t
+   ,:END:
+   #+END_SRC
+4. Optional: to highlight it on the landing page, add a short featured block to =index.org=
+   (see the "Featured: Fuga I" section there as a template).
+5. Run =./build.sh= and open =docs/prelude.html= to check it.
 
 * Publishing (the procedure)
 ** Option A — push and let CI publish (the normal way)
