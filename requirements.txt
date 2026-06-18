@@ -1,0 +1,23 @@
+# Python packages for the OPTIONAL analysis/image-regeneration workflow.
+#
+# These are NOT needed to build or publish the website. The HTML export runs only
+# Emacs + htmlize; every Python block in src/fuga_1.suborg is :eval never-export and
+# its outputs (PNGs in src/assets/images/, text in :results: drawers) are committed.
+#
+# Install these only when you want to RE-RUN an analysis to produce a new figure/result,
+# by evaluating the commented `#+BEGIN_SRC ipython :session fugue ...` blocks interactively
+# in Emacs (via emacs-jupyter / jupyter). After running, commit the new image and leave the
+# matching :eval never-export block in place.
+#
+# Versions below are a known-good, mutually compatible set; bump them if needed and
+# re-verify that regenerated figures still match the prose. Rendering scores with music21
+# additionally requires a local MuseScore install (MuseScore 4) configured in music21.
+#
+# Setup:  python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+
+music21==9.1.0
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.2
+scikit-learn==1.5.2
+jupyter==1.1.1

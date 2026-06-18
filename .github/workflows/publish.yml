@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Install Emacs
-        run: sudo apt install emacs-nox --yes
+        # Pin Emacs so builds are reproducible instead of "whatever apt ships".
+        uses: purcell/setup-emacs@master
+        with:
+          version: '29.4'
 
       - name: Build the site
         run: ./build.sh

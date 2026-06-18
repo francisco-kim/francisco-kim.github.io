@@ -48,4 +48,4 @@ A musical cryptogram has been used by Westerns composers to transcribe a text in
 \\
 \\
 
-[fn:sitemap] This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]], along with [[https://github.com/gjbae1212/hit-counter][gjbae1212's hit counter]].
+[fn:sitemap] This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]].
