@@ -43,12 +43,10 @@ Each composition is one page. To add one (say =prelude=):
    #+END_SRC
    followed by a =* Sitemap= section that does =#+INCLUDE: ToC.suborg=, then a content
    section that does =#+INCLUDE: prelude.suborg :minlevel 1=.
-3. Add one entry to the sitemap in =src/ToC.suborg= (this menu shows on every page):
+3. Add one entry to the sitemap in =src/ToC.suborg= (this menu shows on every page). It is a
+   plain list — one line per page:
    #+BEGIN_SRC org
-   ,* ♪\nbsp{} [[file:prelude.org][My Prelude]]
-   ,:PROPERTIES:
-   ,:UNNUMBERED: t
-   ,:END:
+   ,- 🎵\nbsp{} [[file:prelude.org][My Prelude]]
    #+END_SRC
 4. Optional: to highlight it on the landing page, add a short featured block to =index.org=
    (see the "Featured: Fuga I" section there as a template).
