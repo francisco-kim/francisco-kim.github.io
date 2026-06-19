@@ -8,5 +8,7 @@
 #+HTML_HEAD: <style> #content{max-width:920px;}</style>
 #+HTML_HEAD: <style> p{max-width:870px;}</style>
 #+HTML_HEAD: <style> li{max-width:870px;}</style>
+# Keep each footnote's number and text on the same line (Org wraps the text in a block div).
+#+HTML_HEAD: <style> .footpara{display:inline;}</style>
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil email:nil
 #+startup: shrink
