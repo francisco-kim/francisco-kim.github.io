@@ -11,6 +11,7 @@
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('#table-of-contents h2');if(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('toc-open');});}});</script>
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('#content img').forEach(function(img){if(img.closest('a'))return;var a=document.createElement('a');a.className='img-zoom';a.href=img.currentSrc||img.src;img.parentNode.insertBefore(a,img);a.appendChild(img);});});</script>
 <script>
   window.MathJax = {
     tex: {
@@ -63,39 +64,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgef33e16">1. Introduction</a></li>
-<li><a href="#org07ebf2f">2. Music/Score</a></li>
-<li><a href="#orgf7eb7c8">3. Structural analysis</a>
+<li><a href="#org23df702">1. Introduction</a></li>
+<li><a href="#orgfeca0a0">2. Music/Score</a></li>
+<li><a href="#orgd49540c">3. Structural analysis</a>
 <ul>
-<li><a href="#org5783a07">3.1. Structure diagram</a></li>
-<li><a href="#orgdafedaa">3.2. Score analysis</a>
+<li><a href="#orgaca2eaf">3.1. Structure diagram</a></li>
+<li><a href="#org901f402">3.2. Score analysis</a>
 <ul>
-<li><a href="#org3f6b76d">3.2.1. Entries/episodes</a></li>
-<li><a href="#orgd3a399d">3.2.2. Subjects/countersujects and invertible counterpoint</a></li>
+<li><a href="#orgb31be17">3.2.1. Entries/episodes</a></li>
+<li><a href="#org7ad9723">3.2.2. Subjects/countersujects and invertible counterpoint</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb50979a">4. Specific details</a>
+<li><a href="#orgf049d72">4. Specific details</a>
 <ul>
-<li><a href="#org91ffbdc">4.1. Zenith/nadir of the piece</a></li>
-<li><a href="#org6e6ad9d">4.2. The strong-beat tritone in the lower voices</a></li>
-<li><a href="#org90b85b8">4.3. German sixth (übermässiger Quintsextakkord)</a></li>
-<li><a href="#orgf6f9d72">4.4. Double sequence</a></li>
+<li><a href="#orgef683d3">4.1. Zenith/nadir of the piece</a></li>
+<li><a href="#org131baae">4.2. The strong-beat tritone in the lower voices</a></li>
+<li><a href="#org7f5e081">4.3. German sixth (übermässiger Quintsextakkord)</a></li>
+<li><a href="#orgcd614eb">4.4. Double sequence</a></li>
 </ul>
 </li>
-<li><a href="#orgdb52d40">5. Appendix A: computational musicology</a>
+<li><a href="#orga97436b">5. Appendix A: computational musicology</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org96c37cf">5.0.1. Piano roll and other graphics</a></li>
-<li><a href="#org3d7d79d">5.0.2. Key center</a></li>
-<li><a href="#org94a790c">5.0.3. Chords</a></li>
+<li><a href="#orgf6557bf">5.0.1. Piano roll and other graphics</a></li>
+<li><a href="#org66be844">5.0.2. Key center</a></li>
+<li><a href="#org2a31c22">5.0.3. Chords</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orga8aad76">6. Appendix B: fractal intervallic scaling</a></li>
+<li><a href="#org327763c">6. Appendix B: fractal intervallic scaling</a></li>
 </ul>
 </div>
 </div>
@@ -103,8 +104,8 @@
 This is a personal note of the musical ideas that were used in the composition of my Fuga I (all rights reserved, © 2020).<br />
 <br />
 </p>
-<div id="outline-container-orgef33e16" class="outline-2">
-<h2 id="orgef33e16"><span class="section-number-2">1.</span> Introduction</h2>
+<div id="outline-container-org23df702" class="outline-2">
+<h2 id="org23df702"><span class="section-number-2">1.</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In the composition of this fugue in D minor, the main idea was to use the <b>B-A-C-H motif</b> within the counterpoint rules of the Baroque period&#x2014;in particular in Bach's time. This means:<br />
@@ -128,8 +129,8 @@ The ideas that were used as guiding principles this fugue were as follows:<br />
 </ul>
 </div>
 </div>
-<div id="outline-container-org07ebf2f" class="outline-2">
-<h2 id="org07ebf2f"><span class="section-number-2">2.</span> Music/Score</h2>
+<div id="outline-container-orgfeca0a0" class="outline-2">
+<h2 id="orgfeca0a0"><span class="section-number-2">2.</span> Music/Score</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 The score can be found below, and the fugue can be played here:<br />
@@ -145,19 +146,19 @@ Your browser does not support the audio element.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf7eb7c8" class="outline-2">
-<h2 id="orgf7eb7c8"><span class="section-number-2">3.</span> Structural analysis</h2>
+<div id="outline-container-orgd49540c" class="outline-2">
+<h2 id="orgd49540c"><span class="section-number-2">3.</span> Structural analysis</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-The structure diagram is shown in Figure <a href="#orgc3b8c30">1</a>. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection <a href="#orgdafedaa">3.2</a>. The structure of the fugue with entries and episodes are shown on the <a href="#org3f6b76d">first score</a>. The highlighted subject,<br />
-countersubjects and the inverted counterpoint are detailed on the <a href="#orgd3a399d">second score</a>.<br />
+The structure diagram is shown in Figure <a href="#orgaa6896b">1</a>. which shows schematically the location of the subject, countersubjects, episodes and the invertible counterpoints (inv. c.) amongst other indications. The scores with these indications can then be found in Subsection <a href="#org901f402">3.2</a>. The structure of the fugue with entries and episodes are shown on the <a href="#orgb31be17">first score</a>. The highlighted subject,<br />
+countersubjects and the inverted counterpoint are detailed on the <a href="#org7ad9723">second score</a>.<br />
 </p>
 </div>
-<div id="outline-container-org5783a07" class="outline-3">
-<h3 id="org5783a07"><span class="section-number-3">3.1.</span> Structure diagram</h3>
+<div id="outline-container-orgaca2eaf" class="outline-3">
+<h3 id="orgaca2eaf"><span class="section-number-3">3.1.</span> Structure diagram</h3>
 <div class="outline-text-3" id="text-3-1">
 
-<div id="orgc3b8c30" class="figure">
+<div id="orgaa6896b" class="figure">
 <p><img src="./assets/images/fuga_1/structure_table/fuga_1-analysis.png" alt="Fuga I image" title="Fuga I" align="center" /><br />
 </p>
 <p><span class="figure-number">Figure 1: </span>Structure diagram</p>
@@ -170,12 +171,12 @@ There is a notable deceptive cadence in measure 5 (V &rarr; VI [I]) and a quite 
 </p>
 </div>
 </div>
-<div id="outline-container-orgdafedaa" class="outline-3">
-<h3 id="orgdafedaa"><span class="section-number-3">3.2.</span> Score analysis</h3>
+<div id="outline-container-org901f402" class="outline-3">
+<h3 id="org901f402"><span class="section-number-3">3.2.</span> Score analysis</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-org3f6b76d" class="outline-4">
-<h4 id="org3f6b76d"><span class="section-number-4">3.2.1.</span> Entries/episodes</h4>
+<div id="outline-container-orgb31be17" class="outline-4">
+<h4 id="orgb31be17"><span class="section-number-4">3.2.1.</span> Entries/episodes</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center">
 <img src="./assets/images/fuga_1/scores/Fuga_I-analyse-structure-1.png" alt="Entries/episodes analysis image" title="Entries/episodes analysis" align="center" /><br />
@@ -183,8 +184,8 @@ There is a notable deceptive cadence in measure 5 (V &rarr; VI [I]) and a quite 
 </p>
 </div>
 </div>
-<div id="outline-container-orgd3a399d" class="outline-4">
-<h4 id="orgd3a399d"><span class="section-number-4">3.2.2.</span> Subjects/countersujects and invertible counterpoint</h4>
+<div id="outline-container-org7ad9723" class="outline-4">
+<h4 id="org7ad9723"><span class="section-number-4">3.2.2.</span> Subjects/countersujects and invertible counterpoint</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center">
 <img src="./assets/images/fuga_1/scores/Fuga_I-analyse-sujets+counterpoint-1.png" alt="Subjects/countersujects and invertible counterpoint image" title="Subjects/countersujects and invertible counterpoint" align="center" /><br />
@@ -194,31 +195,31 @@ There is a notable deceptive cadence in measure 5 (V &rarr; VI [I]) and a quite 
 </div>
 </div>
 </div>
-<div id="outline-container-orgb50979a" class="outline-2">
-<h2 id="orgb50979a"><span class="section-number-2">4.</span> Specific details</h2>
+<div id="outline-container-orgf049d72" class="outline-2">
+<h2 id="orgf049d72"><span class="section-number-2">4.</span> Specific details</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org91ffbdc" class="outline-3">
-<h3 id="org91ffbdc"><span class="section-number-3">4.1.</span> Zenith/nadir of the piece</h3>
+<div id="outline-container-orgef683d3" class="outline-3">
+<h3 id="orgef683d3"><span class="section-number-3">4.1.</span> Zenith/nadir of the piece</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 The piece has a brief central part in the relative major (F major). The zenith of this fugue is in this F major section, which is generally in the higher pitch registry. The D minor section, in contrast, is much more grounded in the lower pitch registry.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org6e6ad9d" class="outline-3">
-<h3 id="org6e6ad9d"><span class="section-number-3">4.2.</span> The strong-beat tritone in the lower voices</h3>
+<div id="outline-container-org131baae" class="outline-3">
+<h3 id="org131baae"><span class="section-number-3">4.2.</span> The strong-beat tritone in the lower voices</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 In measure 9 (episode 2-1), the two lower voices form a tritone on the very first beat (<b>E</b> and \(\textbf{B}\flat\)) which is not allowed in principle (the fact that the dissonant interval is with the bass AND the fact that the dissonance is on the first beat). This is the only place in this fugue where such a dissonance occur, and this is to stress the B-A-C-H motif that enters with an augmentation with respect to the subject.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org90b85b8" class="outline-3">
-<h3 id="org90b85b8"><span class="section-number-3">4.3.</span> German sixth (übermässiger Quintsextakkord)</h3>
+<div id="outline-container-org7f5e081" class="outline-3">
+<h3 id="org7f5e081"><span class="section-number-3">4.3.</span> German sixth (übermässiger Quintsextakkord)</h3>
 <div class="outline-text-3" id="text-4-3">
 
-<div id="orgf6d0fc3" class="figure">
+<div id="org7a68235" class="figure">
 <p><img src="./assets/images/fuga_1/german_sixth.png" alt="german_sixth.png" /><br />
 </p>
 <p><span class="figure-number">Figure 2: </span>(Suggested) German sixth chord without the fifth.</p>
@@ -237,11 +238,11 @@ The <b>D\(\sharp\)</b> (<b>Dis</b>) suggests the <b>VII</b> degree of <b>E</b>, 
 </p>
 </div>
 </div>
-<div id="outline-container-orgf6f9d72" class="outline-3">
-<h3 id="orgf6f9d72"><span class="section-number-3">4.4.</span> Double sequence</h3>
+<div id="outline-container-orgcd614eb" class="outline-3">
+<h3 id="orgcd614eb"><span class="section-number-3">4.4.</span> Double sequence</h3>
 <div class="outline-text-3" id="text-4-4">
 
-<div id="org966e24a" class="figure">
+<div id="org47437e1" class="figure">
 <p><img src="./assets/images/fuga_1/double_sequence.png" alt="double_sequence.png" /><br />
 </p>
 <p><span class="figure-number">Figure 3: </span>The double sequence with the pattern and imitative sequence used in all the voices.</p>
@@ -256,7 +257,7 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 </p>
 
 
-<div id="org0317065" class="figure">
+<div id="orgf9c8573" class="figure">
 <p><img src="./assets/images/fuga_1/double_sequence-end.png" alt="double_sequence-end.png" /><br />
 </p>
 <p><span class="figure-number">Figure 4: </span>Measure wrapping up the double sequence which is again an imitative sequence.</p>
@@ -268,15 +269,15 @@ Following the idea of <i>pattern &rarr; sequence &rarr; contrast</i> (or <i>idea
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb52d40" class="outline-2">
-<h2 id="orgdb52d40"><span class="section-number-2">5.</span> Appendix A: computational musicology</h2>
+<div id="outline-container-orga97436b" class="outline-2">
+<h2 id="orga97436b"><span class="section-number-2">5.</span> Appendix A: computational musicology</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 We now analyse the fugue with <a href="https://web.mit.edu/music21/"><code>music21</code></a> (v6.7 in this appendix), a <i>python</i> package developed by MIT for computer-aided musicology.<br />
 </p>
 </div>
-<div id="outline-container-org96c37cf" class="outline-4">
-<h4 id="org96c37cf"><span class="section-number-4">5.0.1.</span> Piano roll and other graphics</h4>
+<div id="outline-container-orgf6557bf" class="outline-4">
+<h4 id="orgf6557bf"><span class="section-number-4">5.0.1.</span> Piano roll and other graphics</h4>
 <div class="outline-text-4" id="text-5-0-1">
 <p>
 First initialise <code>music21</code>:<br />
@@ -306,7 +307,7 @@ roll.run()
 </div>
 
 
-<div id="orge48c046" class="figure">
+<div id="orgb90cee2" class="figure">
 <p><img src="./assets/images/fuga_1/pianoRoll.png" alt="pianoRoll.png" /><br />
 </p>
 </div>
@@ -326,7 +327,7 @@ roll.run()
 </div>
 
 
-<div id="org38dbed2" class="figure">
+<div id="org8277f2f" class="figure">
 <p><img src="./assets/images/fuga_1/pitchClass.png" alt="pitchClass.png" /><br />
 </p>
 </div>
@@ -363,14 +364,14 @@ plt.show()
 </div>
 
 
-<div id="org765183f" class="figure">
+<div id="orga8d4b59" class="figure">
 <p><img src="./assets/images/fuga_1/Pitch-interpolation.png" alt="Pitch-interpolation.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3d7d79d" class="outline-4">
-<h4 id="org3d7d79d"><span class="section-number-4">5.0.2.</span> Key center</h4>
+<div id="outline-container-org66be844" class="outline-4">
+<h4 id="org66be844"><span class="section-number-4">5.0.2.</span> Key center</h4>
 <div class="outline-text-4" id="text-5-0-2">
 <p>
 The key is found using the <a href="https://rnhart.net/articles/key-finding/">Krumhansl-Schmuckler key-finding algorithm</a> which uses the correlation coefficient<br />
@@ -432,7 +433,7 @@ plt.show()
 </div>
 
 
-<div id="orgc8f5368" class="figure">
+<div id="org97a3a8b" class="figure">
 <p><img src="assets/images/fuga_1/tonal_probability.png" alt="tonal_probability.png" /><br />
 </p>
 </div>
@@ -447,7 +448,7 @@ The histogram of the pitch classes:<br />
 </div>
 
 
-<div id="org403c457" class="figure">
+<div id="org571f1f3" class="figure">
 <p><img src="./assets/images/fuga_1/histogram-pitchClass.png" alt="histogram-pitchClass.png" /><br />
 </p>
 </div>
@@ -462,7 +463,7 @@ The histogram of all the pitches:<br />
 </div>
 
 
-<div id="org87e36cc" class="figure">
+<div id="org38e830d" class="figure">
 <p><img src="./assets/images/fuga_1/histogram-pitch.png" alt="histogram-pitch.png" /><br />
 </p>
 </div>
@@ -480,7 +481,7 @@ scatter.run()
 </div>
 
 
-<div id="org2baebf9" class="figure">
+<div id="org9c820d6" class="figure">
 <p><img src="./assets/images/fuga_1/Scatter-pitchClass.png" alt="Scatter-pitchClass.png" /><br />
 </p>
 </div>
@@ -495,7 +496,7 @@ The scatter plot with the pitch class by quarter length:<br />
 </div>
 
 
-<div id="org2405c0d" class="figure">
+<div id="org9ae5ce8" class="figure">
 <p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength.png" alt="scatter-pitchClass-quarterLength.png" /><br />
 </p>
 </div>
@@ -510,14 +511,14 @@ And in 3D:<br />
 </div>
 
 
-<div id="orgfec15b5" class="figure">
+<div id="org255572d" class="figure">
 <p><img src="./assets/images/fuga_1/scatter-pitchClass-quarterLength-3D.png" alt="scatter-pitchClass-quarterLength-3D.png" /><br />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org94a790c" class="outline-4">
-<h4 id="org94a790c"><span class="section-number-4">5.0.3.</span> Chords</h4>
+<div id="outline-container-org2a31c22" class="outline-4">
+<h4 id="org2a31c22"><span class="section-number-4">5.0.3.</span> Chords</h4>
 <div class="outline-text-4" id="text-5-0-3">
 <p>
 We now combine the three voices into <code>Chord</code> objects:<br />
@@ -545,7 +546,7 @@ fugue.measures(0,12).show()
 </div>
 
 
-<div id="org6365446" class="figure">
+<div id="org6950c42" class="figure">
 <p><img src="./assets/images/fuga_1/romanAnalysis.png" alt="romanAnalysis.png" /><br />
 </p>
 </div>
@@ -593,7 +594,7 @@ onlyChords.measures(0,37).show()
 </div>
 
 
-<div id="org2092d51" class="figure">
+<div id="orgf5cd4a0" class="figure">
 <p><img src="./assets/images/fuga_1/romanAnalysis-onlyChords.png" alt="romanAnalysis-onlyChords.png" /><br />
 </p>
 </div>
@@ -609,7 +610,7 @@ With the chords, it is possible to analyse the key of each measures:<br />
 </pre>
 </div>
 
-<pre class="example" id="org45a988e">
+<pre class="example" id="orgb399c08">
 1 a minor
 2 b- minor
 3 d minor
@@ -631,8 +632,8 @@ With the chords, it is possible to analyse the key of each measures:<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orga8aad76" class="outline-2">
-<h2 id="orga8aad76"><span class="section-number-2">6.</span> Appendix B: fractal intervallic scaling</h2>
+<div id="outline-container-org327763c" class="outline-2">
+<h2 id="org327763c"><span class="section-number-2">6.</span> Appendix B: fractal intervallic scaling</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 There is evidence that Bach's music could be fractal, in the sense that it can exhibit pitch, interval or structural-related scaling laws<sup><a id="fnr.-0-Hsu" class="footref" href="#fn.-0-Hsu" role="doc-backlink">1</a></sup><sup>, </sup><sup><a id="fnr.-0-Brother" class="footref" href="#fn.-0-Brother" role="doc-backlink">2</a></sup>. A theoretical physicist's perspective of this would be the concept of universality in statistical mechanics at critical points of a system.<br />
@@ -694,7 +695,7 @@ analysis.discrete.MelodicIntervalDiversity().countMelodicIntervals(fugue.parts)
 </pre>
 </div>
 
-<pre class="example" id="orgb666866">
+<pre class="example" id="org8a61394">
 {'P4': [&lt;music21.interval.Interval P4&gt;, 48],
 'm2': [&lt;music21.interval.Interval m2&gt;, 190],
 'm3': [&lt;music21.interval.Interval m3&gt;, 56],
@@ -790,7 +791,7 @@ As an example, when looking at all the melodies together after our choice of bin
 </pre>
 </div>
 
-<pre class="example" id="orgb5d9a17">
+<pre class="example" id="org01286eb">
 [(0.0, 18),
 (1.0, 204),
 (2.0, 264),
@@ -844,7 +845,7 @@ plt.show()
 </div>
 
 
-<div id="orgfdc6477" class="figure">
+<div id="orgdc78886" class="figure">
 <p><img src="./assets/images/fuga_1/fractal_AllVoices.png" alt="fractal_AllVoices.png" /><br />
 </p>
 </div>
@@ -892,7 +893,7 @@ plt.show()
 </div>
 
 
-<div id="org104f059" class="figure">
+<div id="orgf14123a" class="figure">
 <p><img src="./assets/images/fuga_1/fractal_individualVoices.png" alt="fractal_individualVoices.png" /><br />
 </p>
 </div>

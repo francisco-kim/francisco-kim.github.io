@@ -11,5 +11,9 @@
 # On narrow screens the table of contents is collapsed; its heading toggles it
 # (site.css shows/hides #text-table-of-contents via the .toc-open class).
 #+HTML_HEAD: <script>document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('#table-of-contents h2');if(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('toc-open');});}});</script>
+# Click-to-zoom: every content image not already inside a link gets wrapped in
+# a link to its full-size file, so figures (capped at 960px wide by site.css)
+# stay readable. Automatic — nothing special to write when adding images.
+#+HTML_HEAD: <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('#content img').forEach(function(img){if(img.closest('a'))return;var a=document.createElement('a');a.className='img-zoom';a.href=img.currentSrc||img.src;img.parentNode.insertBefore(a,img);a.appendChild(img);});});</script>
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil email:nil
 #+startup: shrink

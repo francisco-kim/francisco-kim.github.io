@@ -39,7 +39,9 @@ compositions go on =src/compositions.org=, everything else (games, doodles,
 notes — like the cryptograms) on =src/scribbles.org=. To add one (say =prelude=):
 
 1. Write the prose/analysis in =src/prelude.suborg= (a fragment, no header needed). Put any
-   images/audio under =src/assets/=.
+   images/audio under =src/assets/=. Images need no special markup: a script included via
+   =common.setup= automatically makes every image click-to-zoom (it opens the full-size
+   file), and =site.css= caps how wide they display.
 2. Create the page =src/prelude.org= by copying =fuga_1.org=. The minimal header is just:
    #+BEGIN_SRC org
    ,#+TITLE: My Prelude

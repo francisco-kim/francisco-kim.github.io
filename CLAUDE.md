@@ -65,6 +65,9 @@ place. See `requirements.txt` for the Python package versions this workflow expe
   on wide screens and a collapsed, tap-to-expand block on narrow ones (a small inline
   script in `common.setup` toggles the `.toc-open` class). Short pages set
   `#+OPTIONS: toc:nil`.
+- Content images display capped at 960px wide and are click-to-zoom automatically (a
+  script in `common.setup` wraps any image not already inside a link) — no per-image
+  markup needed.
 - `build-site.el` defines a custom `color:` Org link type so `[[color:green][text]]` renders
   as colored HTML/LaTeX spans. Keep it if you touch that file.
 - `docs/` is build output committed to the repo; never hand-edit it — change `src/` and

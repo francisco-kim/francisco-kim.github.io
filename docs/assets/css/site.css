@@ -224,11 +224,19 @@ a.cta:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
+/* Images wrapped by the click-to-zoom script in common.setup. */
+.img-zoom img { cursor: zoom-in; }
+
 /* Contact row under the homepage intro. */
 .contact-links {
   font-family: var(--sans);
   font-size: 0.9rem;
   letter-spacing: 0.02em;
+}
+
+.contact-links svg {
+  vertical-align: -2px;
+  margin-right: 0.35em;
 }
 
 .contact-links a {
