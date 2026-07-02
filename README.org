@@ -13,12 +13,14 @@ written permission.
 * How it works
 The site is written in [[https://orgmode.org][Emacs Org-mode]] and exported to static HTML.
 
-- =src/= holds the source. =index.org= is the home page (a welcome, a featured piece, and
-  the sitemap); each composition gets its own page (e.g. =fuga_1.org=), plus there is
+- =src/= holds the source. =index.org= is the home page (a welcome and the featured
+  pieces); each composition gets its own page (e.g. =fuga_1.org=), plus there is
   =cryptograms.org=. The actual prose/analysis lives in =*.suborg= fragments (e.g.
-  =fuga_1.suborg=) pulled in with =#+INCLUDE=, and =ToC.suborg= is the shared sitemap.
-  =common.setup= is the shared page header (author, styles, options) so pages don't repeat
-  it. =src/assets/= holds the images, audio, and PDFs.
+  =fuga_1.suborg=) pulled in with =#+INCLUDE=. =common.setup= is the shared page header
+  (author, stylesheet link, options) so pages don't repeat it. The look of the site is
+  one hand-written stylesheet, =src/assets/css/site.css=; the navigation header and
+  footer on every page come from =org-html-preamble= / =org-html-postamble= in
+  =build-site.el=. =src/assets/= holds the images, audio, and PDFs.
 - =build.sh= empties =docs/= and runs =emacs -Q --script build-site.el=.
 - =build-site.el= installs its only dependency, =htmlize= (kept under =.packages/=), and
   exports everything in =src/= into =docs/=.
@@ -38,16 +40,18 @@ Each composition is one page. To add one (say =prelude=):
    #+BEGIN_SRC org
    ,#+TITLE: My Prelude
    ,#+DESCRIPTION: A short description.
-   ,#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
    ,#+SETUPFILE: common.setup
    #+END_SRC
-   followed by a =* Sitemap= section that does =#+INCLUDE: ToC.suborg=, then a content
-   section that does =#+INCLUDE: prelude.suborg :minlevel 1=.
-3. Add one entry to the sitemap in =src/ToC.suborg= (this menu shows on every page). It is a
-   plain list — one line per page:
-   #+BEGIN_SRC org
-   ,- 🎵\nbsp{} [[file:prelude.org][My Prelude]]
-   #+END_SRC
+   followed by =#+INCLUDE: prelude.suborg :minlevel 1=.
+3. Add the piece to the index in =src/compositions.org=, in two places (copy the Fuga I
+   entry as a template for both):
+   - an entry section: a short blurb, the audio player, and the
+     "Read the full analysis …" button (=<a class="cta" href="prelude.html">=);
+   - one =<li><a href="prelude.html">My Prelude</a></li>= line in the sidebar list at the
+     top of the file (the =#+BEGIN_EXPORT html= block), which is what shows in the left
+     bar on wide screens.
+   The navigation header (defined by =org-html-preamble= in =build-site.el=) stays fixed
+   at Home · Compositions · Cryptograms, so it does not need editing.
 4. Optional: to highlight it on the landing page, add a short featured block to =index.org=
    (see the "Featured: Fuga I" section there as a template).
 5. Run =./build.sh= and open =docs/prelude.html= to check it.
