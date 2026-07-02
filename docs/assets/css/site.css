@@ -212,10 +212,12 @@ a.cta:hover {
   color: #fff;
 }
 
-/* Small clickable preview of a PDF (links to the full document). */
+/* Clickable preview of a PDF (links to the full document), centred on the
+   text column and sized like one page of the score pair on the home page. */
 .pdf-thumb {
   display: block;
-  width: min(280px, 100%);
+  width: min(420px, 100%);
+  margin-inline: auto;
   border: 1px solid var(--rule);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }

@@ -41,10 +41,11 @@ place. See `requirements.txt` for the Python package versions this workflow expe
 
 ## Source layout
 
-- `src/index.org`, `src/compositions.org`, `src/cryptograms.org` — the published pages.
-  Only files matching `:base-extension "org"` in `build-site.el` become standalone HTML.
-  `compositions.org` is the index of pieces: new compositions get an entry there, not a
-  new nav link.
+- `src/index.org`, `src/compositions.org`, `src/scribbles.org`, `src/cryptograms.org` —
+  the published pages. Only files matching `:base-extension "org"` in `build-site.el`
+  become standalone HTML. `compositions.org` and `scribbles.org` are index pages with a
+  hand-written sidebar (same ids as Org's TOC on purpose): new pieces/scribbles get an
+  entry + sidebar line there, not a new nav link.
 - `src/*.suborg` — `#+INCLUDE` fragments (`fuga_1.suborg`). The `.suborg` extension
   deliberately keeps them from being published as their own pages; they only appear via
   the `#+INCLUDE` directives in the `.org` pages.

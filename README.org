@@ -51,7 +51,9 @@ Each composition is one page. To add one (say =prelude=):
      top of the file (the =#+BEGIN_EXPORT html= block), which is what shows in the left
      bar on wide screens.
    The navigation header (defined by =org-html-preamble= in =build-site.el=) stays fixed
-   at Home · Compositions · Cryptograms, so it does not need editing.
+   at Home · Compositions · Other scribbles, so it does not need editing.
+   (Non-composition pages work the same way through =src/scribbles.org=: give the piece
+   its own page and add an entry + sidebar line there instead.)
 4. Optional: to highlight it on the landing page, add a short featured block to =index.org=
    (see the "Featured: Fuga I" section there as a template).
 5. Run =./build.sh= and open =docs/prelude.html= to check it.

@@ -54,7 +54,7 @@
     <div class=\"site-links\">
       <a href=\"index.html\">Home</a>
       <a href=\"compositions.html\">Compositions</a>
-      <a href=\"cryptograms.html\">Cryptograms</a>
+      <a href=\"scribbles.html\">Other scribbles</a>
     </div>
   </nav>
 </header>"
