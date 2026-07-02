@@ -179,9 +179,11 @@ audio {
   max-width: none;
 }
 
+/* Images may exceed the prose column a little, but stay close to it:
+   full-window-width figures make the surrounding text uncomfortable to read. */
 .figure img,
 #content img {
-  max-width: 100%;
+  max-width: min(100%, 960px);
   height: auto;
 }
 

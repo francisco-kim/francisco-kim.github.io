@@ -50,13 +50,3 @@ Your browser does not support the audio element.
   <a href="./assets/images/fuga_1/scores/Fuga_I-2.png"><img src="./assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga I, score page 2"></a>
 </div>
 #+END_EXPORT
-
-\\
-\\
-
-* Cryptograms
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-Musical cryptograms transcribe a text into music and vice versa. [[file:cryptograms.org][Try some of the ones I have written →]]
