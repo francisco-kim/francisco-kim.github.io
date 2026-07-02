@@ -13,9 +13,11 @@ written permission.
 * How it works
 The site is written in [[https://orgmode.org][Emacs Org-mode]] and exported to static HTML.
 
-- =src/= holds the source. =index.org= is the home page (a welcome and the featured
-  pieces); each composition gets its own page (e.g. =fuga_1.org=), plus there is
-  =cryptograms.org=. The actual prose/analysis lives in =*.suborg= fragments (e.g.
+- =src/= holds the source. =index.org= is the home page (name, bio, contact links, and
+  the featured pieces). =compositions.org= and =scribbles.org= are the two index pages,
+  each with a hand-written left sidebar listing its entries; every entry (composition or
+  scribble) gets its own page (e.g. =fuga_1.org=, =cryptograms.org=). The actual
+  prose/analysis lives in =*.suborg= fragments (e.g.
   =fuga_1.suborg=) pulled in with =#+INCLUDE=. =common.setup= is the shared page header
   (author, stylesheet link, options) so pages don't repeat it. The look of the site is
   one hand-written stylesheet, =src/assets/css/site.css=; the navigation header and
@@ -31,8 +33,10 @@ Python/=music21= analyses are pre-computed and their results (figures, tables) a
 so the site can always be rebuilt from any machine that has Emacs. See
 [[Regenerating the analyses]] for when Python is actually needed.
 
-* Adding a new composition
-Each composition is one page. To add one (say =prelude=):
+* Adding a new entry (a composition or another scribble)
+Every entry is one page plus a listing on the matching index page:
+compositions go on =src/compositions.org=, everything else (games, doodles,
+notes — like the cryptograms) on =src/scribbles.org=. To add one (say =prelude=):
 
 1. Write the prose/analysis in =src/prelude.suborg= (a fragment, no header needed). Put any
    images/audio under =src/assets/=.
@@ -43,17 +47,19 @@ Each composition is one page. To add one (say =prelude=):
    ,#+SETUPFILE: common.setup
    #+END_SRC
    followed by =#+INCLUDE: prelude.suborg :minlevel 1=.
-3. Add the piece to the index in =src/compositions.org=, in two places (copy the Fuga I
-   entry as a template for both):
-   - an entry section: a short blurb, the audio player, and the
-     "Read the full analysis …" button (=<a class="cta" href="prelude.html">=);
+   (For a small page — like =cryptograms.org= — you can skip the =.suborg= fragment and
+   write the content directly in the =.org= file, with =#+OPTIONS: toc:nil= in the header.)
+3. List it on the matching index page — =src/compositions.org= for a composition,
+   =src/scribbles.org= for anything else — in two places (copy the existing Fuga I /
+   cryptograms entry as a template for both):
+   - an entry section: a short blurb, the audio player if there is a recording, and a
+     call-to-action button (=<a class="cta" href="prelude.html">Read the full analysis …</a>=);
    - one =<li><a href="prelude.html">My Prelude</a></li>= line in the sidebar list at the
      top of the file (the =#+BEGIN_EXPORT html= block), which is what shows in the left
      bar on wide screens.
    The navigation header (defined by =org-html-preamble= in =build-site.el=) stays fixed
-   at Home · Compositions · Other scribbles, so it does not need editing.
-   (Non-composition pages work the same way through =src/scribbles.org=: give the piece
-   its own page and add an entry + sidebar line there instead.)
+   at Home · Compositions · Other scribbles, so it does not need editing — only a brand
+   new *section* (a fourth index page) would mean adding a nav link there.
 4. Optional: to highlight it on the landing page, add a short featured block to =index.org=
    (see the "Featured: Fuga I" section there as a template).
 5. Run =./build.sh= and open =docs/prelude.html= to check it.
