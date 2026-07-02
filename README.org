@@ -53,7 +53,13 @@ notes — like the cryptograms) on =src/scribbles.org=. To add one (say =prelude
    =src/scribbles.org= for anything else — in two places (copy the existing Fuga I /
    cryptograms entry as a template for both):
    - an entry section: a short blurb, the audio player if there is a recording, and a
-     call-to-action button (=<a class="cta" href="prelude.html">Read the full analysis …</a>=);
+     call-to-action button. The button is nothing special — any link with =class="cta"=
+     is styled as a button by =site.css= — but raw HTML must sit in an export block:
+     #+BEGIN_SRC org
+     ,#+BEGIN_EXPORT html
+     <p><a class="cta" href="prelude.html">Read the full analysis of My Prelude →</a></p>
+     ,#+END_EXPORT
+     #+END_SRC
    - one =<li><a href="prelude.html">My Prelude</a></li>= line in the sidebar list at the
      top of the file (the =#+BEGIN_EXPORT html= block), which is what shows in the left
      bar on wide screens.
