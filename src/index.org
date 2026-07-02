@@ -8,7 +8,7 @@
 #+SETUPFILE: common.setup
 #+OPTIONS: toc:nil
 
-PhD in theoretical physics by training, but a musician and musicologist at heart. An avid novel reader, a happy knitter, and a sports enthusiast — whether playing myself or watching from the sofa with a beer and crisps.
+PhD in theoretical physics by training, but a musician and musicologist at heart. An avid novel reader, a happy knitter, and a sports enthusiast — whether taking part or watching from the sofa with a beer and crisps.
 
 # Contact links, each with a small inline SVG icon (self-drawn, no external
 # requests). The email address is assembled by the script so it never appears
