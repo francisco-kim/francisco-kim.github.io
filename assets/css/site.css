@@ -1,0 +1,479 @@
+/* site.css — the whole look of francisco-kim.github.io.
+   Org exports semantic HTML (org-html-head-include-default-style is nil in
+   build-site.el, so this file owns every rule). Layout contract: prose sits in
+   a readable centred column (--prose); figures, scores, plots and tables may
+   use the full window width. */
+
+:root {
+  --prose: 850px;
+  --header-h: 3.25rem;
+  --bg: #faf8f4;
+  --ink: #211d1a;
+  --muted: #6f675f;
+  --accent: #7a2e2e;
+  --accent-dark: #571f1f;
+  --rule: #e3ddd3;
+  --code-bg: #f2eee6;
+  --serif: "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+/* ---------- Site header (org-html-preamble in build-site.el) ---------- */
+
+#preamble {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+}
+
+.site-nav {
+  max-width: var(--prose);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-name {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-links {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.site-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.site-name:hover,
+.site-links a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Content column ---------- */
+
+#content {
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+/* Prose lives in a centred column; block elements that hold text share it. */
+#content p,
+#content ul,
+#content ol,
+#content dl,
+#content blockquote,
+#content .org-src-container,
+#content pre.example,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+  max-width: var(--prose);
+  margin-inline: auto;
+}
+
+/* ---------- Headings & text ---------- */
+
+h1.title {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 auto 0.5rem;
+}
+
+h1.title + .subtitle { color: var(--muted); }
+
+h2 { font-size: 1.55rem; margin-top: 2.6rem; }
+h3 { font-size: 1.25rem; margin-top: 2rem; }
+h4, h5, h6 { font-size: 1.05rem; margin-top: 1.6rem; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.section-number-2, .section-number-3, .section-number-4, .section-number-5 {
+  color: var(--muted);
+  font-weight: 500;
+  margin-right: 0.35em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+blockquote {
+  border-left: 3px solid var(--rule);
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  max-width: var(--prose);
+  margin: 2.5rem auto;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: var(--prose);
+  margin: 1.2rem auto;
+}
+
+/* ---------- Figures & images (may exceed the prose column) ---------- */
+
+.figure {
+  text-align: center;
+  margin: 2.2rem auto;
+}
+
+#content .figure p {
+  max-width: none;
+}
+
+/* Images may exceed the prose column a little, but stay close to it:
+   full-window-width figures make the surrounding text uncomfortable to read. */
+.figure img,
+#content img {
+  max-width: min(100%, 960px);
+  height: auto;
+}
+
+.figure-number,
+.table-number,
+.figure p:last-child {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Call-to-action link ("Read the full analysis …") rendered as a button. */
+a.cta {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: var(--accent);
+  padding: 0.55rem 1.15rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+a.cta:hover {
+  background: var(--accent-dark);
+  color: #fff;
+}
+
+/* Clickable preview of a PDF (links to the full document), centred on the
+   text column and sized like one page of the score pair on the home page. */
+.pdf-thumb {
+  display: block;
+  width: min(420px, 100%);
+  margin-inline: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Images wrapped by the click-to-zoom script in common.setup. */
+.img-zoom img { cursor: zoom-in; }
+
+/* Contact row under the homepage intro. */
+.contact-links {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.contact-links svg {
+  vertical-align: -2px;
+  margin-right: 0.35em;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.contact-links a:hover { text-decoration: underline; }
+
+/* Two score pages shown side by side (stacking on narrow screens); each
+   links to the full-size image. */
+.score-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  max-width: var(--prose);
+  margin: 1.6rem auto;
+}
+
+.score-pair a {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.score-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Tables (may exceed the prose column) ---------- */
+
+table {
+  margin: 1.8rem auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+caption {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  padding: 0.35rem 0.8rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+thead th, th {
+  font-family: var(--sans);
+  font-weight: 600;
+  border-bottom: 2px solid var(--ink);
+}
+
+.org-right  { text-align: right; }
+.org-left   { text-align: left; }
+.org-center { text-align: center; }
+
+/* ---------- Code (htmlize exports class-based highlighting) ---------- */
+
+code, kbd, samp {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+pre {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  overflow-x: auto;
+}
+
+.org-src-container { margin: 1.4rem auto; }
+.org-src-container pre { margin: 0; }
+
+pre.example {
+  background: transparent;
+  border-left: 3px solid var(--rule);
+  border-top: none; border-right: none; border-bottom: none;
+  border-radius: 0;
+  color: var(--muted);
+}
+
+/* htmlize faces (see org-html-htmlize-output-type 'css in build-site.el) */
+.org-keyword           { color: #7a2e2e; font-weight: 600; }
+.org-builtin           { color: #5b3a8e; }
+.org-function-name     { color: #205e8c; }
+.org-variable-name     { color: #7c5218; }
+.org-string            { color: #3d6b35; }
+.org-doc               { color: #3d6b35; font-style: italic; }
+.org-constant          { color: #205e8c; }
+.org-type              { color: #2a6f6f; }
+.org-comment,
+.org-comment-delimiter { color: #8f867c; font-style: italic; }
+.org-operator          { color: inherit; }
+.org-warning           { color: #a33a3a; font-weight: 600; }
+
+/* ---------- Footnotes ---------- */
+
+#footnotes {
+  max-width: var(--prose);
+  margin: 3rem auto 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+h2.footnotes {
+  font-size: 1.1rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2rem;
+}
+
+.footpara { display: inline; }
+.footdef  { margin-bottom: 0.5rem; }
+sup { line-height: 0; }
+
+/* ---------- MathJax: centre display equations on the text column ---------- */
+
+mjx-container[display="true"] {
+  max-width: var(--prose);
+  margin-inline: auto !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ---------- Table of contents ----------
+   Narrow screens: collapsed by default, the heading toggles .toc-open
+   (tiny script in common.setup). Wide screens: fixed sidebar left of the
+   text column, always expanded. */
+
+#table-of-contents {
+  max-width: var(--prose);
+  margin: 0 auto 2rem;
+  font-family: var(--sans);
+}
+
+#table-of-contents h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#table-of-contents h2::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+#table-of-contents.toc-open h2::before { transform: rotate(90deg); }
+
+#text-table-of-contents { display: none; }
+#table-of-contents.toc-open #text-table-of-contents { display: block; }
+
+#text-table-of-contents ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+#text-table-of-contents ul ul { padding-left: 1rem; }
+
+#text-table-of-contents li { margin: 0.25rem 0; }
+
+#text-table-of-contents a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+#text-table-of-contents a:hover { color: var(--accent); }
+
+@media (min-width: 1360px) {
+  /* Reserve the sidebar's width so full-width images/tables never run under it. */
+  body:has(#table-of-contents) #content {
+    margin-left: 290px;
+  }
+
+  #table-of-contents {
+    position: fixed;
+    left: 0;
+    top: var(--header-h);
+    width: 250px;
+    max-height: calc(100vh - var(--header-h));
+    overflow-y: auto;
+    margin: 0;
+    padding: 1.6rem 1.25rem 2rem;
+    border-right: 1px solid var(--rule);
+  }
+
+  #table-of-contents h2 { cursor: default; }
+  #table-of-contents h2::before { content: none; }
+  #text-table-of-contents { display: block; }
+}
+
+/* ---------- Footer (org-html-postamble in build-site.el) ---------- */
+
+#postamble {
+  border-top: 1px solid var(--rule);
+  margin-top: 2rem;
+}
+
+.site-footer {
+  max-width: var(--prose);
+  margin: 0 auto;
+  padding: 1.4rem 1.25rem 2.2rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-footer p { margin: 0.2rem 0; }
+
+.site-footer a { color: inherit; }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  h1.title { font-size: 1.7rem; }
+  .site-links { gap: 0.9rem; }
+  .site-links a { font-size: 0.78rem; letter-spacing: 0.06em; }
+}
