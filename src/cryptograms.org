@@ -5,41 +5,13 @@
 
 #+TITLE: Musical cryptograms
 #+DESCRIPTION: Some musical cryptograms written by Francisco Kim.
-#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #+SETUPFILE: common.setup
-
-#+ATTR_HTML: :align right
-*Francisco Kim*
-
-Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains notes, scribbles and doodles for my personal use, but you are very welcome to have a look at them!
-
-* Sitemap
-:PROPERTIES:  
-:UNNUMBERED: t  
-:END:  
-
-#+INCLUDE: ToC.suborg
-
-\\
-\\
-
-* Musical cryptograms
-:PROPERTIES:  
-:UNNUMBERED: t  
-:END:  
+#+OPTIONS: toc:nil
 
 A musical cryptogram has been used by Westerns composers to transcribe a text into music and vice versa. Here are some of the cryptograms that I have written for fun! The pdf file (written in French) can be downloaded [[file:assets/images/cryptograms/cryptogrammes.pdf][here]]!
 
-\\
-\\
-
-#+ATTR_HTML: :align right
-[[*Sitemap][Back to the sitemap]][fn:sitemap]
-
-\\
-\\
-\\
-\\
-\\
-
-[fn:sitemap] This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]].
+# The thumbnail is the first page of the PDF, rendered with:
+#   pdftoppm -png -f 1 -l 1 -r 100 cryptogrammes.pdf cryptogrammes-p1
+#+BEGIN_EXPORT html
+<p><a href="assets/images/cryptograms/cryptogrammes.pdf"><img class="pdf-thumb" src="assets/images/cryptograms/cryptogrammes-p1.png" alt="First page of the cryptograms PDF"></a></p>
+#+END_EXPORT

@@ -40,11 +40,28 @@
 ;; Load the publishing system
 (require 'ox-publish)
 
-;; Customize the HTML output
-;; (setq org-html-validation-link nil            ;; Don't show validation link
-;;       org-html-head-include-scripts nil       ;; Use our own scripts
-;;       org-html-head-include-default-style nil ;; Use our own styles
-;;       org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+;; Customize the HTML output. All styling comes from src/assets/css/site.css
+;; (linked via src/common.setup); pages carry no default Org CSS/JS.
+(setq org-html-validation-link nil            ;; Don't show validation link
+      org-html-head-include-scripts nil       ;; Use our own scripts
+      org-html-head-include-default-style nil ;; Use our own styles
+      ;; Site header (nav) and footer, shared by every page. Styled by the
+      ;; .site-header/.site-footer rules in site.css.
+      org-html-preamble
+      "<header class=\"site-header\">
+  <nav class=\"site-nav\">
+    <a class=\"site-name\" href=\"index.html\">Francisco Kim</a>
+    <div class=\"site-links\">
+      <a href=\"index.html\">Home</a>
+      <a href=\"compositions.html\">Compositions</a>
+      <a href=\"cryptograms.html\">Cryptograms</a>
+    </div>
+  </nav>
+</header>"
+      org-html-postamble
+      "<footer class=\"site-footer\">
+  <p>© Francisco Kim · Made with <a href=\"https://orgmode.org/\">Emacs Org-mode</a></p>
+</footer>")
 
 ;; Define the publishing project
 (setq org-publish-project-alist
@@ -68,7 +85,7 @@
          )
         ("org-static"
          :base-directory "./src"
-         :base-extension "png\\|pdf\\|mp3"
+         :base-extension "png\\|pdf\\|mp3\\|css"
          :publishing-directory "./docs"
          :publishing-function org-publish-attachment
          :recursive t

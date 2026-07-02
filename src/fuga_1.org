@@ -5,22 +5,6 @@
 
 #+TITLE: Compositional ideas behind Fuga I
 #+DESCRIPTION: Musicological, computational and mathematical analysis of the Fuga I.
-#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #+SETUPFILE: common.setup
-
-* Sitemap
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-#+INCLUDE: ToC.suborg
-
-\\
-\\
-
-* Compositional ideas behind Fuga I
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
 
 #+INCLUDE: fuga_1.suborg :minlevel 1

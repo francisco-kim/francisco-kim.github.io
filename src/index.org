@@ -3,12 +3,27 @@
 # org-html-table-use-header-tags-for-first-column: t
 # End:
 
-#+TITLE: Francisco's musical notebook
+#+TITLE: Francisco Kim
 #+DESCRIPTION: Francisco Kim's musical notebook: compositions and music-related notes.
-#+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #+SETUPFILE: common.setup
+#+OPTIONS: toc:nil
 
-Welcome to Francisco's personal musical "notebook/scrapbook"! This page contains notes, scribbles and doodles for my personal use, but you are very welcome to have a look at them!
+PhD in theoretical physics, but a musician and musicologist at heart. An avid novel reader, a happy knitter, and a sports enthusiast — whether playing myself or watching from the sofa with a beer and crisps.
+
+# Contact links. The email address is assembled by the script so it never
+# appears verbatim in the HTML (harder for address scrapers to harvest).
+#+BEGIN_EXPORT html
+<p class="contact-links">
+  <a id="email-link" href="#">Email</a> ·
+  <a href="https://orcid.org/0000-0003-1767-7774">ORCID</a> ·
+  <a href="https://scholar.google.com/citations?user=BNpaxLQAAAAJ&amp;hl=en">Google Scholar</a>
+</p>
+<script>
+  document.getElementById('email-link').href =
+    'mailto:' + 'francisco.kim' + '@' + 'ik.me';
+</script>
+#+END_EXPORT
+
 \\
 
 * Featured: Fuga I
@@ -25,14 +40,23 @@ Your browser does not support the audio element.
 </audio>
 #+END_EXPORT
 
-[[file:fuga_1.org][Read the full analysis of Fuga I →]]
+#+BEGIN_EXPORT html
+<p><a class="cta" href="fuga_1.html">Read the full analysis of Fuga I →</a></p>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="score-pair">
+  <a href="./assets/images/fuga_1/scores/Fuga_I-1.png"><img src="./assets/images/fuga_1/scores/Fuga_I-1.png" alt="Fuga I, score page 1"></a>
+  <a href="./assets/images/fuga_1/scores/Fuga_I-2.png"><img src="./assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga I, score page 2"></a>
+</div>
+#+END_EXPORT
 
 \\
 \\
 
-* Sitemap
+* Cryptograms
 :PROPERTIES:
 :UNNUMBERED: t
 :END:
 
-#+INCLUDE: ToC.suborg
+Musical cryptograms transcribe a text into music and vice versa. [[file:cryptograms.org][Try some of the ones I have written →]]

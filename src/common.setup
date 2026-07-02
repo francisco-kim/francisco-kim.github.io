@@ -1,21 +1,15 @@
 # -*- mode: org; -*-
 # Shared header for every page. Include it from a page with:
-#   #+SETUPFILE: ../org-html-themes/org/theme-readtheorg.setup
 #   #+SETUPFILE: common.setup
-# (a page only needs its own #+TITLE and #+DESCRIPTION on top of these.)
+# (a page only needs its own #+TITLE and #+DESCRIPTION on top of this.)
 
 #+AUTHOR: Dr. Francisco Kim
-# Let the content area fill the window width (images, scores, plots, tables go wide)
-# while keeping prose in a comfortable, readable column.
-#+HTML_HEAD: <style> #content{max-width:none;}</style>
-#+HTML_HEAD: <style> p{max-width:850px;}</style>
-#+HTML_HEAD: <style> li{max-width:850px;}</style>
-# Keep code/example/result blocks in the same readable column (long lines scroll).
-#+HTML_HEAD: <style> pre{max-width:850px;}</style>
-# Keep MathJax display equations within the text column so they centre on the text,
-# not on the full-width page.
-#+HTML_HEAD: <style> mjx-container[display="true"]{max-width:850px;}</style>
-# Keep each footnote's number and text on the same line (Org wraps the text in a block div).
-#+HTML_HEAD: <style> .footpara{display:inline;}</style>
+# All styling lives in the site stylesheet (copied to docs/ by the org-static
+# project in build-site.el). Pages export flat into docs/, so one relative
+# path works for every page. (Org already emits the viewport meta tag itself.)
+#+HTML_HEAD: <link rel="stylesheet" href="assets/css/site.css">
+# On narrow screens the table of contents is collapsed; its heading toggles it
+# (site.css shows/hides #text-table-of-contents via the .toc-open class).
+#+HTML_HEAD: <script>document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('#table-of-contents h2');if(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('toc-open');});}});</script>
 #+OPTIONS: ^:{} H:5 num:3 \n:t tags:nil email:nil
 #+startup: shrink

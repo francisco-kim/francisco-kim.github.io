@@ -41,22 +41,29 @@ place. See `requirements.txt` for the Python package versions this workflow expe
 
 ## Source layout
 
-- `src/index.org`, `src/cryptograms.org` — the published pages. Only files matching
-  `:base-extension "org"` in `build-site.el` become standalone HTML.
-- `src/*.suborg` — `#+INCLUDE` fragments (`ToC.suborg`, `fuga_1.suborg`). The `.suborg`
-  extension deliberately keeps them from being published as their own pages; they only
-  appear via the `#+INCLUDE` directives in `index.org`.
-- `src/assets/` — committed images (png), audio (mp3), and PDFs. The `org-static` project in
-  `build-site.el` copies `png|pdf|mp3` straight through to `docs/`.
-- `org-html-themes/` — vendored copy of fniessen's readtheorg theme.
+- `src/index.org`, `src/compositions.org`, `src/cryptograms.org` — the published pages.
+  Only files matching `:base-extension "org"` in `build-site.el` become standalone HTML.
+  `compositions.org` is the index of pieces: new compositions get an entry there, not a
+  new nav link.
+- `src/*.suborg` — `#+INCLUDE` fragments (`fuga_1.suborg`). The `.suborg` extension
+  deliberately keeps them from being published as their own pages; they only appear via
+  the `#+INCLUDE` directives in the `.org` pages.
+- `src/assets/` — committed images (png), audio (mp3), PDFs, and the site stylesheet
+  (`css/site.css`). The `org-static` project in `build-site.el` copies `png|pdf|mp3|css`
+  straight through to `docs/`.
 
 ## Things to know before editing
 
 - Editing a `.suborg` produces no visible change until the including `.org` is re-exported.
   `build.sh` always rebuilds everything, so just rerun it.
-- The theme is pulled in via `#+SETUPFILE:` at the top of each page. `theme-readtheorg.setup`
-  loads CSS/JS from remote URLs (`fniessen.github.io`, jquery/bootstrap CDNs);
-  `theme-readtheorg-local.setup` is the offline variant using the vendored copy.
+- The entire look of the site is hand-written in `src/assets/css/site.css` (no external
+  theme, no CDNs): pages link it via `src/common.setup`, and `build-site.el` disables Org's
+  default CSS/JS and supplies the shared nav header/footer through `org-html-preamble` /
+  `org-html-postamble`. To add a page to the nav, edit the preamble in `build-site.el`.
+- The Fuga I page keeps Org's table of contents: `site.css` renders it as a fixed sidebar
+  on wide screens and a collapsed, tap-to-expand block on narrow ones (a small inline
+  script in `common.setup` toggles the `.toc-open` class). Short pages set
+  `#+OPTIONS: toc:nil`.
 - `build-site.el` defines a custom `color:` Org link type so `[[color:green][text]]` renders
   as colored HTML/LaTeX spans. Keep it if you touch that file.
 - `docs/` is build output committed to the repo; never hand-edit it — change `src/` and

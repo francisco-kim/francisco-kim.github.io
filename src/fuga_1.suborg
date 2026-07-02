@@ -714,18 +714,6 @@ The selected version for the analysis with all the voices (red line) assumes tha
 
 \\
 \\
-\\
-\\
-\\
-
-#+ATTR_HTML: :align right
-[[*Sitemap][Back to the sitemap]][fn:sitemap]
-
-\\
-\\
 
 [fn:Hsu] K. Hsu and A. Hsu, Fractal geometry of music, Proc. Natl. Acad. Sci. USA, 87 (1990) 938–941.
 [fn:Brother] H. J. Brothers, Intervallic scaling in the Bach cello suites, Fractals, 4 (2009) 537–545.
-
-
-[fn:sitemap] This webpage was built with Org mode, using [[https://github.com/fniessen/org-html-themes][fniessen's org-html-themes]] and [[https://github.com/SystemCrafters/org-website-example][System Crafters's Org website publishing example]].

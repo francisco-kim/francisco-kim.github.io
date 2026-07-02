@@ -1,0 +1,45 @@
+# -*- mode:org; mode:reftex; indent-tabs-mode:nil; tab-width:2 -*-
+# Local Variables:
+# org-html-table-use-header-tags-for-first-column: t
+# End:
+
+#+TITLE: Compositions
+#+DESCRIPTION: Musical compositions by Francisco Kim.
+#+SETUPFILE: common.setup
+#+OPTIONS: toc:nil
+
+# Hand-written sidebar. It reuses the ids of Org's table of contents on
+# purpose: site.css renders it as the fixed left sidebar on wide screens and
+# as a collapsed, tap-to-expand block on narrow ones, and the toggle script in
+# common.setup works on it as-is. Unlike a real TOC, the entries link to each
+# composition's own page. New pieces: add one <li> here.
+#+BEGIN_EXPORT html
+<div id="table-of-contents" role="doc-toc">
+  <h2>Compositions</h2>
+  <div id="text-table-of-contents" role="doc-toc">
+    <ul>
+      <li><a href="fuga_1.html">Fuga I</a></li>
+    </ul>
+  </div>
+</div>
+#+END_EXPORT
+
+An index of my compositions. Each piece has its own page with the score, a recording, and a write-up of the ideas behind it.
+
+* Fuga I
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+A three-voice fugue in D minor built on the *B-A-C-H motif* within the counterpoint rules of the Baroque period.
+
+#+BEGIN_EXPORT html
+<audio controls>
+  <source src="./assets/images/fuga_1/Fuga_I.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<p><a class="cta" href="fuga_1.html">Read the full analysis of Fuga I →</a></p>
+#+END_EXPORT
