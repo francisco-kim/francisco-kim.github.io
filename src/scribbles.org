@@ -4,7 +4,7 @@
 # End:
 
 #+TITLE: Other scribbles
-#+DESCRIPTION: Music-related scribbles, games and notes by Francisco Kim.
+#+DESCRIPTION: Scribbles by Francisco Kim: doodles and notes on music, mathematics, physics and more.
 #+SETUPFILE: common.setup
 #+OPTIONS: toc:nil
 
@@ -23,7 +23,7 @@
 </div>
 #+END_EXPORT
 
-Music-related scribbles that are not quite compositions: games, doodles and other notes.
+Scribbles that are not quite compositions — doodles and notes on music, mathematics, physics or whatever else caught my curiosity.
 
 * Musical cryptograms
 :PROPERTIES:
