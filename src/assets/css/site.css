@@ -380,10 +380,16 @@ mjx-container[display="true"] {
    (tiny script in common.setup). Wide screens: fixed sidebar left of the
    text column, always expanded. */
 
+/* On narrow screens (no room for the sidebar) the TOC is a collapsed,
+   tap-to-expand control — boxed so it clearly looks tappable. */
 #table-of-contents {
   max-width: var(--prose);
   margin: 0 auto 2rem;
   font-family: var(--sans);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--code-bg);
+  padding: 0.7rem 1rem;
 }
 
 #table-of-contents h2 {
@@ -391,10 +397,12 @@ mjx-container[display="true"] {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   color: var(--muted);
-  margin: 0 0 0.6rem;
+  margin: 0;
   cursor: pointer;
   user-select: none;
 }
+
+#table-of-contents.toc-open h2 { margin-bottom: 0.7rem; }
 
 #table-of-contents h2::before {
   content: "▸ ";
@@ -441,8 +449,13 @@ mjx-container[display="true"] {
     overflow-y: auto;
     margin: 0;
     padding: 1.6rem 1.25rem 2rem;
+    border: none;
     border-right: 1px solid var(--rule);
+    border-radius: 0;
+    background: transparent;
   }
+
+  #table-of-contents h2 { margin-bottom: 0.6rem; }
 
   #table-of-contents h2 { cursor: default; }
   #table-of-contents h2::before { content: none; }
