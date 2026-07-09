@@ -227,11 +227,14 @@ a.cta:hover {
 /* Images wrapped by the click-to-zoom script in common.setup. */
 .img-zoom img { cursor: zoom-in; }
 
-/* Contact row under the homepage intro. */
+/* Contact row under the homepage intro. The bottom margin sets the gap
+   before the "Featured" section (it collapses with the h2's top margin,
+   so the larger of the two wins). */
 .contact-links {
   font-family: var(--sans);
   font-size: 0.9rem;
   letter-spacing: 0.02em;
+  margin-bottom: 7rem;
 }
 
 .contact-links svg {

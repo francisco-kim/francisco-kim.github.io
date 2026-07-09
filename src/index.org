@@ -25,8 +25,6 @@ PhD in theoretical physics by training, but a musician and musicologist at heart
 </script>
 #+END_EXPORT
 
-\\
-
 * Featured: Fuga I
 :PROPERTIES:
 :UNNUMBERED: t
