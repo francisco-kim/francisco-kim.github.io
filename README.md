@@ -78,8 +78,14 @@ notes — like the cryptograms) on `src/scribbles.org`. To add one (say `prelude
      ```
 
    The navigation header (defined by `org-html-preamble` in `build-site.el`) stays fixed
-   at Home · Compositions · Other scribbles, so it does not need editing — only a brand
-   new **section** (a fourth index page) would mean adding a nav link there.
+   at Compositions · Ising & XY simulation · Other scribbles — there is no Home link because the
+   site name on the left already links home, and "Ising & XY simulation" is an external link to
+   the interactive app published from the separate
+   [IsingSimulator repository](https://github.com/francisco-kim/IsingSimulator) (hosted at
+   `francisco-kim.github.io/IsingSimulator/` as a GitHub project page, so this repository
+   plays no part in building or deploying it). The header does not need editing for new
+   entries — only a brand new **section** (a new index page or external app) would mean
+   adding a nav link there.
 4. Optional: to highlight it on the landing page, add a short featured block to `index.org`
    (see the "Featured: Fuga I" section there as a template).
 5. Run `./build.sh` and open `docs/prelude.html` to check it.

@@ -52,8 +52,8 @@
   <nav class=\"site-nav\">
     <a class=\"site-name\" href=\"index.html\">Francisco Kim</a>
     <div class=\"site-links\">
-      <a href=\"index.html\">Home</a>
       <a href=\"compositions.html\">Compositions</a>
+      <a href=\"https://francisco-kim.github.io/IsingSimulator/\">Ising &amp; XY simulation</a>
       <a href=\"scribbles.html\">Other scribbles</a>
     </div>
   </nav>

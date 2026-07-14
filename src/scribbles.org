@@ -18,6 +18,7 @@
   <div id="text-table-of-contents" role="doc-toc">
     <ul>
       <li><a href="cryptograms.html">Musical cryptograms</a></li>
+      <li><a href="https://francisco-kim.github.io/IsingSimulator/">Ising &amp; XY model simulator</a></li>
     </ul>
   </div>
 </div>
@@ -34,4 +35,17 @@ Musical cryptograms transcribe a text into music and vice versa. I have written 
 
 #+BEGIN_EXPORT html
 <p><a class="cta" href="cryptograms.html">Try the cryptograms →</a></p>
+#+END_EXPORT
+
+* Ising & XY model simulator
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+A Monte Carlo simulation that runs entirely in your browser. For the Ising model: watch a lattice of spins order and disorder as you drag the temperature through the phase transition, compare local (Metropolis, Glauber) and cluster (Wolff) dynamics, trace hysteresis loops, measure the susceptibility and specific heat across the exactly known critical point, and coarse-grain configurations with block-spin renormalisation.
+
+It also simulates the two-dimensional XY model, whose planar spins are drawn as hue: here you can watch vortices and antivortices bind and unbind across the topological Berezinskii–Kosterlitz–Thouless transition.
+
+#+BEGIN_EXPORT html
+<p><a class="cta" href="https://francisco-kim.github.io/IsingSimulator/">Play with the simulator →</a></p>
 #+END_EXPORT
