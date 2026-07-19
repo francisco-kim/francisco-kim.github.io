@@ -1,0 +1,23 @@
+# Compositional ideas behind Prélude avec Fugato pour Grand-Maman -*- mode: org -*-
+
+TODO: write introduction.
+@@latex: \thispagestyle{empty}@@
+
+* Introduction
+
+For my wife's grandmother's 90th birthday, I composed this piece in tribute to a woman who has always felt like my own grandmother. Her deep love of Bach inspired me to create something simple to play—a Prelude and Fugue that echoes his tradition. The tonality of D major was chosen to give it a majestic character, and it contains exactly 45 bars—or 90 quavers (eighth notes for my American friends 🙂).
+
+* Music/Score
+
+The score can be found below, and the piece can be played here:
+#+BEGIN_EXPORT html
+ <audio controls>
+  <source src="./assets/images/prelude_et_fugato_pour_grand-maman/Prélude avec Fugato pour Grand-Maman.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+#+END_EXPORT
+
+#+CAPTION: Prélude avec Fugato pour Grand-Maman
+#+ATTR_HTML: :alt Prélude avec Fugato pour Grand-Maman image :title Prélude avec Fugato pour Grand-Maman :align center
+[[./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-1.png]]
+[[./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-2.png]]

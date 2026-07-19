@@ -19,6 +19,7 @@
   <div id="text-table-of-contents" role="doc-toc">
     <ul>
       <li><a href="fuga_1.html">Fuga I</a></li>
+      <li><a href="prelude_et_fugato.html">Prélude avec Fugato pour Grand-Maman</a></li>
     </ul>
   </div>
 </div>
@@ -48,5 +49,30 @@ Your browser does not support the audio element.
 <div class="score-pair">
   <a href="./assets/images/fuga_1/scores/Fuga_I-1.png"><img src="./assets/images/fuga_1/scores/Fuga_I-1.png" alt="Fuga I, score page 1"></a>
   <a href="./assets/images/fuga_1/scores/Fuga_I-2.png"><img src="./assets/images/fuga_1/scores/Fuga_I-2.png" alt="Fuga I, score page 2"></a>
+</div>
+#+END_EXPORT
+
+* Prélude avec Fugato pour Grand-Maman
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+A simple piece in "Prelude and Fugue" format for my wife's grandmother's 90th birthday.
+
+#+BEGIN_EXPORT html
+<audio controls>
+  <source src="./assets/images/prelude_et_fugato_pour_grand-maman/Prélude avec Fugato pour Grand-Maman.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<p><a class="cta" href="prelude_et_fugato.html">Read the full analysis of Prélude avec Fugato pour Grand-Maman →</a></p>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<div class="score-pair">
+  <a href="./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-1.png"><img src="./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-1.png" alt="Prélude avec Fugato pour Grand-Maman, score page 1"></a>
+  <a href="./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-2.png"><img src="./assets/images/prelude_et_fugato_pour_grand-maman/scores/Prelude_et_Fugato-2.png" alt="Prélude avec Fugato pour Grand-Maman, score page 2"></a>
 </div>
 #+END_EXPORT
