@@ -122,6 +122,14 @@ h1.title + .subtitle { color: var(--muted); }
 
 h2 { font-size: 1.55rem; margin-top: 2.6rem; }
 h3 { font-size: 1.25rem; margin-top: 2rem; }
+
+/* Unnumbered top-level headings are listing entries (Compositions,
+   Other scribbles), not prose sections: give them extra breathing room. */
+h2:not(:has(.section-number-2)) { margin-top: 4.5rem; }
+
+/* A section ending on a score image reads visually denser, so the same
+   margin feels smaller: give it a bit more room before the next entry. */
+.outline-2:has(.score-pair) + .outline-2 > h2 { margin-top: 6rem; }
 h4, h5, h6 { font-size: 1.05rem; margin-top: 1.6rem; }
 
 h2, h3, h4, h5, h6 {
