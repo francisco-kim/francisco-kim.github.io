@@ -54,8 +54,7 @@
     <div class=\"site-links\">
       <a href=\"compositions.html\">Compositions</a>
       <a href=\"scribbles.html\">Other scribbles</a>
-      <a href=\"https://francisco-kim.github.io/IsingSimulator/\">Ising &amp; XY simulation</a>
-      <a href=\"https://francisco-kim.github.io/DoubleSlitSimulator/\">Double-slit simulation</a>
+      <a href=\"simulations.html\">Physics &amp; Maths simulations</a>
     </div>
   </nav>
 </header>"

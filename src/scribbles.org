@@ -18,8 +18,6 @@
   <div id="text-table-of-contents" role="doc-toc">
     <ul>
       <li><a href="cryptograms.html">Musical cryptograms</a></li>
-      <li><a href="https://francisco-kim.github.io/IsingSimulator/">Ising &amp; XY model simulator</a></li>
-      <li><a href="https://francisco-kim.github.io/DoubleSlitSimulator/">Double-slit experiment simulator</a></li>
     </ul>
   </div>
 </div>
@@ -36,44 +34,4 @@ Musical cryptograms transcribe a text into music and vice versa. I have written 
 
 #+BEGIN_EXPORT html
 <p><a class="cta" href="cryptograms.html">Try the cryptograms →</a></p>
-#+END_EXPORT
-
-* Ising & XY model simulator
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder; compare local (Metropolis, Glauber) and cluster (Wolff) dynamics; measure the susceptibility and specific heat across the exactly known critical point; and coarse-grain configurations with block-spin renormalisation.
-
-It also simulates the two-dimensional XY model, whose planar spins are drawn as hue, so you can watch vortices and antivortices bind and unbind across the topological Berezinskii–Kosterlitz–Thouless transition.
-
-#+BEGIN_EXPORT html
-<div class="score-pair">
-  <a href="./assets/images/ising/ising-lattice.png"><img src="./assets/images/ising/ising-lattice.png" alt="Ising lattice near the critical temperature: black-and-white spin domains of every size"></a>
-  <a href="./assets/images/ising/xy-lattice.png"><img src="./assets/images/ising/xy-lattice.png" alt="XY model phase field coloured by hue, with vortices and antivortices marked as crosses"></a>
-</div>
-#+END_EXPORT
-
-#+BEGIN_EXPORT html
-<p><a class="cta" href="https://francisco-kim.github.io/IsingSimulator/">Play with the simulator →</a></p>
-#+END_EXPORT
-
-* Double-slit experiment simulator
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-The most beautiful experiment in physics, running in your browser: an electron gun fires electrons one at a time at a wall with two slits. Each electron lands as a single dot on the detection screen, yet the dots build up an interference pattern — until you switch on a detector that observes which slit each electron goes through, and the pattern collapses into two classical heaps.
-
-The wave you watch propagate is no cartoon: the app numerically solves the two-dimensional time-dependent Schrödinger equation (split-step Fourier method, .NET WebAssembly) and samples every electron's impact from the resulting probability distribution.
-
-#+BEGIN_EXPORT html
-<div class="score-pair">
-  <a href="./assets/images/doubleslit/double-slit-wave.png"><img src="./assets/images/doubleslit/double-slit-wave.png" alt="Top view of the electron wave diffracting through two slits into an interference fan"></a>
-  <a href="./assets/images/doubleslit/double-slit-screen.png"><img src="./assets/images/doubleslit/double-slit-screen.png" alt="Detection screen with hundreds of single-electron dots forming interference fringes"></a>
-</div>
-#+END_EXPORT
-
-#+BEGIN_EXPORT html
-<p><a class="cta" href="https://francisco-kim.github.io/DoubleSlitSimulator/">Fire some electrons →</a></p>
 #+END_EXPORT
