@@ -59,7 +59,6 @@ The wave you watch propagate is no cartoon: the app numerically solves the two-d
 #+BEGIN_EXPORT html
 <div class="score-pair">
   <a href="./assets/images/doubleslit/double-slit-wave.png"><img src="./assets/images/doubleslit/double-slit-wave.png" alt="Top view of the electron wave diffracting through two slits into an interference fan"></a>
-  <a href="./assets/images/doubleslit/double-slit-screen.png"><img src="./assets/images/doubleslit/double-slit-screen.png" alt="Detection screen with hundreds of single-electron dots forming interference fringes"></a>
 </div>
 #+END_EXPORT
 
