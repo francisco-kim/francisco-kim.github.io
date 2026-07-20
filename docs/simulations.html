@@ -34,6 +34,7 @@
     <ul>
       <li><a href="https://francisco-kim.github.io/IsingSimulator/">Ising &amp; XY model simulator</a></li>
       <li><a href="https://francisco-kim.github.io/DoubleSlitSimulator/">Double-slit experiment simulator</a></li>
+      <li><a href="https://francisco-kim.github.io/PersistentHomologyVisualisation/">Persistent homology visualisation</a></li>
     </ul>
   </div>
 </div>
@@ -41,9 +42,9 @@
 <p>
 Interactive physics and maths simulations that run entirely in your browser.<br />
 </p>
-<div id="outline-container-org6d9b492" class="outline-2">
-<h2 id="org6d9b492">Ising &amp; XY model simulator</h2>
-<div class="outline-text-2" id="text-org6d9b492">
+<div id="outline-container-org8e261b6" class="outline-2">
+<h2 id="org8e261b6">Ising &amp; XY model simulator</h2>
+<div class="outline-text-2" id="text-org8e261b6">
 <p>
 A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder; compare local (Metropolis, Glauber) and cluster (Wolff) dynamics; measure the susceptibility and specific heat across the exactly known critical point; and coarse-grain configurations with block-spin renormalisation.<br />
 </p>
@@ -60,9 +61,9 @@ It also simulates the two-dimensional XY model, whose planar spins are drawn as 
 <p><a class="cta" href="https://francisco-kim.github.io/IsingSimulator/">Play with the simulator →</a></p>
 </div>
 </div>
-<div id="outline-container-orgbf67232" class="outline-2">
-<h2 id="orgbf67232">Double-slit experiment simulator</h2>
-<div class="outline-text-2" id="text-orgbf67232">
+<div id="outline-container-org09b7432" class="outline-2">
+<h2 id="org09b7432">Double-slit experiment simulator</h2>
+<div class="outline-text-2" id="text-org09b7432">
 <p>
 The most beautiful experiment in physics, running in your browser: an electron gun fires electrons one at a time at a wall with two slits. Each electron lands as a single dot on the detection screen, yet the dots build up an interference pattern — until you switch on a detector that observes which slit each electron goes through, and the pattern collapses into two classical heaps.<br />
 </p>
@@ -76,6 +77,25 @@ The wave you watch propagate is no cartoon: the app numerically solves the two-d
 </div>
 
 <p><a class="cta" href="https://francisco-kim.github.io/DoubleSlitSimulator/">Fire some electrons →</a></p>
+</div>
+</div>
+<div id="outline-container-org43417a2" class="outline-2">
+<h2 id="org43417a2">Persistent homology visualisation</h2>
+<div class="outline-text-2" id="text-org43417a2">
+<p>
+Sample noisy points off a shape, grow a disc of radius ε/2 around every one, and watch a graph of edges and triangles build up as ε grows — until pieces merge into a single blob and the shape's holes get filled in. A live barcode records exactly when each piece and loop is born and dies, so you can read off, by eye, which features are real shape and which are noise.<br />
+</p>
+
+<p>
+Every step is the real computation, not a cartoon: the app builds the actual Vietoris–Rips filtration and computes persistent homology (H0, H1) via boundary-matrix reduction over ℤ/2, entirely in your browser.<br />
+</p>
+
+<div class="score-pair">
+  <a href="./assets/images/persistenthomology/rips-complex.png"><img src="./assets/images/persistenthomology/rips-complex.png" alt="A noisy circle's Vietoris–Rips complex mid-growth: translucent balls, edges and triangles forming a ring with a clear hole in the middle"></a>
+  <a href="./assets/images/persistenthomology/barcode.png"><img src="./assets/images/persistenthomology/barcode.png" alt="Persistence barcode: many short-lived bars from noise and one long bar spanning most of the radius range - the real hole"></a>
+</div>
+
+<p><a class="cta" href="https://francisco-kim.github.io/PersistentHomologyVisualisation/">Grow the balls and watch the holes →</a></p>
 </div>
 </div>
 </div>

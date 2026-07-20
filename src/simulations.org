@@ -20,6 +20,7 @@
     <ul>
       <li><a href="https://francisco-kim.github.io/IsingSimulator/">Ising &amp; XY model simulator</a></li>
       <li><a href="https://francisco-kim.github.io/DoubleSlitSimulator/">Double-slit experiment simulator</a></li>
+      <li><a href="https://francisco-kim.github.io/PersistentHomologyVisualisation/">Persistent homology visualisation</a></li>
     </ul>
   </div>
 </div>
@@ -64,4 +65,24 @@ The wave you watch propagate is no cartoon: the app numerically solves the two-d
 
 #+BEGIN_EXPORT html
 <p><a class="cta" href="https://francisco-kim.github.io/DoubleSlitSimulator/">Fire some electrons →</a></p>
+#+END_EXPORT
+
+* Persistent homology visualisation
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+Sample noisy points off a shape, grow a disc of radius ε/2 around every one, and watch a graph of edges and triangles build up as ε grows — until pieces merge into a single blob and the shape's holes get filled in. A live barcode records exactly when each piece and loop is born and dies, so you can read off, by eye, which features are real shape and which are noise.
+
+Every step is the real computation, not a cartoon: the app builds the actual Vietoris–Rips filtration and computes persistent homology (H0, H1) via boundary-matrix reduction over ℤ/2, entirely in your browser.
+
+#+BEGIN_EXPORT html
+<div class="score-pair">
+  <a href="./assets/images/persistenthomology/rips-complex.png"><img src="./assets/images/persistenthomology/rips-complex.png" alt="A noisy circle's Vietoris–Rips complex mid-growth: translucent balls, edges and triangles forming a ring with a clear hole in the middle"></a>
+  <a href="./assets/images/persistenthomology/barcode.png"><img src="./assets/images/persistenthomology/barcode.png" alt="Persistence barcode: many short-lived bars from noise and one long bar spanning most of the radius range - the real hole"></a>
+</div>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<p><a class="cta" href="https://francisco-kim.github.io/PersistentHomologyVisualisation/">Grow the balls and watch the holes →</a></p>
 #+END_EXPORT
