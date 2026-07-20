@@ -263,13 +263,29 @@ a.cta:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
-  max-width: var(--prose);
+  max-width: 700px;
   margin: 1.6rem auto;
 }
 
 .score-pair a {
   flex: 1 1 300px;
   min-width: 0;
+}
+
+/* A single (unpaired) image would otherwise stretch to fill the row like a
+   pair does; shrink and centre it instead so it doesn't dominate the page. */
+.score-pair:has(> a:only-child) {
+  justify-content: center;
+}
+
+.score-pair:has(> a:only-child) a {
+  flex: 0 1 50%;
+}
+
+/* A CTA button right after an image block reads as part of it, so centre
+   it too rather than snapping back to the text column's left edge. */
+.score-pair + p {
+  text-align: center;
 }
 
 .score-pair img {
