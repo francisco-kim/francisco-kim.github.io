@@ -85,7 +85,7 @@
          )
         ("org-static"
          :base-directory "./src"
-         :base-extension "png\\|pdf\\|mp3\\|css"
+         :base-extension "png\\|pdf\\|mp3\\|css\\|js\\|woff2"
          :publishing-directory "./docs"
          :publishing-function org-publish-attachment
          :recursive t

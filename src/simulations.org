@@ -8,6 +8,16 @@
 #+SETUPFILE: common.setup
 #+OPTIONS: toc:nil
 
+# KaTeX, vendored locally (no CDN, matching the rest of the site). Org's HTML
+# exporter already wraps $...$ / $$...$$ as \(...\) / \[...\] by default (its
+# "mathjax" LaTeX-fragment method, used regardless of MathJax actually being
+# present) - auto-render's default delimiters match that output directly, so
+# no custom delimiter config is needed here.
+#+HTML_HEAD: <link rel="stylesheet" href="assets/lib/katex/katex.min.css">
+#+HTML_HEAD: <script src="assets/lib/katex/katex.min.js"></script>
+#+HTML_HEAD: <script src="assets/lib/katex/auto-render.min.js"></script>
+#+HTML_HEAD: <script>document.addEventListener('DOMContentLoaded',function(){renderMathInElement(document.body,{throwOnError:false});});</script>
+
 # Hand-written sidebar, same pattern as compositions.org/scribbles.org: it
 # reuses the ids of Org's table of contents so site.css shows it as the fixed
 # left sidebar on wide screens and a collapsed, tap-to-expand block on narrow
@@ -33,7 +43,7 @@ Interactive physics and maths simulations that run entirely in your browser.
 :UNNUMBERED: t
 :END:
 
-A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder; compare local (Metropolis, Glauber) and cluster (Wolff) dynamics; measure the susceptibility and specific heat across the exactly known critical point; and coarse-grain configurations with block-spin renormalisation.
+A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder, and coarse-grain configurations with block-spin renormalisation.
 
 It also simulates the two-dimensional XY model, whose planar spins are drawn as hue, so you can watch vortices and antivortices bind and unbind across the topological Berezinskii–Kosterlitz–Thouless transition.
 
@@ -55,8 +65,6 @@ It also simulates the two-dimensional XY model, whose planar spins are drawn as 
 
 The most beautiful experiment in physics, running in your browser: an electron gun fires electrons one at a time at a wall with two slits. Each electron lands as a single dot on the detection screen, yet the dots build up an interference pattern — until you switch on a detector that observes which slit each electron goes through, and the pattern collapses into two classical heaps.
 
-The wave you watch propagate is no cartoon: the app numerically solves the two-dimensional time-dependent Schrödinger equation (split-step Fourier method) and samples every electron's impact from the resulting probability distribution.
-
 #+BEGIN_EXPORT html
 <div class="score-pair">
   <a href="./assets/images/doubleslit/double-slit-wave.png"><img src="./assets/images/doubleslit/double-slit-wave.png" alt="Top view of the electron wave diffracting through two slits into an interference fan"></a>
@@ -72,9 +80,9 @@ The wave you watch propagate is no cartoon: the app numerically solves the two-d
 :UNNUMBERED: t
 :END:
 
-Sample noisy points off a shape, grow a disc of radius ε/2 around every one, and watch a graph of edges and triangles build up as ε grows — until pieces merge into a single blob and the shape's holes get filled in. A live barcode records exactly when each piece and loop is born and dies, so you can read off, by eye, which features are real shape and which are noise.
+Sample points off a noisy shape and grow a disc of radius $\varepsilon/2$ around each one. Two points join with an edge once their discs touch; three points fill in with a triangle once all three overlap. Whatever loop is left over — a closed path that isn't the edge of any triangle — is a hole; counting pieces and holes this way is what mathematicians call $H_0$ and $H_1$.
 
-Every step is the real computation, not a cartoon: the app builds the actual Vietoris–Rips filtration and computes persistent homology (H0, H1) via boundary-matrix reduction over ℤ/2, entirely in your browser.
+A live barcode tracks exactly when each hole opens and closes as $\varepsilon$ grows, so a real hole (a long bar) is easy to tell apart from noise (a short one).
 
 #+BEGIN_EXPORT html
 <div class="score-pair">
