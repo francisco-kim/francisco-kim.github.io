@@ -12,6 +12,42 @@
 <link rel="stylesheet" href="assets/css/site.css">
 <script>document.addEventListener('DOMContentLoaded',function(){var h=document.querySelector('#table-of-contents h2');if(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('toc-open');});}});</script>
 <script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('#content img').forEach(function(img){if(img.closest('a'))return;var a=document.createElement('a');a.className='img-zoom';a.href=img.currentSrc||img.src;img.parentNode.insertBefore(a,img);a.appendChild(img);});});</script>
+<link rel="stylesheet" href="assets/lib/katex/katex.min.css">
+<script src="assets/lib/katex/katex.min.js"></script>
+<script src="assets/lib/katex/auto-render.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){renderMathInElement(document.body,{throwOnError:false});});</script>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -42,11 +78,11 @@
 <p>
 Interactive physics and maths simulations that run entirely in your browser.<br />
 </p>
-<div id="outline-container-orgbd976c5" class="outline-2">
-<h2 id="orgbd976c5">Ising &amp; XY model simulator</h2>
-<div class="outline-text-2" id="text-orgbd976c5">
+<div id="outline-container-orgf18fa07" class="outline-2">
+<h2 id="orgf18fa07">Ising &amp; XY model simulator</h2>
+<div class="outline-text-2" id="text-orgf18fa07">
 <p>
-A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder; compare local (Metropolis, Glauber) and cluster (Wolff) dynamics; measure the susceptibility and specific heat across the exactly known critical point; and coarse-grain configurations with block-spin renormalisation.<br />
+A Monte Carlo simulation that runs entirely in your browser. Drag the temperature through the phase transition and watch a lattice of spins order and disorder, and coarse-grain configurations with block-spin renormalisation.<br />
 </p>
 
 <p>
@@ -61,15 +97,11 @@ It also simulates the two-dimensional XY model, whose planar spins are drawn as 
 <p><a class="cta" href="https://francisco-kim.github.io/IsingSimulator/">Play with the simulator →</a></p>
 </div>
 </div>
-<div id="outline-container-org0a0906d" class="outline-2">
-<h2 id="org0a0906d">Double-slit experiment simulator</h2>
-<div class="outline-text-2" id="text-org0a0906d">
+<div id="outline-container-org9e61e48" class="outline-2">
+<h2 id="org9e61e48">Double-slit experiment simulator</h2>
+<div class="outline-text-2" id="text-org9e61e48">
 <p>
 The most beautiful experiment in physics, running in your browser: an electron gun fires electrons one at a time at a wall with two slits. Each electron lands as a single dot on the detection screen, yet the dots build up an interference pattern — until you switch on a detector that observes which slit each electron goes through, and the pattern collapses into two classical heaps.<br />
-</p>
-
-<p>
-The wave you watch propagate is no cartoon: the app numerically solves the two-dimensional time-dependent Schrödinger equation (split-step Fourier method) and samples every electron's impact from the resulting probability distribution.<br />
 </p>
 
 <div class="score-pair">
@@ -79,15 +111,15 @@ The wave you watch propagate is no cartoon: the app numerically solves the two-d
 <p><a class="cta" href="https://francisco-kim.github.io/DoubleSlitSimulator/">Fire some electrons →</a></p>
 </div>
 </div>
-<div id="outline-container-org037db43" class="outline-2">
-<h2 id="org037db43">Persistent homology visualisation</h2>
-<div class="outline-text-2" id="text-org037db43">
+<div id="outline-container-org6508473" class="outline-2">
+<h2 id="org6508473">Persistent homology visualisation</h2>
+<div class="outline-text-2" id="text-org6508473">
 <p>
-Sample noisy points off a shape, grow a disc of radius ε/2 around every one, and watch a graph of edges and triangles build up as ε grows — until pieces merge into a single blob and the shape's holes get filled in. A live barcode records exactly when each piece and loop is born and dies, so you can read off, by eye, which features are real shape and which are noise.<br />
+Sample points off a noisy shape and grow a disc of radius \(\varepsilon/2\) around each one. Two points join with an edge once their discs touch; three points fill in with a triangle once all three overlap. Whatever loop is left over — a closed path that isn't the edge of any triangle — is a hole; counting pieces and holes this way is what mathematicians call \(H_0\) and \(H_1\).<br />
 </p>
 
 <p>
-Every step is the real computation, not a cartoon: the app builds the actual Vietoris–Rips filtration and computes persistent homology (H0, H1) via boundary-matrix reduction over ℤ/2, entirely in your browser.<br />
+A live barcode tracks exactly when each hole opens and closes as \(\varepsilon\) grows, so a real hole (a long bar) is easy to tell apart from noise (a short one).<br />
 </p>
 
 <div class="score-pair">
