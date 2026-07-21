@@ -452,7 +452,7 @@ mjx-container[display="true"] {
 
 #text-table-of-contents ul ul { padding-left: 1rem; }
 
-#text-table-of-contents li { margin: 0.25rem 0; }
+#text-table-of-contents li { margin: 0.55rem 0; }
 
 #text-table-of-contents a {
   color: var(--muted);
