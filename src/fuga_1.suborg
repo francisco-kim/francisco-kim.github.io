@@ -91,7 +91,7 @@ Harmonically, the passage goes through the cycle of fifths "downwards". At the e
 Following the idea of /pattern \rightarrow sequence \rightarrow contrast/ (or /idea - \rightarrow repetition \rightarrow contrast/altered repetition)/, the next measure pursues a different melodic motifs. However, one of them is a recall of one of the motifs from the double sequence which allows a certain continuity with the double sequence. This passage is also an imitative sequence with a series of imperfect consonances (thirds and sixths), making these three measures complex yet beautiful with a lot of structure and symmetry. They come back once more later in the fugue as a triple counterpoint.
 
 * Appendix A: computational musicology
-We now analyse the fugue with [[https://web.mit.edu/music21/][=music21=]] (v6.7 in this appendix), a /python/ package developed by MIT for computer-aided musicology.
+We now analyse the fugue with [[https://web.mit.edu/music21/][=music21=]] (v6.7 in this appendix), a /python/ package developed by MIT for computer-aided musicology. The aim here is to try out some features of this package without doing any real analysis.
 *** Piano roll and other graphics
 First initialise =music21=:
 # #+BEGIN_SRC ipython :session fugue :exports code :results none
